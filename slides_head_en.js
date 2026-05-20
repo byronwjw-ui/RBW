@@ -1,50 +1,38 @@
 /* RBW Confidential Strategy Deck — slides 1-10 (English) */
 window.RBW_SLIDES_EN_HEAD = [
-/* 01 */ `<section class="slide cover" data-title="Cover" data-section="Open">
+/* 01 · Cover · ALL TIERS */ `<section class="slide cover" data-title="Cover" data-section="Open" data-min-tier="public">
 <div class="seal">● CONFIDENTIAL · v1.0</div>
 <div class="mono">RBW · AI GUIDED EXPERIENCE COMPANY</div>
 <h1>RBW</h1><div class="acc rbw" style="max-width:220px"></div>
 <div class="sub">AI Guided Experience Company</div>
 <div class="core">Building AI-guided experiences across play, self-discovery, wellness education, and skill learning.</div>
-<div style="margin-top:34px;display:flex;gap:10px;flex-wrap:wrap"><span class="pill gold">Confidential Business Strategy Deck</span><span class="pill">Investor · Internal · Post-NDA</span><span class="pill violet">Version 1.0</span></div>
+<div style="margin-top:34px;display:flex;gap:10px;flex-wrap:wrap"><span class="pill gold">Confidential Strategy Deck</span><span class="pill">Public · Investor · Full Access</span><span class="pill violet">Version 1.0</span></div>
 <div class="slide-meta"><span>CONFIDENTIAL — DO NOT DISTRIBUTE<span class="dot"></span>RBW Strategy Deck</span><span class="pgnum">01 / --</span></div></section>`,
 
-/* 02 */ `<section class="slide" data-title="Confidentiality Notice" data-section="Open">
-<div class="kicker">02 · Confidentiality</div><h2 class="title">Confidentiality Notice</h2>
-<div class="subtitle">For selected internal decision-makers and qualified potential investors only.</div><div class="hr"></div>
-<div class="card hi"><div class="h">Notice</div><div class="v">CONFIDENTIAL — DO NOT DISTRIBUTE</div><div class="d">This document is confidential and intended only for selected internal decision-makers and qualified potential investors. It contains confidential business strategy information of RBW including product roadmap, channel resources and capital structure considerations. Do not copy, forward, screenshot, upload or otherwise distribute any part of this document without prior written permission.</div></div>
-<div class="grid c3" style="margin-top:14px">
-<div class="card"><div class="h">Tier 1</div><div class="v" style="font-size:14px">Investor Preview</div><div class="d">For potential investors. Strategy, products, market, business model and roadmap. Resources by code only.</div></div>
-<div class="card"><div class="h">Tier 2</div><div class="v" style="font-size:14px">Internal</div><div class="d">For founders and senior advisors. All Investor content plus strategic meaning behind resource codes.</div></div>
-<div class="card"><div class="h">Tier 3</div><div class="v" style="font-size:14px">Post-NDA</div><div class="d">After NDA: diligence-grade detail, structure context, milestone calendar. Real names still controlled.</div></div>
+/* 02 · What RBW Is (Public-only short version) */ `<section class="slide" data-title="What RBW Is" data-section="Open" data-tier-only="public">
+<div class="kicker">02 · What RBW Is</div><h2 class="title">An AI Guided Experience Company</h2>
+<div class="lede">RBW builds AI-guided experiences across four high-interest consumer categories — wrapped by one shared engine underneath.</div><div class="hr"></div>
+<div class="grid c4">
+<div class="card"><div class="acc meta"></div><div class="h">RBW Meta</div><div class="d">Self-discovery</div></div>
+<div class="card"><div class="acc vibe"></div><div class="h">Vibe Party</div><div class="d">Social play</div></div>
+<div class="card"><div class="acc acu"></div><div class="h">Acu Map</div><div class="d">Wellness education</div></div>
+<div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><div class="d">Skill learning</div></div>
 </div>
-<div class="slide-meta"><span>CONFIDENTIAL<span class="dot"></span>Notice</span><span class="pgnum">02 / --</span></div></section>`,
+<div class="card hi" style="margin-top:14px"><div class="d"><b>One engine, four products.</b> The shared AI Experience Engine ships every product end-to-end — and is ready to ship the next one without scaling the team.</div></div>
+<div class="slide-meta"><span>OPEN<span class="dot"></span>What RBW Is</span><span class="pgnum">02 / --</span></div></section>`,
 
-/* 03 */ `<section class="slide" data-title="Executive Summary" data-section="Thesis">
-<div class="kicker">03 · Executive Summary</div><h2 class="title">RBW in One Page</h2>
-<div class="subtitle">Separate products. Unified engine. Validate first. Amplify with resources later.</div><div class="hr"></div>
+/* 03 · Market Shift · PUBLIC + */ `<section class="slide" data-title="Market Shift" data-section="Market" data-min-tier="public">
+<div class="kicker">03 · Market</div><h2 class="title">AI Consumer Products Are Moving from Tools to Experiences</h2>
+<div class="subtitle">The first wave was productivity. The next wave is feeling, guidance and participation.</div><div class="hr"></div>
 <div class="grid c2">
-<div class="stack">
-<div class="card"><div class="h">What RBW Is</div><div class="d">RBW is an <b>AI Guided Experience Company</b>. Not a single AI fortune-telling product. Enters four high-interest consumer categories with a shared engine underneath.</div></div>
-<div class="card"><div class="h">How RBW Goes To Market</div><div class="d">Overseas first while domestic ICP filing is in progress. <b>Vibe Party</b> = distribution. <b>RBW Meta</b> = cash flow. <b>Acu Map</b> = wellness education + SEO trust. <b>Magic Cube</b> = subscription learning.</div></div>
-<div class="card"><div class="h">How RBW Wins</div><div class="d">Validate with small scenes first. Amplify with high-quality resources only after the funnel works. Resource discipline is part of risk control.</div></div>
+<div class="card"><div class="h">Wave 1 — AI as Tool</div><ul class="clean"><li>Writing assistants</li><li>Office and meeting copilots</li><li>Customer service automation</li><li>Code generation</li></ul><div class="d">Sold on efficiency. Replaceable by the next model.</div></div>
+<div class="card hi"><div class="h">Wave 2 — AI as Experience</div><ul class="clean"><li>Companionship and self-discovery</li><li>Social entertainment and group play</li><li>Wellness culture and education</li><li>Skill learning with guidance</li></ul><div class="d">Sold on emotion, guidance and participation. Sticky by design.</div></div>
 </div>
-<div class="stack"><div class="card hi"><div class="h">The Ten Points</div><ol class="clean" style="font-size:13px"><li>RBW is an AI Guided Experience Company.</li><li>Not a single AI mysticism product.</li><li>Enters via four high-interest scenes.</li><li>One unified AI Experience Engine underneath.</li><li>Overseas first for live validation.</li><li>Domestic launch after ICP completion.</li><li>Vibe Party = distribution funnel.</li><li>RBW Meta = cash flow.</li><li>Acu Map = wellness education + SEO trust.</li><li>Strategic resources amplify, never replace, validation.</li></ol></div>
-<div class="card"><div class="h">One Sentence</div><div class="v" style="font-size:17px;line-height:1.35">Separate products. Unified engine.<br/>Validate first. Amplify later.</div></div></div>
-</div>
-<div class="slide-meta"><span>THESIS<span class="dot"></span>Executive Summary</span><span class="pgnum">03 / --</span></div></section>`,
+<div class="card" style="margin-top:14px"><div class="d"><b>RBW thesis:</b> Users no longer only want efficiency. They want emotional value, a sense of being guided, and the feeling of taking part. RBW is built for the experience layer of AI consumer products.</div></div>
+<div class="slide-meta"><span>MARKET<span class="dot"></span>Tools → Experiences</span><span class="pgnum">03 / --</span></div></section>`,
 
-/* 04 */ `<section class="slide" data-title="CEO-Level Thesis" data-section="Thesis">
-<div class="kicker">04 · Positioning</div><h2 class="title">RBW is not a collection of small apps.</h2>
-<div class="lede">RBW is building an <b>AI Experience Engine</b> that turns cultural knowledge, social entertainment, wellness education, and skill learning into guided interactive products.</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card" style="border-color:rgba(255,122,122,.35)"><div class="h" style="color:#ff9b9b">Do not say it like this</div><ul class="clean"><li>A mysticism app</li><li>A cube-learning tool</li><li>An acupoint lookup mini-program</li><li>A party-games collection</li><li>"AI fortune telling"</li></ul></div>
-<div class="card hi"><div class="h" style="color:#f3e3bf">Say it like this</div><ul class="clean"><li>AI-guided <b>Self-discovery</b></li><li>AI-guided <b>Skill Learning</b></li><li>AI-guided <b>Wellness Education</b></li><li>AI-guided <b>Social Play</b></li><li>One shared <b>AI Experience Engine</b></li></ul></div>
-</div>
-<div class="slide-meta"><span>POSITIONING<span class="dot"></span>CEO Thesis</span><span class="pgnum">04 / --</span></div></section>`,
-
-/* 05 — FOUNDING TEAM HIGHLIGHT */ `<section class="slide" data-title="Founding Team" data-section="Team">
-<div class="kicker">05 · Founding Team</div><div class="acc rbw" style="max-width:200px"></div>
+/* 04 · Founding Team · PUBLIC + */ `<section class="slide" data-title="Founding Team" data-section="Team" data-min-tier="public">
+<div class="kicker">04 · Founding Team</div><div class="acc rbw" style="max-width:200px"></div>
 <h2 class="title">Two Founders. One Month. Four Products Built.</h2>
 <div class="lede">Everything you are looking at — four products, this deck, every page, every flow — was built by a two-person sibling founding team in under one month.</div>
 <div class="team-stats">
@@ -60,20 +48,54 @@ window.RBW_SLIDES_EN_HEAD = [
 <div class="card hi"><div class="h">FDE</div><div class="v" style="font-size:15px">Forward Deployed Engineer</div><div class="d">Designs, ships and integrates the product in the same week. Closes the loop between idea and live surface.</div></div>
 </div>
 <div class="card" style="margin-top:12px"><div class="d"><b>Why this matters:</b> A two-person team that combines Boss + Sales + FDE in the same room compresses the cycle from "decision" to "live product" to days. This is the leverage that makes a four-product matrix shippable without scaling headcount first.</div></div>
-<div class="slide-meta"><span>TEAM<span class="dot"></span>Two Founders · One Month</span><span class="pgnum">05 / --</span></div></section>`,
+<div class="slide-meta"><span>TEAM<span class="dot"></span>Two Founders · One Month</span><span class="pgnum">04 / --</span></div></section>`,
 
-/* 06 */ `<section class="slide" data-title="Market Shift" data-section="Market">
-<div class="kicker">06 · Market</div><h2 class="title">AI Consumer Products Are Moving from Tools to Experiences</h2>
-<div class="subtitle">The first wave was productivity. The next wave is feeling, guidance and participation.</div><div class="hr"></div>
+/* 05 · Want More? (Public-only unlock page) */ `<section class="slide" data-title="Want More?" data-section="Unlock" data-tier-only="public">
+<div class="kicker">05 · Unlock More</div><h2 class="title">Want to See the Full Strategy?</h2>
+<div class="lede">This Public Preview shows 6 pages. The complete deck contains the strategy, products, business model, roadmap and full appendix — gated by audience.</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card"><div class="h">Wave 1 — AI as Tool</div><ul class="clean"><li>Writing assistants</li><li>Office and meeting copilots</li><li>Customer service automation</li><li>Code generation</li></ul><div class="d">Sold on efficiency. Replaceable by the next model.</div></div>
-<div class="card hi"><div class="h">Wave 2 — AI as Experience</div><ul class="clean"><li>Companionship and self-discovery</li><li>Social entertainment and group play</li><li>Wellness culture and education</li><li>Skill learning with guidance</li></ul><div class="d">Sold on emotion, guidance and participation. Sticky by design.</div></div>
+<div class="card" style="border-color:rgba(160,140,255,.45)"><div class="h" style="color:#cdbcff">Investor View · 28 pages</div><div class="d" style="font-size:13px;line-height:1.55">Full strategy, product matrix, business model, 12-month roadmap, risk control, investor narrative and ask. External resources by code.</div><button class="btn primary" style="margin-top:10px;width:100%" data-unlock="investor">🔒 Unlock Investor View</button></div>
+<div class="card hi" style="border-color:rgba(232,201,138,.5)"><div class="h" style="color:#f3e3bf">完整版 / Full Access · 43 pages</div><div class="d" style="font-size:13px;line-height:1.55">Everything in Investor View plus operating discipline, key metrics, governance, 90-day execution plan, and full appendix (A–G).</div><button class="btn gold" style="margin-top:10px;width:100%" data-unlock="full">🔒 Unlock 完整版 / Full Access</button></div>
 </div>
-<div class="card" style="margin-top:14px"><div class="d"><b>RBW thesis:</b> Users no longer only want efficiency. They want emotional value, a sense of being guided, and the feeling of taking part. RBW is built for the experience layer of AI consumer products.</div></div>
-<div class="slide-meta"><span>MARKET<span class="dot"></span>Tools → Experiences</span><span class="pgnum">06 / --</span></div></section>`,
+<div class="note" style="margin-top:14px;text-align:center">Click the top-right toggle anytime. Independent passwords. Session-only.</div>
+<div class="slide-meta"><span>UNLOCK<span class="dot"></span>Audience Gate</span><span class="pgnum">05 / --</span></div></section>`,
 
-/* 07 */ `<section class="slide" data-title="Product Matrix" data-section="Products">
-<div class="kicker">07 · Products</div><h2 class="title">Four Products. One Engine.</h2>
+/* 06 · Confidentiality · PUBLIC + */ `<section class="slide" data-title="Confidentiality Notice" data-section="Open" data-min-tier="public">
+<div class="kicker">06 · Confidentiality</div><h2 class="title">Confidentiality Notice</h2>
+<div class="subtitle">For selected internal decision-makers and qualified potential investors only.</div><div class="hr"></div>
+<div class="card hi"><div class="h">Notice</div><div class="v">CONFIDENTIAL — DO NOT DISTRIBUTE</div><div class="d">This document is confidential and intended only for selected internal decision-makers and qualified potential investors. It contains confidential business strategy information of RBW including product roadmap, channel resources and capital structure considerations. Do not copy, forward, screenshot, upload or otherwise distribute any part of this document without prior written permission.</div></div>
+<div class="grid c3" style="margin-top:14px">
+<div class="card"><div class="h">Tier 1</div><div class="v" style="font-size:14px">Public Preview</div><div class="d">Open. 6 pages. Company introduction and team. No sensitive detail.</div></div>
+<div class="card"><div class="h">Tier 2</div><div class="v" style="font-size:14px">Investor View</div><div class="d">28 pages. For potential investors. Password-gated. Resources by code.</div></div>
+<div class="card"><div class="h">Tier 3</div><div class="v" style="font-size:14px">完整版 Full Access</div><div class="d">43 pages. For founders and senior advisors. Independent password. Full operating detail.</div></div>
+</div>
+<div class="slide-meta"><span>CONFIDENTIAL<span class="dot"></span>Notice</span><span class="pgnum">06 / --</span></div></section>`,
+
+/* 07 · Executive Summary · INVESTOR + */ `<section class="slide" data-title="Executive Summary" data-section="Thesis" data-min-tier="investor">
+<div class="kicker">07 · Executive Summary</div><h2 class="title">RBW in One Page</h2>
+<div class="subtitle">Separate products. Unified engine. Validate first. Amplify with resources later.</div><div class="hr"></div>
+<div class="grid c2">
+<div class="stack">
+<div class="card"><div class="h">What RBW Is</div><div class="d">RBW is an <b>AI Guided Experience Company</b>. Not a single AI fortune-telling product. Enters four high-interest consumer categories with a shared engine underneath.</div></div>
+<div class="card"><div class="h">How RBW Goes To Market</div><div class="d">Overseas first while domestic ICP filing is in progress. <b>Vibe Party</b> = distribution. <b>RBW Meta</b> = cash flow. <b>Acu Map</b> = wellness education + SEO trust. <b>Magic Cube</b> = subscription learning.</div></div>
+<div class="card"><div class="h">How RBW Wins</div><div class="d">Validate with small scenes first. Amplify with high-quality resources only after the funnel works. Resource discipline is part of risk control.</div></div>
+</div>
+<div class="stack"><div class="card hi"><div class="h">The Ten Points</div><ol class="clean" style="font-size:13px"><li>RBW is an AI Guided Experience Company.</li><li>Not a single AI mysticism product.</li><li>Enters via four high-interest scenes.</li><li>One unified AI Experience Engine underneath.</li><li>Overseas first for live validation.</li><li>Domestic launch after ICP completion.</li><li>Vibe Party = distribution funnel.</li><li>RBW Meta = cash flow.</li><li>Acu Map = wellness education + SEO trust.</li><li>Strategic resources amplify, never replace, validation.</li></ol></div>
+<div class="card"><div class="h">One Sentence</div><div class="v" style="font-size:17px;line-height:1.35">Separate products. Unified engine.<br/>Validate first. Amplify later.</div></div></div>
+</div>
+<div class="slide-meta"><span>THESIS<span class="dot"></span>Executive Summary</span><span class="pgnum">07 / --</span></div></section>`,
+
+/* 08 · CEO Thesis · INVESTOR + */ `<section class="slide" data-title="CEO-Level Thesis" data-section="Thesis" data-min-tier="investor">
+<div class="kicker">08 · Positioning</div><h2 class="title">RBW is not a collection of small apps.</h2>
+<div class="lede">RBW is building an <b>AI Experience Engine</b> that turns cultural knowledge, social entertainment, wellness education, and skill learning into guided interactive products.</div><div class="hr"></div>
+<div class="grid c2">
+<div class="card" style="border-color:rgba(255,122,122,.35)"><div class="h" style="color:#ff9b9b">Do not say it like this</div><ul class="clean"><li>A mysticism app</li><li>A cube-learning tool</li><li>An acupoint lookup mini-program</li><li>A party-games collection</li><li>"AI fortune telling"</li></ul></div>
+<div class="card hi"><div class="h" style="color:#f3e3bf">Say it like this</div><ul class="clean"><li>AI-guided <b>Self-discovery</b></li><li>AI-guided <b>Skill Learning</b></li><li>AI-guided <b>Wellness Education</b></li><li>AI-guided <b>Social Play</b></li><li>One shared <b>AI Experience Engine</b></li></ul></div>
+</div>
+<div class="slide-meta"><span>POSITIONING<span class="dot"></span>CEO Thesis</span><span class="pgnum">08 / --</span></div></section>`,
+
+/* 09 · Product Matrix · INVESTOR + */ `<section class="slide" data-title="Product Matrix" data-section="Products" data-min-tier="investor">
+<div class="kicker">09 · Products</div><h2 class="title">Four Products. One Engine.</h2>
 <div class="subtitle">Each product covers a distinct domain and plays a distinct commercial role.</div><div class="hr"></div>
 <table class="t"><thead><tr><th style="width:18%">Product</th><th>Domain</th><th>User Need</th><th>Business Role</th></tr></thead><tbody>
 <tr><td><span class="pill violet">RBW Meta</span></td><td>Self-discovery</td><td>Tarot, Xiao Liu Ren, Zi Wei Dou Shu, reports</td><td>Cash-flow engine</td></tr>
@@ -87,10 +109,10 @@ window.RBW_SLIDES_EN_HEAD = [
 <div class="card"><div class="acc acu"></div><div class="h">Acu Map</div><div class="d">Wellness education for global users. SEO compounding asset.</div></div>
 <div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><div class="d">Beginner to solver path. Annual subscription product.</div></div>
 </div>
-<div class="slide-meta"><span>PRODUCTS<span class="dot"></span>Matrix</span><span class="pgnum">07 / --</span></div></section>`,
+<div class="slide-meta"><span>PRODUCTS<span class="dot"></span>Matrix</span><span class="pgnum">09 / --</span></div></section>`,
 
-/* 08 */ `<section class="slide" data-title="Product Roles" data-section="Products">
-<div class="kicker">08 · Discipline</div><h2 class="title">Each Product Has a Different Commercial Mission</h2>
+/* 10 · Product Roles · INVESTOR + */ `<section class="slide" data-title="Product Roles" data-section="Products" data-min-tier="investor">
+<div class="kicker">10 · Discipline</div><h2 class="title">Each Product Has a Different Commercial Mission</h2>
 <div class="subtitle">Do not average effort across products. Each product must serve a clear commercial function.</div><div class="hr"></div>
 <div class="grid c2">
 <div class="card"><div class="acc vibe"></div><div class="h">Vibe Party</div><div class="v">Group Distribution</div><div class="d">Brings users in groups. Sponsored cards route traffic into other RBW products. KPI: rooms created, players per room, cross-product CTR.</div></div>
@@ -99,10 +121,10 @@ window.RBW_SLIDES_EN_HEAD = [
 <div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><div class="v">Subscription Skill Learning</div><div class="d">Beginner-to-solver guided path. KPI: practice days, formula completion, annual subscription conversion.</div></div>
 </div>
 <div class="card hi" style="margin-top:12px"><div class="d"><b>Rule:</b> Every quarter, each product must demonstrate progress on its assigned commercial role — not just usage growth in general.</div></div>
-<div class="slide-meta"><span>PRODUCTS<span class="dot"></span>Commercial Roles</span><span class="pgnum">08 / --</span></div></section>`,
+<div class="slide-meta"><span>PRODUCTS<span class="dot"></span>Commercial Roles</span><span class="pgnum">10 / --</span></div></section>`,
 
-/* 09 */ `<section class="slide" data-title="Experience Engine" data-section="Engine">
-<div class="kicker">09 · Platform</div><h2 class="title">RBW Experience Engine</h2>
+/* 11 · Experience Engine · INVESTOR + */ `<section class="slide" data-title="Experience Engine" data-section="Engine" data-min-tier="investor">
+<div class="kicker">11 · Platform</div><h2 class="title">RBW Experience Engine</h2>
 <div class="subtitle">Separate products in the front. Unified engine in the back.</div><div class="hr"></div>
 <div class="grid c4">
 <div class="card"><div class="h">01</div><div class="v" style="font-size:14px">AI Dialogue Engine</div><div class="d">Guided conversation core shared across products.</div></div>
@@ -115,10 +137,10 @@ window.RBW_SLIDES_EN_HEAD = [
 <div class="card"><div class="h">08</div><div class="v" style="font-size:14px">Payment & Subscription</div><div class="d">One-off purchases, monthly, annual, and B2B plans.</div></div>
 </div>
 <div class="card hi" style="margin-top:12px"><div class="d"><b>Strategic implication:</b> Adding the fifth and sixth experience product later will not require a fifth and sixth team. The same engine ships them.</div></div>
-<div class="slide-meta"><span>ENGINE<span class="dot"></span>Shared Platform</span><span class="pgnum">09 / --</span></div></section>`,
+<div class="slide-meta"><span>ENGINE<span class="dot"></span>Shared Platform</span><span class="pgnum">11 / --</span></div></section>`,
 
-/* 10 */ `<section class="slide" data-title="Why This Is Not Random" data-section="Engine">
-<div class="kicker">10 · Pattern</div><h2 class="title">The Common Pattern: AI-Guided Experiences</h2>
+/* 12 · Why Coherent · FULL only */ `<section class="slide" data-title="Why This Is Not Random" data-section="Engine" data-min-tier="full">
+<div class="kicker">12 · Pattern</div><h2 class="title">The Common Pattern: AI-Guided Experiences</h2>
 <div class="subtitle">Different categories. Same underlying experience design.</div><div class="hr"></div>
 <div class="grid c2">
 <div class="card"><div class="acc meta"></div><div class="h">Self-discovery</div><div class="d"><b>Tarot · Xiao Liu Ren · Zi Wei Dou Shu</b> — AI guides the user through a personal reflection arc that ends in a structured report.</div></div>
@@ -127,5 +149,5 @@ window.RBW_SLIDES_EN_HEAD = [
 <div class="card"><div class="acc vibe"></div><div class="h">Social Play</div><div class="d"><b>Vibe Party</b> — AI and the system guide a group of people through a shared interactive session.</div></div>
 </div>
 <div class="card hi" style="margin-top:12px"><div class="d"><b>Conclusion:</b> RBW does not sell tools. RBW sells the feeling of being guided through an experience.</div></div>
-<div class="slide-meta"><span>ENGINE<span class="dot"></span>Why Coherent</span><span class="pgnum">10 / --</span></div></section>`
+<div class="slide-meta"><span>ENGINE<span class="dot"></span>Why Coherent</span><span class="pgnum">12 / --</span></div></section>`
 ];
