@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>RBW — Confidential Strategy Deck</title>
+<meta name="robots" content="noindex,nofollow,noarchive" />
+<meta name="referrer" content="no-referrer" />
+<style>
+/* =========================================================
+   RBW Confidential Strategy Deck — v1.0
+   Self-contained. No external CDN, fonts, images, or APIs.
+   ========================================================= */
+:root{
+  --bg-0:#07080d;
+  --bg-1:#0c0f17;
+  --bg-2:#121627;
+  --ink-0:#f3f5fb;
+  --ink-1:#c7ccd9;
+  --ink-2:#8a90a3;
+  --ink-3:#5a6075;
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.14);
+  --gold:#c9a45a;
+  --gold-2:#e8c98a;
+  --violet:#7c5cff;
+  --indigo:#5b6cff;
+  --pink:#ff6aa5;
+  --orange:#ff9b5a;
+  --blue:#4cc2ff;
+  --teal:#3fd6c2;
+  --green:#7ee0a1;
+  --red:#ff7a7a;
+  --glass:rgba(255,255,255,.04);
+  --glass-2:rgba(255,255,255,.06);
+  --shadow:0 30px 80px rgba(0,0,0,.55);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg-0);color:var(--ink-0);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  background:
+    radial-gradient(1200px 700px at 15% -10%, rgba(124,92,255,.18), transparent 60%),
+    radial-gradient(1000px 700px at 110% 10%, rgba(76,194,255,.12), transparent 55%),
+    radial-gradient(900px 700px at 50% 120%, rgba(201,164,90,.10), transparent 60%),
+    var(--bg-0);
+  min-height:100vh;
+  overflow:hidden;
+}
+a{color:inherit}
+button{font-family:inherit}
+
+/* ---------- Shell ---------- */
+.deck-shell{position:fixed;inset:0;display:flex;flex-direction:column}
+.deck-header{
+  display:flex;align-items:center;gap:14px;
+  padding:10px 18px;border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(10,12,20,.85),rgba(10,12,20,.55));
+  backdrop-filter:blur(10px);z-index:5
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em}
+.brand .logo{
+  width:28px;height:28px;border-radius:8px;
+  background:conic-gradient(from 210deg, #7c5cff, #4cc2ff, #c9a45a, #ff6aa5, #7c5cff);
+  box-shadow:0 0 0 1px rgba(255,255,255,.12), 0 8px 24px rgba(124,92,255,.35)
+}
+.brand .name{font-size:13px;color:var(--ink-0)}
+.brand .tag{font-size:11px;color:var(--ink-2);letter-spacing:.22em}
+.header-spacer{flex:1}
+.chip{
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  padding:6px 10px;border:1px solid var(--line-2);border-radius:999px;color:var(--ink-1);
+  background:var(--glass)
+}
+.chip.warn{color:#ffd29b;border-color:rgba(255,210,155,.35);background:rgba(255,180,90,.06)}
+.toolbar{display:flex;gap:8px;align-items:center}
+.btn{
+  appearance:none;border:1px solid var(--line-2);background:var(--glass);
+  color:var(--ink-0);padding:8px 12px;border-radius:10px;font-size:12px;letter-spacing:.08em;
+  cursor:pointer;transition:transform .15s ease, background .15s ease, border-color .15s ease
+}
+.btn:hover{background:var(--glass-2);border-color:rgba(255,255,255,.22)}
+.btn:active{transform:translateY(1px)}
+.btn.primary{
+  background:linear-gradient(180deg, rgba(124,92,255,.35), rgba(76,108,255,.25));
+  border-color:rgba(160,140,255,.45)
+}
+.btn.gold{
+  background:linear-gradient(180deg, rgba(232,201,138,.18), rgba(201,164,90,.08));
+  border-color:rgba(232,201,138,.45);color:#f3e3bf
+}
+.mode-toggle{
+  display:inline-flex;border:1px solid var(--line-2);border-radius:10px;overflow:hidden
+}
+.mode-toggle button{
+  background:transparent;border:0;color:var(--ink-2);padding:7px 12px;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;cursor:pointer
+}
+.mode-toggle button.active{
+  background:linear-gradient(180deg, rgba(124,92,255,.35), rgba(76,108,255,.25));
+  color:#fff
+}
+
+/* ---------- Stage ---------- */
+.stage{
+  flex:1;position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center
+}
+.slides{
+  position:relative;width:min(1280px, 96vw);aspect-ratio:16/9;max-height:88vh;
+}
+.slide{
+  position:absolute;inset:0;
+  border-radius:var(--radius);
+  background:
+    linear-gradient(180deg, rgba(18,22,39,.92), rgba(10,12,22,.92));
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  padding:48px 56px 64px;
+  overflow:hidden;
+  opacity:0;transform:translateY(14px) scale(.995);
+  transition:opacity .35s ease, transform .35s ease;
+  pointer-events:none;
+}
+.slide.active{opacity:1;transform:none;pointer-events:auto}
+.slide::before{
+  /* watermark */
+  content:"RBW CONFIDENTIAL";
+  position:absolute;right:-40px;bottom:60px;
+  transform:rotate(-90deg);transform-origin:right bottom;
+  font-size:11px;letter-spacing:.5em;color:rgba(255,255,255,.05);
+  pointer-events:none;white-space:nowrap
+}
+.slide::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(800px 300px at 10% -10%, rgba(124,92,255,.10), transparent 60%),
+    radial-gradient(700px 300px at 100% 110%, rgba(76,194,255,.07), transparent 60%);
+}
+.slide > *{position:relative;z-index:1}
+
+/* ---------- Slide footer ---------- */
+.slide-meta{
+  position:absolute;left:56px;right:56px;bottom:18px;
+  display:flex;justify-content:space-between;align-items:center;
+  color:var(--ink-3);font-size:11px;letter-spacing:.18em;text-transform:uppercase
+}
+.slide-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;margin:0 8px;vertical-align:middle}
+
+/* ---------- Typography ---------- */
+.kicker{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-2)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2)}
+h1.title{font-size:54px;line-height:1.05;margin:8px 0 10px;letter-spacing:-.01em;font-weight:700}
+h2.title{font-size:40px;line-height:1.1;margin:6px 0 8px;letter-spacing:-.005em;font-weight:700}
+h3.title{font-size:28px;line-height:1.2;margin:4px 0 6px;font-weight:700}
+.subtitle{font-size:18px;color:var(--ink-1);max-width:60ch}
+.lede{font-size:20px;color:var(--ink-1);max-width:70ch}
+.note{font-size:12px;color:var(--ink-3)}
+.zh{color:var(--ink-2);font-size:14px}
+.hr{height:1px;background:linear-gradient(90deg, transparent, var(--line-2), transparent);margin:18px 0}
+
+/* ---------- Layout helpers ---------- */
+.row{display:flex;gap:22px}
+.col{flex:1}
+.grid{display:grid;gap:14px}
+.grid.c2{grid-template-columns:1fr 1fr}
+.grid.c3{grid-template-columns:1fr 1fr 1fr}
+.grid.c4{grid-template-columns:repeat(4,1fr)}
+.stack > * + *{margin-top:10px}
+
+/* ---------- Cards ---------- */
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+  border:1px solid var(--line);border-radius:14px;padding:18px;
+  backdrop-filter:blur(8px)
+}
+.card.hi{border-color:rgba(232,201,138,.35);background:linear-gradient(180deg, rgba(232,201,138,.08), rgba(232,201,138,.02))}
+.card .h{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin-bottom:6px}
+.card .v{font-size:22px;font-weight:700;color:#fff}
+.card .d{font-size:13px;color:var(--ink-1);margin-top:6px}
+
+.pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--line-2);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-1);background:var(--glass)}
+.pill.violet{color:#cdbcff;border-color:rgba(160,140,255,.45);background:rgba(124,92,255,.10)}
+.pill.pink{color:#ffc0d7;border-color:rgba(255,106,165,.45);background:rgba(255,106,165,.08)}
+.pill.blue{color:#bfe7ff;border-color:rgba(76,194,255,.45);background:rgba(76,194,255,.08)}
+.pill.teal{color:#b9f1e7;border-color:rgba(63,214,194,.45);background:rgba(63,214,194,.08)}
+.pill.gold{color:#f3e3bf;border-color:rgba(232,201,138,.45);background:rgba(232,201,138,.08)}
+
+ul.clean{list-style:none;padding:0;margin:0}
+ul.clean li{position:relative;padding-left:18px;margin:6px 0;color:var(--ink-1)}
+ul.clean li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--gold)}
+ol.clean{padding-left:18px;margin:0}
+ol.clean li{margin:6px 0;color:var(--ink-1)}
+
+/* ---------- Tables ---------- */
+table.t{
+  width:100%;border-collapse:separate;border-spacing:0;font-size:13px;
+  border:1px solid var(--line);border-radius:12px;overflow:hidden
+}
+table.t th,table.t td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+table.t th{background:rgba(255,255,255,.04);color:var(--ink-1);font-weight:600;letter-spacing:.08em;font-size:11px;text-transform:uppercase}
+table.t tr:last-child td{border-bottom:0}
+table.t td{color:var(--ink-1)}
+
+/* ---------- Product accents ---------- */
+.acc{height:3px;border-radius:3px;margin-bottom:10px}
+.acc.meta{background:linear-gradient(90deg, #7c5cff, #5b6cff)}
+.acc.vibe{background:linear-gradient(90deg, #ff6aa5, #4cc2ff)}
+.acc.cube{background:linear-gradient(90deg, #4cc2ff, #3fd6c2, #7ee0a1)}
+.acc.acu{background:linear-gradient(90deg, #3fd6c2, #e8c98a)}
+.acc.rbw{background:linear-gradient(90deg, #c9a45a, #e8c98a, #fff)}
+
+/* ---------- Cover special ---------- */
+.cover{display:flex;flex-direction:column;justify-content:center;height:100%}
+.cover .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;color:var(--ink-2);letter-spacing:.3em}
+.cover h1{font-size:88px;line-height:.95;margin:14px 0 6px;letter-spacing:-.02em;
+  background:linear-gradient(180deg,#fff,#cfd2e0 60%,#8a90a3);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.cover .sub{font-size:22px;color:var(--ink-1);max-width:780px}
+.cover .core{font-size:16px;color:var(--ink-2);max-width:760px;margin-top:18px}
+.cover .seal{
+  position:absolute;right:56px;top:48px;display:flex;align-items:center;gap:10px;
+  padding:8px 12px;border:1px solid rgba(232,201,138,.4);border-radius:999px;
+  color:#f3e3bf;font-size:11px;letter-spacing:.22em
+}
+
+/* ---------- TOC ---------- */
+.toc-wrap{position:absolute;inset:0;background:rgba(5,6,12,.78);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;z-index:20}
+.toc-wrap.open{display:flex}
+.toc{
+  width:min(1100px,92vw);max-height:82vh;overflow:auto;
+  background:linear-gradient(180deg, rgba(18,22,39,.96), rgba(10,12,22,.96));
+  border:1px solid var(--line-2);border-radius:18px;padding:22px 26px;box-shadow:var(--shadow)
+}
+.toc h4{margin:0 0 4px;font-size:18px}
+.toc .small{color:var(--ink-3);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-top:14px}
+.toc a{
+  display:flex;gap:12px;align-items:center;padding:8px 10px;border-radius:10px;
+  text-decoration:none;color:var(--ink-1);border:1px solid transparent;cursor:pointer
+}
+.toc a:hover{background:rgba(255,255,255,.04);border-color:var(--line)}
+.toc a .n{font-variant-numeric:tabular-nums;color:var(--ink-3);width:34px}
+.toc a .t{flex:1}
+.toc a .s{color:var(--ink-3);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+
+/* ---------- Footer / controls ---------- */
+.deck-footer{
+  border-top:1px solid var(--line);
+  background:linear-gradient(0deg, rgba(10,12,20,.85), rgba(10,12,20,.55));
+  backdrop-filter:blur(10px);
+  padding:8px 18px;display:flex;align-items:center;gap:14px
+}
+.progress{flex:1;height:3px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
+.progress > i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#7c5cff,#4cc2ff,#e8c98a);transition:width .35s ease}
+.page-ind{font-size:12px;color:var(--ink-2);letter-spacing:.14em;font-variant-numeric:tabular-nums}
+.section-ind{font-size:11px;color:var(--ink-3);letter-spacing:.22em;text-transform:uppercase}
+
+/* ---------- Audience visibility ---------- */
+body[data-mode="investor"] [data-internal="true"]{display:none !important}
+body[data-mode="internal"] [data-investor-only="true"]{display:none !important}
+.internal-badge{display:none}
+body[data-mode="internal"] .internal-badge{display:inline-block}
+
+/* ---------- Print ---------- */
+@media print{
+  @page{size:1280px 720px;margin:0}
+  html,body{background:#fff !important;color:#111 !important;overflow:visible !important}
+  body{background:#fff !important}
+  .deck-header,.deck-footer,.toc-wrap{display:none !important}
+  .stage{display:block;overflow:visible}
+  .slides{width:1280px;height:auto;max-height:none;aspect-ratio:auto;position:static}
+  .slide{
+    position:relative;inset:auto;width:1280px;height:720px;
+    page-break-after:always;break-after:page;
+    opacity:1 !important;transform:none !important;pointer-events:auto !important;
+    background:#fff !important;color:#111 !important;border:0;border-radius:0;box-shadow:none;
+  }
+  .slide::after{display:none}
+  .slide::before{color:rgba(0,0,0,.06)}
+  .card{background:#f6f6f9 !important;border-color:#e3e3ea !important;color:#111}
+  .card .v,.card .h,.card .d,.subtitle,.lede,.zh,.note,ul.clean li,ol.clean li,table.t td,table.t th{color:#222 !important}
+  .kicker{color:#8a6a1f !important}
+  .pill{background:#f0f0f4 !important;color:#222 !important;border-color:#dcdce4 !important}
+  table.t,table.t th,table.t td{border-color:#e3e3ea !important;background:#fff !important}
+  table.t th{background:#f4f4f7 !important}
+  h1.title,h2.title,h3.title{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important}
+  .cover h1{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important}
+  .slide-meta{color:#777 !important}
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px){
+  .slides{aspect-ratio:auto;height:calc(100vh - 110px);max-height:none}
+  .slide{padding:24px 22px 56px}
+  h1.title{font-size:32px}
+  h2.title{font-size:26px}
+  h3.title{font-size:20px}
+  .cover h1{font-size:48px}
+  .grid.c3,.grid.c4{grid-template-columns:1fr 1fr}
+  .row{flex-direction:column}
+  .brand .tag{display:none}
+  .toolbar .btn span.long{display:none}
+}
+</style>
+</head>
+<body data-mode="investor">
+<div class="deck-shell">
+
+  <!-- ============ HEADER ============ -->
+  <header class="deck-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <div class="name">RBW</div>
+        <div class="tag">AI GUIDED EXPERIENCE COMPANY</div>
+      </div>
+    </div>
+    <span class="chip warn">CONFIDENTIAL</span>
+    <span class="chip">v1.0</span>
+    <div class="header-spacer"></div>
+
+    <div class="mode-toggle" role="tablist" aria-label="Audience mode">
+      <button id="mode-investor" class="active" data-mode="investor">Investor Preview</button>
+      <button id="mode-internal" data-mode="internal">Internal View</button>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-toc" title="Table of Contents (T)">☰ <span class="long">Contents</span></button>
+      <button class="btn" id="btn-prev" title="Previous (←)">‹ <span class="long">Prev</span></button>
+      <button class="btn primary" id="btn-next" title="Next (→)"><span class="long">Next</span> ›</button>
+      <button class="btn gold" id="btn-print" title="Print / Save as PDF (P)">⎙ <span class="long">PDF</span></button>
+    </div>
+  </header>
+
+  <!-- ============ STAGE ============ -->
+  <main class="stage">
+    <div class="slides" id="slides">
+<!-- SLIDES_PLACEHOLDER -->
+    </div>
+
+    <!-- TOC -->
+    <div class="toc-wrap" id="toc">
+      <div class="toc">
+        <div class="row" style="align-items:center;gap:16px">
+          <div style="flex:1">
+            <div class="small">Table of Contents</div>
+            <h4>RBW — Confidential Strategy Deck</h4>
+          </div>
+          <button class="btn" id="btn-toc-close">Close (Esc)</button>
+        </div>
+        <div class="hr"></div>
+        <div class="toc-grid" id="toc-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="deck-footer">
+    <span class="page-ind"><span id="pg-cur">01</span> / <span id="pg-total">--</span></span>
+    <span class="section-ind" id="section-ind">Cover</span>
+    <div class="progress"><i id="progress-bar"></i></div>
+    <span class="section-ind">RBW CONFIDENTIAL · v1.0</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const total = slides.length;
+  const pgCur = document.getElementById('pg-cur');
+  const pgTotal = document.getElementById('pg-total');
+  const secInd = document.getElementById('section-ind');
+  const bar = document.getElementById('progress-bar');
+  const tocWrap = document.getElementById('toc');
+  const tocGrid = document.getElementById('toc-grid');
+  let i = 0;
+
+  pgTotal.textContent = String(total).padStart(2,'0');
+
+  function render(){
+    slides.forEach((s,idx)=>s.classList.toggle('active', idx===i));
+    pgCur.textContent = String(i+1).padStart(2,'0');
+    const s = slides[i];
+    const title = s.getAttribute('data-title') || '';
+    const section = s.getAttribute('data-section') || '';
+    secInd.textContent = (section ? section + ' · ' : '') + title;
+    bar.style.width = ((i+1)/total*100).toFixed(2)+'%';
+    // update slide meta page number if present
+    const meta = s.querySelector('.slide-meta .pgnum');
+    if(meta) meta.textContent = String(i+1).padStart(2,'0') + ' / ' + String(total).padStart(2,'0');
+  }
+  function go(n){ i = Math.max(0, Math.min(total-1, n)); render(); }
+  function next(){ go(i+1) }
+  function prev(){ go(i-1) }
+
+  document.getElementById('btn-next').addEventListener('click', next);
+  document.getElementById('btn-prev').addEventListener('click', prev);
+  document.getElementById('btn-print').addEventListener('click', ()=>window.print());
+  document.getElementById('btn-toc').addEventListener('click', ()=>tocWrap.classList.add('open'));
+  document.getElementById('btn-toc-close').addEventListener('click', ()=>tocWrap.classList.remove('open'));
+
+  // Build TOC
+  slides.forEach((s,idx)=>{
+    const a = document.createElement('a');
+    a.innerHTML = '<span class="n">'+String(idx+1).padStart(2,'0')+'</span>'+
+                  '<span class="t">'+(s.getAttribute('data-title')||'')+'</span>'+
+                  '<span class="s">'+(s.getAttribute('data-section')||'')+'</span>';
+    a.addEventListener('click', ()=>{ go(idx); tocWrap.classList.remove('open'); });
+    tocGrid.appendChild(a);
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', (e)=>{
+    if(e.target && (e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')) return;
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown') { e.preventDefault(); next(); }
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); prev(); }
+    else if(e.key==='Home'){ go(0); }
+    else if(e.key==='End'){ go(total-1); }
+    else if(e.key.toLowerCase()==='t'){ tocWrap.classList.toggle('open'); }
+    else if(e.key==='Escape'){ tocWrap.classList.remove('open'); }
+    else if(e.key.toLowerCase()==='p'){ window.print(); }
+    else if(e.key.toLowerCase()==='i'){ // toggle mode
+      const m = document.body.getAttribute('data-mode')==='internal'?'investor':'internal';
+      setMode(m);
+    }
+  });
+
+  // Click left/right halves (desktop subtle)
+  document.querySelector('.stage').addEventListener('click', (e)=>{
+    if(e.target.closest('.slide') == null) return;
+    if(e.target.closest('a,button')) return;
+    const r = document.querySelector('.slide.active').getBoundingClientRect();
+    const x = e.clientX - r.left;
+    if(x > r.width*0.66) next();
+    else if(x < r.width*0.18) prev();
+  });
+
+  // Mode toggle
+  function setMode(m){
+    document.body.setAttribute('data-mode', m);
+    document.getElementById('mode-investor').classList.toggle('active', m==='investor');
+    document.getElementById('mode-internal').classList.toggle('active', m==='internal');
+  }
+  document.getElementById('mode-investor').addEventListener('click', ()=>setMode('investor'));
+  document.getElementById('mode-internal').addEventListener('click', ()=>setMode('internal'));
+
+  // Touch swipe
+  let tx=null;
+  document.querySelector('.stage').addEventListener('touchstart', e=>{ tx = e.changedTouches[0].clientX; }, {passive:true});
+  document.querySelector('.stage').addEventListener('touchend', e=>{
+    if(tx==null) return;
+    const dx = e.changedTouches[0].clientX - tx;
+    if(Math.abs(dx)>40){ dx<0?next():prev(); }
+    tx=null;
+  }, {passive:true});
+
+  render();
+})();
+</script>
+</body>
+</html>
