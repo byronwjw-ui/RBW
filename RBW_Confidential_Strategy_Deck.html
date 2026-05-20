@@ -15,18 +15,17 @@ a{color:inherit}button{font-family:inherit}
 .header-spacer{flex:1}
 .chip{font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--line-2);border-radius:999px;color:var(--ink-1);background:var(--glass)}
 .chip.warn{color:#ffd29b;border-color:rgba(255,210,155,.35);background:rgba(255,180,90,.06)}
-.chip.mode{color:#cdbcff;border-color:rgba(160,140,255,.45);background:rgba(124,92,255,.10)}
-.chip.mode.post{color:#a8e8c0;border-color:rgba(126,224,161,.4);background:rgba(126,224,161,.08)}
 .toolbar{display:flex;gap:8px;align-items:center}
 .btn{appearance:none;border:1px solid var(--line-2);background:var(--glass);color:var(--ink-0);padding:7px 11px;border-radius:10px;font-size:12px;letter-spacing:.08em;cursor:pointer}
 .btn:hover{background:var(--glass-2);border-color:rgba(255,255,255,.22)}
 .btn.primary{background:linear-gradient(180deg,rgba(124,92,255,.35),rgba(76,108,255,.25));border-color:rgba(160,140,255,.45)}
 .btn.gold{background:linear-gradient(180deg,rgba(232,201,138,.18),rgba(201,164,90,.08));border-color:rgba(232,201,138,.45);color:#f3e3bf}
 .seg{display:inline-flex;border:1px solid var(--line-2);border-radius:10px;overflow:hidden}
-.seg button{background:transparent;border:0;color:var(--ink-2);padding:7px 11px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-right:1px solid var(--line-2)}
+.seg button{background:transparent;border:0;color:var(--ink-2);padding:7px 11px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-right:1px solid var(--line-2);position:relative}
 .seg button:last-child{border-right:0}
 .seg button.active{background:linear-gradient(180deg,rgba(124,92,255,.35),rgba(76,108,255,.25));color:#fff}
-.seg.post button.active[data-mode="post-nda"]{background:linear-gradient(180deg,rgba(126,224,161,.32),rgba(63,214,194,.22));color:#fff}
+.seg button.locked::after{content:"🔒";font-size:9px;margin-left:4px;opacity:.7}
+.seg button.unlocked::after{content:"✓";font-size:10px;margin-left:4px;color:#7ee0a1}
 .seg.lang button{padding:7px 13px;font-size:12px;letter-spacing:.06em;text-transform:none}
 .stage{flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .slides{position:relative;width:min(1280px,96vw);aspect-ratio:16/9;max-height:88vh}
@@ -89,12 +88,6 @@ table.t tr:last-child td{border-bottom:0}table.t td{color:var(--ink-1)}
 .progress>i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#7c5cff,#4cc2ff,#e8c98a);transition:width .35s}
 .page-ind{font-size:12px;color:var(--ink-2);letter-spacing:.14em;font-variant-numeric:tabular-nums}
 .section-ind{font-size:11px;color:var(--ink-3);letter-spacing:.22em;text-transform:uppercase}
-/* 3-tier disclosure visibility */
-body[data-mode="investor"] [data-internal="true"]{display:none!important}
-body[data-mode="investor"] [data-post-nda="true"]{display:none!important}
-body[data-mode="internal"] [data-post-nda="true"]{display:none!important}
-body[data-mode="internal"] [data-investor-only="true"]{display:none!important}
-body[data-mode="post-nda"] [data-investor-only="true"]{display:none!important}
 .flow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
 .flow .step{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:12px;color:var(--ink-1)}
 .flow .step b{display:block;font-size:11px;color:var(--gold-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
@@ -104,16 +97,26 @@ body[data-mode="post-nda"] [data-investor-only="true"]{display:none!important}
 .team-stats .st{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .team-stats .st .num{font-size:22px;font-weight:700;color:#fff;line-height:1}
 .team-stats .st .lbl{font-size:10.5px;color:var(--ink-2);letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
-@media print{@page{size:1280px 720px;margin:0}html,body{background:#fff!important;color:#111!important;overflow:visible!important}.deck-header,.deck-footer,.toc-wrap{display:none!important}.stage{display:block;overflow:visible}.slides{width:1280px;height:auto;max-height:none;aspect-ratio:auto;position:static}.slide{position:relative;inset:auto;width:1280px;height:720px;page-break-after:always;opacity:1!important;transform:none!important;background:#fff!important;color:#111!important;border:0;border-radius:0;box-shadow:none}.slide::after{display:none}.slide::before{color:rgba(0,0,0,.06)}.card{background:#f6f6f9!important;border-color:#e3e3ea!important;color:#111}.card .v,.card .h,.card .d,.subtitle,.lede,.note,ul.clean li,ol.clean li,table.t td,table.t th{color:#222!important}.kicker{color:#8a6a1f!important}.pill{background:#f0f0f4!important;color:#222!important;border-color:#dcdce4!important}table.t,table.t th,table.t td{border-color:#e3e3ea!important;background:#fff!important}table.t th{background:#f4f4f7!important}h1.title,h2.title{color:#111!important;-webkit-text-fill-color:#111!important;background:none!important}.cover h1{color:#111!important;-webkit-text-fill-color:#111!important;background:none!important}.slide-meta{color:#777!important}.flow .step{background:#f6f6f9!important;border-color:#e3e3ea!important;color:#222}.kv{color:#222!important;border-color:#dcdce4!important}.kv b{color:#111!important}.team-stats .st{background:#f6f6f9!important;border-color:#e3e3ea!important}.team-stats .st .num,.team-stats .st .lbl{color:#222!important}}
+/* Password modal */
+.modal-wrap{position:fixed;inset:0;background:rgba(5,6,12,.85);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;z-index:50}
+.modal-wrap.open{display:flex}
+.modal{width:min(440px,92vw);background:linear-gradient(180deg,rgba(18,22,39,.98),rgba(10,12,22,.98));border:1px solid var(--line-2);border-radius:18px;padding:28px 28px 22px;box-shadow:var(--shadow)}
+.modal h3{margin:0 0 6px;font-size:20px;letter-spacing:-.01em}
+.modal .sub{font-size:13px;color:var(--ink-2);margin-bottom:18px;line-height:1.5}
+.modal input{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--line-2);background:rgba(0,0,0,.3);color:#fff;font-size:14px;letter-spacing:.04em;outline:none}
+.modal input:focus{border-color:rgba(160,140,255,.55)}
+.modal .err{color:#ff9b9b;font-size:12px;margin-top:8px;min-height:16px}
+.modal .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+@media print{@page{size:1280px 720px;margin:0}html,body{background:#fff!important;color:#111!important;overflow:visible!important}.deck-header,.deck-footer,.toc-wrap,.modal-wrap{display:none!important}.stage{display:block;overflow:visible}.slides{width:1280px;height:auto;max-height:none;aspect-ratio:auto;position:static}.slide{position:relative;inset:auto;width:1280px;height:720px;page-break-after:always;opacity:1!important;transform:none!important;background:#fff!important;color:#111!important;border:0;border-radius:0;box-shadow:none}.slide::after{display:none}.slide::before{color:rgba(0,0,0,.06)}.card{background:#f6f6f9!important;border-color:#e3e3ea!important;color:#111}.card .v,.card .h,.card .d,.subtitle,.lede,.note,ul.clean li,ol.clean li,table.t td,table.t th{color:#222!important}.kicker{color:#8a6a1f!important}.pill{background:#f0f0f4!important;color:#222!important;border-color:#dcdce4!important}table.t,table.t th,table.t td{border-color:#e3e3ea!important;background:#fff!important}table.t th{background:#f4f4f7!important}h1.title,h2.title{color:#111!important;-webkit-text-fill-color:#111!important;background:none!important}.cover h1{color:#111!important;-webkit-text-fill-color:#111!important;background:none!important}.slide-meta{color:#777!important}.flow .step{background:#f6f6f9!important;border-color:#e3e3ea!important;color:#222}.kv{color:#222!important;border-color:#dcdce4!important}.kv b{color:#111!important}.team-stats .st{background:#f6f6f9!important;border-color:#e3e3ea!important}.team-stats .st .num,.team-stats .st .lbl{color:#222!important}}
 @media (max-width:900px){.slides{aspect-ratio:auto;height:calc(100vh - 110px);max-height:none}.slide{padding:24px 22px 56px}h1.title{font-size:32px}h2.title{font-size:26px}.cover h1{font-size:48px}.grid.c3,.grid.c4{grid-template-columns:1fr 1fr}.row{flex-direction:column}.brand .tag{display:none}.flow{grid-template-columns:1fr 1fr}.team-stats{grid-template-columns:1fr 1fr}}
 </style></head>
-<body data-mode="investor" data-lang="en"><div class="deck-shell">
+<body data-tier="public" data-lang="en"><div class="deck-shell">
 <header class="deck-header">
 <div class="brand"><div class="logo"></div><div><div class="name">RBW</div><div class="tag">AI GUIDED EXPERIENCE COMPANY</div></div></div>
 <span class="chip warn">CONFIDENTIAL</span>
 <div class="header-spacer"></div>
 <div class="seg lang"><button id="lang-en" class="active">EN</button><button id="lang-zh">中文</button></div>
-<div class="seg post"><button id="mode-investor" class="active" data-mode="investor">Investor</button><button id="mode-internal" data-mode="internal">Internal</button><button id="mode-post-nda" data-mode="post-nda">Post-NDA</button></div>
+<div class="seg"><button id="tier-public" class="active" data-tier="public">Public</button><button id="tier-investor" class="locked" data-tier="investor">Investor</button><button id="tier-full" class="locked" data-tier="full">Full Access</button></div>
 <div class="toolbar"><button class="btn" id="btn-toc">☰ TOC</button><button class="btn" id="btn-prev">‹</button><button class="btn primary" id="btn-next">›</button><button class="btn gold" id="btn-print">⎙ PDF</button></div>
 </header>
 <main class="stage"><div class="slides" id="slides">
@@ -122,6 +125,13 @@ body[data-mode="post-nda"] [data-investor-only="true"]{display:none!important}
 <div class="toc-wrap" id="toc"><div class="toc">
 <div class="row" style="align-items:center;gap:16px"><div style="flex:1"><div class="small">Table of Contents</div><h4>RBW — Confidential Strategy Deck</h4></div><button class="btn" id="btn-toc-close">Close (Esc)</button></div>
 <div class="hr"></div><div class="toc-grid" id="toc-grid"></div>
+</div></div>
+<div class="modal-wrap" id="pwd-modal"><div class="modal">
+<h3 id="pwd-title">Unlock</h3>
+<div class="sub" id="pwd-sub">Enter password to unlock this audience tier.</div>
+<input type="password" id="pwd-input" placeholder="Password / 密码" autocomplete="off"/>
+<div class="err" id="pwd-err"></div>
+<div class="actions"><button class="btn" id="pwd-cancel">Cancel</button><button class="btn primary" id="pwd-submit">Unlock</button></div>
 </div></div>
 </main>
 <footer class="deck-footer">
@@ -138,9 +148,65 @@ body[data-mode="post-nda"] [data-investor-only="true"]{display:none!important}
 <script src="slides_zh.js"></script>
 <script src="slides2_zh.js"></script>
 <script>
+/* ============================================================
+   PASSWORD CONFIGURATION
+   Generate hashes in browser console:
+     await sha256("your-password")
+   Default passwords (CHANGE BEFORE DEPLOY):
+     Investor: "investor2025"
+     Full:     "full2025"
+   ============================================================ */
+const PASSWORD_SALT = "RBW-2025-confidential";
+const PASSWORD_HASH_INVESTOR = "8e9d2c5f3a4b7c8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e"; // PLACEHOLDER · sha256("investor2025"+salt)
+const PASSWORD_HASH_FULL     = "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b"; // PLACEHOLDER · sha256("full2025"+salt)
+
+async function sha256(text){
+  const buf = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest('SHA-256', buf);
+  return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+window.sha256 = sha256; // expose for console use
+
 (function(){
-var host = document.getElementById('slides-injection-point');
-var parent = host.parentNode;
+const TIER_RANK = {public:0, investor:1, full:2};
+const host = document.getElementById('slides-injection-point');
+const parent = host.parentNode;
+const pgCur=document.getElementById('pg-cur');
+const pgTotal=document.getElementById('pg-total');
+const secInd=document.getElementById('section-ind');
+const bar=document.getElementById('progress-bar');
+const tocWrap=document.getElementById('toc');
+const tocGrid=document.getElementById('toc-grid');
+const pwdModal=document.getElementById('pwd-modal');
+const pwdInput=document.getElementById('pwd-input');
+const pwdErr=document.getElementById('pwd-err');
+const pwdTitle=document.getElementById('pwd-title');
+const pwdSub=document.getElementById('pwd-sub');
+
+let i=0, slides=[], total=0;
+let pendingTier=null;
+
+function currentTier(){ return document.body.getAttribute('data-tier')||'public'; }
+function isUnlocked(t){
+  if(t==='public') return true;
+  if(t==='investor') return sessionStorage.getItem('rbw_unlocked_investor')==='true';
+  if(t==='full') return sessionStorage.getItem('rbw_unlocked_full')==='true';
+  return false;
+}
+
+function updateTierButtons(){
+  ['public','investor','full'].forEach(function(t){
+    var el=document.getElementById('tier-'+t);
+    if(!el) return;
+    el.classList.toggle('active', currentTier()===t);
+    if(t==='public'){ el.classList.remove('locked','unlocked'); }
+    else {
+      el.classList.toggle('locked', !isUnlocked(t));
+      el.classList.toggle('unlocked', isUnlocked(t) && currentTier()!==t);
+    }
+  });
+}
+
 function render(){
   parent.querySelectorAll('.slide').forEach(function(s){ s.remove(); });
   var lang = document.body.getAttribute('data-lang');
@@ -149,16 +215,28 @@ function render(){
   var payload = head.concat(tail).join('\n');
   var tmp = document.createElement('div');
   tmp.innerHTML = payload;
+  // tier filtering
+  var tier = currentTier();
+  var rank = TIER_RANK[tier];
+  Array.from(tmp.querySelectorAll('.slide')).forEach(function(s){
+    var minTier = s.getAttribute('data-min-tier');
+    var only = s.getAttribute('data-tier-only');
+    var keep = true;
+    if(only && only !== tier) keep = false;
+    if(minTier && TIER_RANK[minTier] > rank) keep = false;
+    if(!keep) s.remove();
+  });
   while(tmp.firstChild){ parent.insertBefore(tmp.firstChild, host); }
+  // also filter nested blocks (data-min-tier within slides)
+  parent.querySelectorAll('[data-min-tier]').forEach(function(el){
+    if(el.classList.contains('slide')) return; // already handled
+    var mt = el.getAttribute('data-min-tier');
+    if(TIER_RANK[mt] > rank) el.style.display='none';
+    else el.style.display='';
+  });
   wireSlides();
 }
-let i=0, slides=[], total=0;
-const pgCur=document.getElementById('pg-cur');
-const pgTotal=document.getElementById('pg-total');
-const secInd=document.getElementById('section-ind');
-const bar=document.getElementById('progress-bar');
-const tocWrap=document.getElementById('toc');
-const tocGrid=document.getElementById('toc-grid');
+
 function paint(){
   slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));
   pgCur.textContent=String(i+1).padStart(2,'0');
@@ -172,11 +250,13 @@ function paint(){
 }
 function go(n){i=Math.max(0,Math.min(total-1,n));paint();}
 function next(){go(i+1)}function prev(){go(i-1)}
+
 function wireSlides(){
   slides = Array.from(document.querySelectorAll('.slide'));
   total = slides.length;
   pgTotal.textContent=String(total).padStart(2,'0');
   i = Math.min(i, total-1);
+  if(i<0) i=0;
   tocGrid.innerHTML='';
   slides.forEach((s,idx)=>{
     const a=document.createElement('a');
@@ -184,43 +264,69 @@ function wireSlides(){
     a.addEventListener('click',()=>{go(idx);tocWrap.classList.remove('open');});
     tocGrid.appendChild(a);
   });
+  // wire unlock buttons inside slides
+  parent.querySelectorAll('[data-unlock]').forEach(function(btn){
+    btn.addEventListener('click', function(){ requestUnlock(btn.getAttribute('data-unlock')); });
+  });
   paint();
 }
+
+function setTier(t){
+  if(!isUnlocked(t)){ requestUnlock(t); return; }
+  document.body.setAttribute('data-tier', t);
+  i = 0;
+  updateTierButtons();
+  render();
+}
+
+function requestUnlock(t){
+  if(t==='public'){ setTier('public'); return; }
+  if(isUnlocked(t)){ setTier(t); return; }
+  pendingTier = t;
+  pwdInput.value='';
+  pwdErr.textContent='';
+  if(t==='investor'){
+    pwdTitle.textContent = document.body.getAttribute('data-lang')==='zh' ? '解锁 Investor 版' : 'Unlock Investor View';
+    pwdSub.textContent = document.body.getAttribute('data-lang')==='zh' ? '输入 Investor 密码以解锁 28 页投资人版本。' : 'Enter Investor password to unlock the 28-page investor view.';
+  } else if(t==='full'){
+    pwdTitle.textContent = document.body.getAttribute('data-lang')==='zh' ? '解锁完整版 (Full Access)' : 'Unlock Full Access · 完整版';
+    pwdSub.textContent = document.body.getAttribute('data-lang')==='zh' ? '输入完整版密码以解锁全部 43 页内容。' : 'Enter Full Access password to unlock all 43 pages.';
+  }
+  pwdModal.classList.add('open');
+  setTimeout(function(){ pwdInput.focus(); }, 50);
+}
+
+async function attemptUnlock(){
+  if(!pendingTier) return;
+  const val = pwdInput.value;
+  if(!val){ pwdErr.textContent = document.body.getAttribute('data-lang')==='zh' ? '请输入密码' : 'Password required'; return; }
+  const h = await sha256(val + PASSWORD_SALT);
+  const target = pendingTier==='investor' ? PASSWORD_HASH_INVESTOR : PASSWORD_HASH_FULL;
+  if(h === target){
+    sessionStorage.setItem('rbw_unlocked_'+pendingTier, 'true');
+    pwdModal.classList.remove('open');
+    setTier(pendingTier);
+    pendingTier = null;
+  } else {
+    pwdErr.textContent = document.body.getAttribute('data-lang')==='zh' ? '密码错误，请重试。' : 'Incorrect password. Try again.';
+    pwdInput.select();
+  }
+}
+
+document.getElementById('pwd-submit').addEventListener('click', attemptUnlock);
+document.getElementById('pwd-cancel').addEventListener('click', function(){ pwdModal.classList.remove('open'); pendingTier=null; });
+pwdInput.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); attemptUnlock(); } });
+pwdModal.addEventListener('click', function(e){ if(e.target===pwdModal){ pwdModal.classList.remove('open'); pendingTier=null; }});
+
 document.getElementById('btn-next').addEventListener('click',next);
 document.getElementById('btn-prev').addEventListener('click',prev);
 document.getElementById('btn-print').addEventListener('click',()=>window.print());
 document.getElementById('btn-toc').addEventListener('click',()=>tocWrap.classList.add('open'));
 document.getElementById('btn-toc-close').addEventListener('click',()=>tocWrap.classList.remove('open'));
-document.addEventListener('keydown',(e)=>{
-  if(e.target&&(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'))return;
-  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();next();}
-  else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();prev();}
-  else if(e.key==='Home'){go(0);}else if(e.key==='End'){go(total-1);}
-  else if(e.key.toLowerCase()==='t'){tocWrap.classList.toggle('open');}
-  else if(e.key==='Escape'){tocWrap.classList.remove('open');}
-  else if(e.key.toLowerCase()==='p'){window.print();}
-  else if(e.key.toLowerCase()==='i'){
-    const order=['investor','internal','post-nda'];
-    const cur=document.body.getAttribute('data-mode');
-    const ni=(order.indexOf(cur)+1)%order.length;
-    setMode(order[ni]);
-  }
-  else if(e.key.toLowerCase()==='l'){const l=document.body.getAttribute('data-lang')==='zh'?'en':'zh';setLang(l);}
-});
-document.querySelector('.stage').addEventListener('click',(e)=>{
-  if(!e.target.closest('.slide'))return;
-  if(e.target.closest('a,button'))return;
-  const ac=document.querySelector('.slide.active');if(!ac)return;
-  const r=ac.getBoundingClientRect();const x=e.clientX-r.left;
-  if(x>r.width*0.66)next();else if(x<r.width*0.18)prev();
-});
-function setMode(m){
-  document.body.setAttribute('data-mode',m);
-  ['investor','internal','post-nda'].forEach(function(k){
-    var el=document.getElementById('mode-'+k);
-    if(el)el.classList.toggle('active',m===k);
-  });
-}
+document.getElementById('tier-public').addEventListener('click',()=>setTier('public'));
+document.getElementById('tier-investor').addEventListener('click',()=>setTier('investor'));
+document.getElementById('tier-full').addEventListener('click',()=>setTier('full'));
+
 function setLang(l){
   document.body.setAttribute('data-lang',l);
   document.documentElement.setAttribute('lang',l==='zh'?'zh':'en');
@@ -228,14 +334,46 @@ function setLang(l){
   document.getElementById('lang-zh').classList.toggle('active',l==='zh');
   render();
 }
-document.getElementById('mode-investor').addEventListener('click',()=>setMode('investor'));
-document.getElementById('mode-internal').addEventListener('click',()=>setMode('internal'));
-document.getElementById('mode-post-nda').addEventListener('click',()=>setMode('post-nda'));
 document.getElementById('lang-en').addEventListener('click',()=>setLang('en'));
 document.getElementById('lang-zh').addEventListener('click',()=>setLang('zh'));
+
+document.addEventListener('keydown',(e)=>{
+  if(e.target&&(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'))return;
+  if(pwdModal.classList.contains('open')){
+    if(e.key==='Escape'){ pwdModal.classList.remove('open'); pendingTier=null; }
+    return;
+  }
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();next();}
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();prev();}
+  else if(e.key==='Home'){go(0);}else if(e.key==='End'){go(total-1);}
+  else if(e.key.toLowerCase()==='t'){tocWrap.classList.toggle('open');}
+  else if(e.key==='Escape'){tocWrap.classList.remove('open');}
+  else if(e.key.toLowerCase()==='p'){window.print();}
+  else if(e.key.toLowerCase()==='i'){
+    const order=['public','investor','full'];
+    const cur=currentTier();
+    let idx=(order.indexOf(cur)+1)%order.length;
+    // skip locked tiers
+    let safety=0;
+    while(!isUnlocked(order[idx]) && safety<3){ idx=(idx+1)%order.length; safety++; }
+    if(isUnlocked(order[idx])) setTier(order[idx]);
+  }
+  else if(e.key.toLowerCase()==='l'){const l=document.body.getAttribute('data-lang')==='zh'?'en':'zh';setLang(l);}
+});
+
+document.querySelector('.stage').addEventListener('click',(e)=>{
+  if(!e.target.closest('.slide'))return;
+  if(e.target.closest('a,button'))return;
+  const ac=document.querySelector('.slide.active');if(!ac)return;
+  const r=ac.getBoundingClientRect();const x=e.clientX-r.left;
+  if(x>r.width*0.66)next();else if(x<r.width*0.18)prev();
+});
+
 let tx=null;
 document.querySelector('.stage').addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX;},{passive:true});
 document.querySelector('.stage').addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){dx<0?next():prev();}tx=null;},{passive:true});
+
+updateTierButtons();
 render();
 })();
 </script></body></html>
