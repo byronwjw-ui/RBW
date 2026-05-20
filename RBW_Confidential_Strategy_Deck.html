@@ -8,22 +8,26 @@
 body{background:radial-gradient(1200px 700px at 15% -10%,rgba(124,92,255,.18),transparent 60%),radial-gradient(1000px 700px at 110% 10%,rgba(76,194,255,.12),transparent 55%),radial-gradient(900px 700px at 50% 120%,rgba(201,164,90,.10),transparent 60%),var(--bg-0);min-height:100vh;overflow:hidden}
 a{color:inherit}button{font-family:inherit}
 .deck-shell{position:fixed;inset:0;display:flex;flex-direction:column}
-.deck-header{display:flex;align-items:center;gap:14px;padding:10px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(10,12,20,.85),rgba(10,12,20,.55));backdrop-filter:blur(10px);z-index:5}
+.deck-header{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(10,12,20,.85),rgba(10,12,20,.55));backdrop-filter:blur(10px);z-index:5;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em}
 .brand .logo{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 210deg,#7c5cff,#4cc2ff,#c9a45a,#ff6aa5,#7c5cff);box-shadow:0 0 0 1px rgba(255,255,255,.12),0 8px 24px rgba(124,92,255,.35)}
 .brand .name{font-size:13px}.brand .tag{font-size:11px;color:var(--ink-2);letter-spacing:.22em}
 .header-spacer{flex:1}
 .chip{font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--line-2);border-radius:999px;color:var(--ink-1);background:var(--glass)}
 .chip.warn{color:#ffd29b;border-color:rgba(255,210,155,.35);background:rgba(255,180,90,.06)}
+.chip.mode{color:#cdbcff;border-color:rgba(160,140,255,.45);background:rgba(124,92,255,.10)}
+.chip.mode.post{color:#a8e8c0;border-color:rgba(126,224,161,.4);background:rgba(126,224,161,.08)}
 .toolbar{display:flex;gap:8px;align-items:center}
-.btn{appearance:none;border:1px solid var(--line-2);background:var(--glass);color:var(--ink-0);padding:8px 12px;border-radius:10px;font-size:12px;letter-spacing:.08em;cursor:pointer}
+.btn{appearance:none;border:1px solid var(--line-2);background:var(--glass);color:var(--ink-0);padding:7px 11px;border-radius:10px;font-size:12px;letter-spacing:.08em;cursor:pointer}
 .btn:hover{background:var(--glass-2);border-color:rgba(255,255,255,.22)}
 .btn.primary{background:linear-gradient(180deg,rgba(124,92,255,.35),rgba(76,108,255,.25));border-color:rgba(160,140,255,.45)}
 .btn.gold{background:linear-gradient(180deg,rgba(232,201,138,.18),rgba(201,164,90,.08));border-color:rgba(232,201,138,.45);color:#f3e3bf}
 .seg{display:inline-flex;border:1px solid var(--line-2);border-radius:10px;overflow:hidden}
-.seg button{background:transparent;border:0;color:var(--ink-2);padding:7px 12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.seg button{background:transparent;border:0;color:var(--ink-2);padding:7px 11px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-right:1px solid var(--line-2)}
+.seg button:last-child{border-right:0}
 .seg button.active{background:linear-gradient(180deg,rgba(124,92,255,.35),rgba(76,108,255,.25));color:#fff}
-.seg.lang button{padding:7px 14px;font-size:12px;letter-spacing:.08em}
+.seg.post button.active[data-mode="post-nda"]{background:linear-gradient(180deg,rgba(126,224,161,.32),rgba(63,214,194,.22));color:#fff}
+.seg.lang button{padding:7px 13px;font-size:12px;letter-spacing:.06em;text-transform:none}
 .stage{flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .slides{position:relative;width:min(1280px,96vw);aspect-ratio:16/9;max-height:88vh}
 .slide{position:absolute;inset:0;border-radius:var(--radius);background:linear-gradient(180deg,rgba(18,22,39,.92),rgba(10,12,22,.92));border:1px solid var(--line);box-shadow:var(--shadow);padding:48px 56px 64px;overflow:hidden;opacity:0;transform:translateY(14px) scale(.995);transition:opacity .35s,transform .35s;pointer-events:none}
@@ -85,23 +89,31 @@ table.t tr:last-child td{border-bottom:0}table.t td{color:var(--ink-1)}
 .progress>i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#7c5cff,#4cc2ff,#e8c98a);transition:width .35s}
 .page-ind{font-size:12px;color:var(--ink-2);letter-spacing:.14em;font-variant-numeric:tabular-nums}
 .section-ind{font-size:11px;color:var(--ink-3);letter-spacing:.22em;text-transform:uppercase}
+/* 3-tier disclosure visibility */
 body[data-mode="investor"] [data-internal="true"]{display:none!important}
+body[data-mode="investor"] [data-post-nda="true"]{display:none!important}
+body[data-mode="internal"] [data-post-nda="true"]{display:none!important}
 body[data-mode="internal"] [data-investor-only="true"]{display:none!important}
+body[data-mode="post-nda"] [data-investor-only="true"]{display:none!important}
 .flow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
 .flow .step{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:12px;color:var(--ink-1)}
 .flow .step b{display:block;font-size:11px;color:var(--gold-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
 .kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:13px;color:var(--ink-1)}
 .kv:last-child{border-bottom:0}.kv b{color:#fff;font-weight:600}
-@media print{@page{size:1280px 720px;margin:0}html,body{background:#fff!important;color:#111!important;overflow:visible!important}.deck-header,.deck-footer,.toc-wrap{display:none!important}.stage{display:block;overflow:visible}.slides{width:1280px;height:auto;max-height:none;aspect-ratio:auto;position:static}.slide{position:relative;inset:auto;width:1280px;height:720px;page-break-after:always;opacity:1!important;transform:none!important;background:#fff!important;color:#111!important;border:0;border-radius:0;box-shadow:none}.slide::after{display:none}.slide::before{color:rgba(0,0,0,.06)}.card{background:#f6f6f9!important;border-color:#e3e3ea!important;color:#111}.card .v,.card .h,.card .d,.subtitle,.lede,.note,ul.clean li,ol.clean li,table.t td,table.t th{color:#222!important}.kicker{color:#8a6a1f!important}.pill{background:#f0f0f4!important;color:#222!important;border-color:#dcdce4!important}table.t,table.t th,table.t td{border-color:#e3e3ea!important;background:#fff!important}table.t th{background:#f4f4f7!important}h1.title,h2.title{color:#111!important;-webkit-text-fill-color:#111!important;background:none!important}.cover h1{color:#111!important;-webkit-text-fill-color:#111!important;background:none!important}.slide-meta{color:#777!important}.flow .step{background:#f6f6f9!important;border-color:#e3e3ea!important;color:#222}.kv{color:#222!important;border-color:#dcdce4!important}.kv b{color:#111!important}}
-@media (max-width:900px){.slides{aspect-ratio:auto;height:calc(100vh - 110px);max-height:none}.slide{padding:24px 22px 56px}h1.title{font-size:32px}h2.title{font-size:26px}.cover h1{font-size:48px}.grid.c3,.grid.c4{grid-template-columns:1fr 1fr}.row{flex-direction:column}.brand .tag{display:none}.flow{grid-template-columns:1fr 1fr}}
+.team-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.team-stats .st{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.team-stats .st .num{font-size:22px;font-weight:700;color:#fff;line-height:1}
+.team-stats .st .lbl{font-size:10.5px;color:var(--ink-2);letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+@media print{@page{size:1280px 720px;margin:0}html,body{background:#fff!important;color:#111!important;overflow:visible!important}.deck-header,.deck-footer,.toc-wrap{display:none!important}.stage{display:block;overflow:visible}.slides{width:1280px;height:auto;max-height:none;aspect-ratio:auto;position:static}.slide{position:relative;inset:auto;width:1280px;height:720px;page-break-after:always;opacity:1!important;transform:none!important;background:#fff!important;color:#111!important;border:0;border-radius:0;box-shadow:none}.slide::after{display:none}.slide::before{color:rgba(0,0,0,.06)}.card{background:#f6f6f9!important;border-color:#e3e3ea!important;color:#111}.card .v,.card .h,.card .d,.subtitle,.lede,.note,ul.clean li,ol.clean li,table.t td,table.t th{color:#222!important}.kicker{color:#8a6a1f!important}.pill{background:#f0f0f4!important;color:#222!important;border-color:#dcdce4!important}table.t,table.t th,table.t td{border-color:#e3e3ea!important;background:#fff!important}table.t th{background:#f4f4f7!important}h1.title,h2.title{color:#111!important;-webkit-text-fill-color:#111!important;background:none!important}.cover h1{color:#111!important;-webkit-text-fill-color:#111!important;background:none!important}.slide-meta{color:#777!important}.flow .step{background:#f6f6f9!important;border-color:#e3e3ea!important;color:#222}.kv{color:#222!important;border-color:#dcdce4!important}.kv b{color:#111!important}.team-stats .st{background:#f6f6f9!important;border-color:#e3e3ea!important}.team-stats .st .num,.team-stats .st .lbl{color:#222!important}}
+@media (max-width:900px){.slides{aspect-ratio:auto;height:calc(100vh - 110px);max-height:none}.slide{padding:24px 22px 56px}h1.title{font-size:32px}h2.title{font-size:26px}.cover h1{font-size:48px}.grid.c3,.grid.c4{grid-template-columns:1fr 1fr}.row{flex-direction:column}.brand .tag{display:none}.flow{grid-template-columns:1fr 1fr}.team-stats{grid-template-columns:1fr 1fr}}
 </style></head>
 <body data-mode="investor" data-lang="en"><div class="deck-shell">
 <header class="deck-header">
 <div class="brand"><div class="logo"></div><div><div class="name">RBW</div><div class="tag">AI GUIDED EXPERIENCE COMPANY</div></div></div>
-<span class="chip warn">CONFIDENTIAL</span><span class="chip">v1.0</span>
+<span class="chip warn">CONFIDENTIAL</span>
 <div class="header-spacer"></div>
 <div class="seg lang"><button id="lang-en" class="active">EN</button><button id="lang-zh">中文</button></div>
-<div class="seg"><button id="mode-investor" class="active">Investor</button><button id="mode-internal">Internal</button></div>
+<div class="seg post"><button id="mode-investor" class="active" data-mode="investor">Investor</button><button id="mode-internal" data-mode="internal">Internal</button><button id="mode-post-nda" data-mode="post-nda">Post-NDA</button></div>
 <div class="toolbar"><button class="btn" id="btn-toc">☰ TOC</button><button class="btn" id="btn-prev">‹</button><button class="btn primary" id="btn-next">›</button><button class="btn gold" id="btn-print">⎙ PDF</button></div>
 </header>
 <main class="stage"><div class="slides" id="slides">
@@ -119,238 +131,8 @@ body[data-mode="internal"] [data-investor-only="true"]{display:none!important}
 <span class="section-ind">RBW CONFIDENTIAL · v1.0</span>
 </footer></div>
 
-<script>
-window.RBW_SLIDES_EN_HEAD = [
-`<section class="slide cover" data-title="Cover" data-section="Open">
-<div class="seal">● CONFIDENTIAL · v1.0</div>
-<div class="mono">RBW · AI GUIDED EXPERIENCE COMPANY</div>
-<h1>RBW</h1><div class="acc rbw" style="max-width:220px"></div>
-<div class="sub">AI Guided Experience Company</div>
-<div class="core">Building AI-guided experiences across play, self-discovery, wellness education, and skill learning.</div>
-<div style="margin-top:34px;display:flex;gap:10px;flex-wrap:wrap"><span class="pill gold">Confidential Business Strategy Deck</span><span class="pill">Internal · Investor Preview · Post-NDA</span><span class="pill violet">Version 1.0</span></div>
-<div class="slide-meta"><span>CONFIDENTIAL — DO NOT DISTRIBUTE<span class="dot"></span>RBW Strategy Deck</span><span class="pgnum">01 / --</span></div></section>`,
-`<section class="slide" data-title="Confidentiality Notice" data-section="Open">
-<div class="kicker">02 · Confidentiality</div><h2 class="title">Confidentiality Notice</h2>
-<div class="subtitle">For selected internal decision-makers and qualified potential investors only.</div><div class="hr"></div>
-<div class="card hi"><div class="h">Notice</div><div class="v">CONFIDENTIAL — DO NOT DISTRIBUTE</div><div class="d">This document is confidential and intended only for selected internal decision-makers and qualified potential investors. It contains confidential business strategy information of RBW including product roadmap, channel resources and capital structure considerations. Do not copy, forward, screenshot, upload or otherwise distribute any part of this document without prior written permission.</div></div>
-<div class="grid c3" style="margin-top:14px">
-<div class="card"><div class="h">Tier 1</div><div class="v" style="font-size:14px">Internal View</div><div class="d">For family, business mentors and risk-control leads. Full strategy visible. External resources shown by code.</div></div>
-<div class="card"><div class="h">Tier 2</div><div class="v" style="font-size:14px">Investor Preview</div><div class="d">For potential investors. Strategy, products, market, business model and roadmap only.</div></div>
-<div class="card"><div class="h">Tier 3</div><div class="v" style="font-size:14px">Post-NDA Materials</div><div class="d">After NDA: resources, counterparties, equity structure and financial detail disclosed.</div></div>
-</div>
-<div class="slide-meta"><span>CONFIDENTIAL<span class="dot"></span>Notice</span><span class="pgnum">02 / --</span></div></section>`,
-`<section class="slide" data-title="Executive Summary" data-section="Thesis">
-<div class="kicker">03 · Executive Summary</div><h2 class="title">RBW in One Page</h2>
-<div class="subtitle">Separate products. Unified engine. Validate first. Amplify with resources later.</div><div class="hr"></div>
-<div class="grid c2">
-<div class="stack">
-<div class="card"><div class="h">What RBW Is</div><div class="d">RBW is an <b>AI Guided Experience Company</b>. Not a single AI fortune-telling product. Enters four high-interest consumer categories with a shared engine underneath.</div></div>
-<div class="card"><div class="h">How RBW Goes To Market</div><div class="d">Overseas first while domestic ICP filing is in progress. <b>Vibe Party</b> = distribution. <b>RBW Meta</b> = cash flow. <b>Acu Map</b> = wellness education + SEO trust. <b>Magic Cube</b> = subscription learning.</div></div>
-<div class="card"><div class="h">How RBW Wins</div><div class="d">Validate with small scenes first. Amplify with high-quality resources only after the funnel works. Resource discipline is part of risk control.</div></div>
-</div>
-<div class="stack"><div class="card hi"><div class="h">The Ten Points</div><ol class="clean" style="font-size:13px"><li>RBW is an AI Guided Experience Company.</li><li>Not a single AI mysticism product.</li><li>Enters via four high-interest scenes.</li><li>One unified AI Experience Engine underneath.</li><li>Overseas first for live validation.</li><li>Domestic launch after ICP completion.</li><li>Vibe Party = distribution funnel.</li><li>RBW Meta = cash flow.</li><li>Acu Map = wellness education + SEO trust.</li><li>Strategic resources amplify, never replace, validation.</li></ol></div>
-<div class="card"><div class="h">One Sentence</div><div class="v" style="font-size:17px;line-height:1.35">Separate products. Unified engine.<br/>Validate first. Amplify later.</div></div></div>
-</div>
-<div class="slide-meta"><span>THESIS<span class="dot"></span>Executive Summary</span><span class="pgnum">03 / --</span></div></section>`,
-`<section class="slide" data-title="CEO-Level Thesis" data-section="Thesis">
-<div class="kicker">04 · Positioning</div><h2 class="title">RBW is not a collection of small apps.</h2>
-<div class="lede">RBW is building an <b>AI Experience Engine</b> that turns cultural knowledge, social entertainment, wellness education, and skill learning into guided interactive products.</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card" style="border-color:rgba(255,122,122,.35)"><div class="h" style="color:#ff9b9b">Do not say it like this</div><ul class="clean"><li>A mysticism app</li><li>A cube-learning tool</li><li>An acupoint lookup mini-program</li><li>A party-games collection</li><li>"AI fortune telling"</li></ul></div>
-<div class="card hi"><div class="h" style="color:#f3e3bf">Say it like this</div><ul class="clean"><li>AI-guided <b>Self-discovery</b></li><li>AI-guided <b>Skill Learning</b></li><li>AI-guided <b>Wellness Education</b></li><li>AI-guided <b>Social Play</b></li><li>One shared <b>AI Experience Engine</b></li></ul></div>
-</div>
-<div class="slide-meta"><span>POSITIONING<span class="dot"></span>CEO Thesis</span><span class="pgnum">04 / --</span></div></section>`,
-`<section class="slide" data-title="Market Shift" data-section="Market">
-<div class="kicker">05 · Market</div><h2 class="title">AI Consumer Products Are Moving from Tools to Experiences</h2>
-<div class="subtitle">The first wave was productivity. The next wave is feeling, guidance and participation.</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card"><div class="h">Wave 1 — AI as Tool</div><ul class="clean"><li>Writing assistants</li><li>Office and meeting copilots</li><li>Customer service automation</li><li>Code generation</li></ul><div class="d">Sold on efficiency. Replaceable by the next model.</div></div>
-<div class="card hi"><div class="h">Wave 2 — AI as Experience</div><ul class="clean"><li>Companionship and self-discovery</li><li>Social entertainment and group play</li><li>Wellness culture and education</li><li>Skill learning with guidance</li></ul><div class="d">Sold on emotion, guidance and participation. Sticky by design.</div></div>
-</div>
-<div class="card" style="margin-top:14px"><div class="d"><b>RBW thesis:</b> Users no longer only want efficiency. They want emotional value, a sense of being guided, and the feeling of taking part. RBW is built for the experience layer of AI consumer products.</div></div>
-<div class="slide-meta"><span>MARKET<span class="dot"></span>Tools → Experiences</span><span class="pgnum">05 / --</span></div></section>`,
-`<section class="slide" data-title="Product Matrix" data-section="Products">
-<div class="kicker">06 · Products</div><h2 class="title">Four Products. One Engine.</h2>
-<div class="subtitle">Each product covers a distinct domain and plays a distinct commercial role.</div><div class="hr"></div>
-<table class="t"><thead><tr><th style="width:18%">Product</th><th>Domain</th><th>User Need</th><th>Business Role</th></tr></thead><tbody>
-<tr><td><span class="pill violet">RBW Meta</span></td><td>Self-discovery</td><td>Tarot, Xiao Liu Ren, Zi Wei Dou Shu, reports</td><td>Cash-flow engine</td></tr>
-<tr><td><span class="pill pink">Vibe Party</span></td><td>Social play</td><td>Party games, icebreakers, group interaction</td><td>Distribution engine</td></tr>
-<tr><td><span class="pill teal">Acu Map</span></td><td>Wellness education</td><td>Acupoints, meridians, TCM cultural learning</td><td>SEO and trust asset</td></tr>
-<tr><td><span class="pill blue">Magic Cube</span></td><td>Skill learning</td><td>2x2 / 3x3 formulas, tracking, challenges</td><td>Subscription learning</td></tr>
-</tbody></table>
-<div class="grid c4" style="margin-top:14px">
-<div class="card"><div class="acc meta"></div><div class="h">RBW Meta</div><div class="d">Self-discovery reports and AI dialogue. High AOV, immediate cash flow.</div></div>
-<div class="card"><div class="acc vibe"></div><div class="h">Vibe Party</div><div class="d">Free party games. One host brings a room of users.</div></div>
-<div class="card"><div class="acc acu"></div><div class="h">Acu Map</div><div class="d">Wellness education for global users. SEO compounding asset.</div></div>
-<div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><div class="d">Beginner to solver path. Annual subscription product.</div></div>
-</div>
-<div class="slide-meta"><span>PRODUCTS<span class="dot"></span>Matrix</span><span class="pgnum">06 / --</span></div></section>`,
-`<section class="slide" data-title="Product Roles" data-section="Products">
-<div class="kicker">07 · Discipline</div><h2 class="title">Each Product Has a Different Commercial Mission</h2>
-<div class="subtitle">Do not average effort across products. Each product must serve a clear commercial function.</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card"><div class="acc vibe"></div><div class="h">Vibe Party</div><div class="v">Group Distribution</div><div class="d">Brings users in groups. Sponsored cards route traffic into other RBW products. KPI: rooms created, players per room, cross-product CTR.</div></div>
-<div class="card"><div class="acc meta"></div><div class="h">RBW Meta</div><div class="v">High-Margin Paid Reports</div><div class="d">Structured self-discovery reports and follow-up questions. KPI: paid report conversion, AOV, 7-day return rate.</div></div>
-<div class="card"><div class="acc acu"></div><div class="h">Acu Map</div><div class="v">Wellness Education + SEO Trust</div><div class="d">Compounding educational content for global users. KPI: SEO pages, organic traffic, time on page, email signups.</div></div>
-<div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><div class="v">Subscription Skill Learning</div><div class="d">Beginner-to-solver guided path. KPI: practice days, formula completion, annual subscription conversion.</div></div>
-</div>
-<div class="card hi" style="margin-top:12px"><div class="d"><b>Rule:</b> Every quarter, each product must demonstrate progress on its assigned commercial role — not just usage growth in general.</div></div>
-<div class="slide-meta"><span>PRODUCTS<span class="dot"></span>Commercial Roles</span><span class="pgnum">07 / --</span></div></section>`,
-`<section class="slide" data-title="Experience Engine" data-section="Engine">
-<div class="kicker">08 · Platform</div><h2 class="title">RBW Experience Engine</h2>
-<div class="subtitle">Separate products in the front. Unified engine in the back.</div><div class="hr"></div>
-<div class="grid c4">
-<div class="card"><div class="h">01</div><div class="v" style="font-size:14px">AI Dialogue Engine</div><div class="d">Guided conversation core shared across products.</div></div>
-<div class="card"><div class="h">02</div><div class="v" style="font-size:14px">Report Generation</div><div class="d">Structured PDF and on-screen reports.</div></div>
-<div class="card"><div class="h">03</div><div class="v" style="font-size:14px">Content Card System</div><div class="d">Reusable card components across all four products.</div></div>
-<div class="card"><div class="h">04</div><div class="v" style="font-size:14px">Achievement System</div><div class="d">Streaks, milestones, badges for retention.</div></div>
-<div class="card"><div class="h">05</div><div class="v" style="font-size:14px">Cross-product Reco</div><div class="d">From Vibe Party into Meta / Acu Map / Cube.</div></div>
-<div class="card"><div class="h">06</div><div class="v" style="font-size:14px">Analytics & Conversion</div><div class="d">Unified funnel tracking and cohort analysis.</div></div>
-<div class="card"><div class="h">07</div><div class="v" style="font-size:14px">Multilingual Content</div><div class="d">EN / ZH pipelines for overseas and domestic.</div></div>
-<div class="card"><div class="h">08</div><div class="v" style="font-size:14px">Payment & Subscription</div><div class="d">One-off purchases, monthly, annual, and B2B plans.</div></div>
-</div>
-<div class="card hi" style="margin-top:12px"><div class="d"><b>Strategic implication:</b> Adding the fifth and sixth experience product later will not require a fifth and sixth team. The same engine ships them.</div></div>
-<div class="slide-meta"><span>ENGINE<span class="dot"></span>Shared Platform</span><span class="pgnum">08 / --</span></div></section>`,
-`<section class="slide" data-title="Why This Is Not Random" data-section="Engine">
-<div class="kicker">09 · Pattern</div><h2 class="title">The Common Pattern: AI-Guided Experiences</h2>
-<div class="subtitle">Different categories. Same underlying experience design.</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card"><div class="acc meta"></div><div class="h">Self-discovery</div><div class="d"><b>Tarot · Xiao Liu Ren · Zi Wei Dou Shu</b> — AI guides the user through a personal reflection arc that ends in a structured report.</div></div>
-<div class="card"><div class="acc cube"></div><div class="h">Skill Learning</div><div class="d"><b>Magic Cube</b> — AI guides a beginner through a 14-day path from "I don't know" to "I can solve a 3x3".</div></div>
-<div class="card"><div class="acc acu"></div><div class="h">Wellness Education</div><div class="d"><b>Acu Map</b> — AI guides the user through traditional Chinese wellness culture, acupoints and meridians as learning content.</div></div>
-<div class="card"><div class="acc vibe"></div><div class="h">Social Play</div><div class="d"><b>Vibe Party</b> — AI and the system guide a group of people through a shared interactive session.</div></div>
-</div>
-<div class="card hi" style="margin-top:12px"><div class="d"><b>Conclusion:</b> RBW does not sell tools. RBW sells the feeling of being guided through an experience.</div></div>
-<div class="slide-meta"><span>ENGINE<span class="dot"></span>Why Coherent</span><span class="pgnum">09 / --</span></div></section>`,
-`<section class="slide" data-title="Global Market Opportunity" data-section="Market">
-<div class="kicker">10 · Opportunity</div><h2 class="title">Global Users Already Love Eastern Wisdom, Tarot, Wellness and Social Games</h2>
-<div class="subtitle">RBW is not creating new demand. RBW is entering categories with existing global willingness to pay.</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card"><div class="acc meta"></div><div class="h">Self-discovery</div><ul class="clean"><li>Western users already pay for tarot, astrology and oracle reading</li><li>Subscription apps in this space exist at meaningful scale</li><li>Eastern systems (Xiao Liu Ren, Zi Wei) add differentiation</li></ul></div>
-<div class="card"><div class="acc acu"></div><div class="h">Wellness Education</div><ul class="clean"><li>Interest in acupuncture, acupressure, meridians and TCM wellness is rising globally</li><li>English-language educational content quality is uneven — clear positioning gap</li><li>Education framing, not medical claims, fits the global market</li></ul></div>
-<div class="card"><div class="acc vibe"></div><div class="h">Social Play</div><ul class="clean"><li>Party games are mainstream in house parties, college events, bars and team building</li><li>QR-code group play is a proven viral mechanic</li><li>Hosts are natural distributors</li></ul></div>
-<div class="card"><div class="acc cube"></div><div class="h">Skill Learning</div><ul class="clean"><li>Cube solving is a global niche with stable demand</li><li>Parents pay for STEM and logic training</li><li>Annual subscriptions are well-accepted</li></ul></div>
-</div>
-<div class="card hi" style="margin-top:10px"><div class="d"><b>RBW edge:</b> Eastern cultural depth + AI-guided experience design + premium visual identity. This combination is rare in the current global market.</div></div>
-<div class="slide-meta"><span>MARKET<span class="dot"></span>Global Demand</span><span class="pgnum">10 / --</span></div></section>`
-];
-
-window.RBW_SLIDES_ZH_HEAD = [
-`<section class="slide cover" data-title="封面" data-section="开篇">
-<div class="seal">● 商业机密 · v1.0</div>
-<div class="mono">RBW · AI GUIDED EXPERIENCE COMPANY</div>
-<h1>RBW</h1><div class="acc rbw" style="max-width:220px"></div>
-<div class="sub">AI 互动体验公司</div>
-<div class="core">用 AI 把娱乐、自我探索、健康文化学习和技能训练，变成普通用户可以直接参与的互动体验。</div>
-<div style="margin-top:34px;display:flex;gap:10px;flex-wrap:wrap"><span class="pill gold">商业机密策略 Deck</span><span class="pill">Internal · Investor Preview · Post-NDA</span><span class="pill violet">版本 1.0</span></div>
-<div class="slide-meta"><span>商业机密 — 不得传播<span class="dot"></span>RBW 策略 Deck</span><span class="pgnum">01 / --</span></div></section>`,
-`<section class="slide" data-title="保密声明" data-section="开篇">
-<div class="kicker">02 · 保密</div><h2 class="title">保密声明</h2>
-<div class="subtitle">仅供指定内部决策者与合格潜在投资人查阅。</div><div class="hr"></div>
-<div class="card hi"><div class="h">声明</div><div class="v">商业机密 — 不得传播</div><div class="d">本文档仅供指定内部决策者与合格潜在投资人查阅。本文档包含 RBW 的商业战略、产品路线图、渠道资源与资本结构设想。未经书面许可，不得复制、转发、截图、上传或对外传播本文档的任何部分。</div></div>
-<div class="grid c3" style="margin-top:14px">
-<div class="card"><div class="h">第一层</div><div class="v" style="font-size:14px">Internal View</div><div class="d">给家族、商业师父、风控负责人。完整战略可见。外部资源以代号展示。</div></div>
-<div class="card"><div class="h">第二层</div><div class="v" style="font-size:14px">Investor Preview</div><div class="d">给潜在投资人。只展示战略、产品、市场、商业模型与路线图。</div></div>
-<div class="card"><div class="h">第三层</div><div class="v" style="font-size:14px">Post-NDA Materials</div><div class="d">签 NDA 之后再披露资源、合作方、股权架构与财务细节。</div></div>
-</div>
-<div class="slide-meta"><span>保密<span class="dot"></span>声明</span><span class="pgnum">02 / --</span></div></section>`,
-`<section class="slide" data-title="执行摘要" data-section="主旨">
-<div class="kicker">03 · 执行摘要</div><h2 class="title">RBW 一页纸</h2>
-<div class="subtitle">前台分开，后台统一。先验证，再用资源放大。</div><div class="hr"></div>
-<div class="grid c2">
-<div class="stack">
-<div class="card"><div class="h">RBW 是什么</div><div class="d">RBW 是一家 <b>AI 互动体验公司</b>。不是单一的 AI 玄学产品。通过四个高兴趣消费品类切入，底层是共享引擎。</div></div>
-<div class="card"><div class="h">怎么进入市场</div><div class="d">海外先行，国内 ICP 同步推进。<b>Vibe Party</b> = 分发。<b>RBW Meta</b> = 现金流。<b>Acu Map</b> = 健康教育 + SEO 信任。<b>Magic Cube</b> = 订阅式学习。</div></div>
-<div class="card"><div class="h">怎么赢</div><div class="d">先用小场景验证。漏斗跑通之后，再用高质量资源放大。资源纪律是风控的一部分。</div></div>
-</div>
-<div class="stack"><div class="card hi"><div class="h">十个要点</div><ol class="clean" style="font-size:13px"><li>RBW 是 AI 互动体验公司。</li><li>不是单一 AI 玄学产品。</li><li>四个高兴趣场景切入。</li><li>统一的 AI Experience Engine 底层。</li><li>海外先做真实验证。</li><li>ICP 完成后国内上线。</li><li>Vibe Party = 分发漏斗。</li><li>RBW Meta = 现金流。</li><li>Acu Map = 健康教育 + SEO 信任。</li><li>战略资源放大验证，绝不替代验证。</li></ol></div>
-<div class="card"><div class="h">一句话</div><div class="v" style="font-size:17px;line-height:1.35">前台分开，后台统一。<br/>先验证，再放大。</div></div></div>
-</div>
-<div class="slide-meta"><span>主旨<span class="dot"></span>执行摘要</span><span class="pgnum">03 / --</span></div></section>`,
-`<section class="slide" data-title="CEO 主旨" data-section="主旨">
-<div class="kicker">04 · 定位</div><h2 class="title">RBW 不是四个小 App 的集合。</h2>
-<div class="lede">RBW 正在打造一套 <b>AI Experience Engine</b>，把文化内容、社交娱乐、健康科普与技能学习变成可商业化、可传播、可复用的互动产品。</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card" style="border-color:rgba(255,122,122,.35)"><div class="h" style="color:#ff9b9b">不要这样讲</div><ul class="clean"><li>玄学 App</li><li>魔方学习工具</li><li>穴位查询小程序</li><li>派对游戏合集</li><li>"AI 算命"</li></ul></div>
-<div class="card hi"><div class="h" style="color:#f3e3bf">这样讲</div><ul class="clean"><li>AI 引导的<b>自我探索</b></li><li>AI 引导的<b>技能学习</b></li><li>AI 引导的<b>健康教育</b></li><li>AI 引导的<b>社交娱乐</b></li><li>一套共享的 <b>AI Experience Engine</b></li></ul></div>
-</div>
-<div class="slide-meta"><span>定位<span class="dot"></span>CEO 主旨</span><span class="pgnum">04 / --</span></div></section>`,
-`<section class="slide" data-title="市场转移" data-section="市场">
-<div class="kicker">05 · 市场</div><h2 class="title">AI 消费产品正从工具走向体验</h2>
-<div class="subtitle">第一波是效率。下一波是感受、引导与参与。</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card"><div class="h">第一波 — AI 作为工具</div><ul class="clean"><li>写作助手</li><li>办公与会议 Copilot</li><li>客服自动化</li><li>代码生成</li></ul><div class="d">卖效率。下个模型一来就被替代。</div></div>
-<div class="card hi"><div class="h">第二波 — AI 作为体验</div><ul class="clean"><li>陪伴与自我探索</li><li>社交娱乐与群体玩法</li><li>健康文化与教育</li><li>带引导的技能学习</li></ul><div class="d">卖情绪、引导与参与感。天然有粘性。</div></div>
-</div>
-<div class="card" style="margin-top:14px"><div class="d"><b>RBW 判断：</b>用户不只要效率。要情绪价值、被引导的感觉、参与感。RBW 服务的是 AI 消费产品的体验层。</div></div>
-<div class="slide-meta"><span>市场<span class="dot"></span>工具 → 体验</span><span class="pgnum">05 / --</span></div></section>`,
-`<section class="slide" data-title="产品矩阵" data-section="产品">
-<div class="kicker">06 · 产品</div><h2 class="title">四个产品。一套引擎。</h2>
-<div class="subtitle">每个产品覆盖独立场景，承担独立的商业角色。</div><div class="hr"></div>
-<table class="t"><thead><tr><th style="width:18%">产品</th><th>场景</th><th>用户需求</th><th>商业角色</th></tr></thead><tbody>
-<tr><td><span class="pill violet">RBW Meta</span></td><td>自我探索</td><td>塔罗、Xiao Liu Ren、Zi Wei Dou Shu、报告</td><td>现金引擎</td></tr>
-<tr><td><span class="pill pink">Vibe Party</span></td><td>社交娱乐</td><td>派对游戏、破冰、群体互动</td><td>分发引擎</td></tr>
-<tr><td><span class="pill teal">Acu Map</span></td><td>健康教育</td><td>穴位、经络、TCM 文化学习</td><td>SEO 与信任资产</td></tr>
-<tr><td><span class="pill blue">Magic Cube</span></td><td>技能学习</td><td>2x2 / 3x3 公式、跟踪、挑战</td><td>订阅式学习</td></tr>
-</tbody></table>
-<div class="grid c4" style="margin-top:14px">
-<div class="card"><div class="acc meta"></div><div class="h">RBW Meta</div><div class="d">自我探索报告与 AI 对话。高 AOV，即时现金流。</div></div>
-<div class="card"><div class="acc vibe"></div><div class="h">Vibe Party</div><div class="d">免费派对游戏。一个 Host 带一整个房间的用户。</div></div>
-<div class="card"><div class="acc acu"></div><div class="h">Acu Map</div><div class="d">全球用户的健康教育。SEO 复利资产。</div></div>
-<div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><div class="d">入门到拼出来的路径。年度订阅产品。</div></div>
-</div>
-<div class="slide-meta"><span>产品<span class="dot"></span>矩阵</span><span class="pgnum">06 / --</span></div></section>`,
-`<section class="slide" data-title="产品角色" data-section="产品">
-<div class="kicker">07 · 纪律</div><h2 class="title">每个产品承担不同的商业任务</h2>
-<div class="subtitle">不要平均用力。每个产品必须承担明确商业功能。</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card"><div class="acc vibe"></div><div class="h">Vibe Party</div><div class="v">群体分发</div><div class="d">把用户成群带进来。Sponsored Cards 把流量导向其他 RBW 产品。KPI：房间数、每房人数、跨产品 CTR。</div></div>
-<div class="card"><div class="acc meta"></div><div class="h">RBW Meta</div><div class="v">高毛利付费报告</div><div class="d">结构化自我探索报告与追问。KPI：付费报告转化、AOV、7 日回访。</div></div>
-<div class="card"><div class="acc acu"></div><div class="h">Acu Map</div><div class="v">健康教育 + SEO 信任</div><div class="d">面向全球用户的复利型教育内容。KPI：SEO 内容数、自然流量、页面停留、邮件订阅。</div></div>
-<div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><div class="v">订阅式技能学习</div><div class="d">从入门到完整还原的引导路径。KPI：练习天数、公式完成、年付订阅转化。</div></div>
-</div>
-<div class="card hi" style="margin-top:12px"><div class="d"><b>规则：</b>每个季度，每个产品都要展示出其商业角色上的进展——不只是用量增长。</div></div>
-<div class="slide-meta"><span>产品<span class="dot"></span>商业角色</span><span class="pgnum">07 / --</span></div></section>`,
-`<section class="slide" data-title="体验引擎" data-section="引擎">
-<div class="kicker">08 · 平台</div><h2 class="title">RBW Experience Engine</h2>
-<div class="subtitle">前台产品分开，后台引擎统一。</div><div class="hr"></div>
-<div class="grid c4">
-<div class="card"><div class="h">01</div><div class="v" style="font-size:14px">AI 对话引擎</div><div class="d">跨产品共享的引导对话内核。</div></div>
-<div class="card"><div class="h">02</div><div class="v" style="font-size:14px">报告生成</div><div class="d">结构化 PDF 与屏幕内报告。</div></div>
-<div class="card"><div class="h">03</div><div class="v" style="font-size:14px">内容卡片系统</div><div class="d">跨四个产品的可复用卡片组件。</div></div>
-<div class="card"><div class="h">04</div><div class="v" style="font-size:14px">成就系统</div><div class="d">连续打卡、里程碑、徽章——做留存。</div></div>
-<div class="card"><div class="h">05</div><div class="v" style="font-size:14px">跨产品推荐</div><div class="d">从 Vibe Party 流入 Meta / Acu Map / Cube。</div></div>
-<div class="card"><div class="h">06</div><div class="v" style="font-size:14px">分析与转化</div><div class="d">统一漏斗追踪与 Cohort 分析。</div></div>
-<div class="card"><div class="h">07</div><div class="v" style="font-size:14px">多语言内容</div><div class="d">海外与国内的 EN / ZH 内容管线。</div></div>
-<div class="card"><div class="h">08</div><div class="v" style="font-size:14px">支付与订阅</div><div class="d">单次购买、月付、年付、B2B 方案。</div></div>
-</div>
-<div class="card hi" style="margin-top:12px"><div class="d"><b>战略含义：</b>未来增加第五、第六个体验产品，不需要第五、第六支团队。同一套引擎承载。</div></div>
-<div class="slide-meta"><span>引擎<span class="dot"></span>共享平台</span><span class="pgnum">08 / --</span></div></section>`,
-`<section class="slide" data-title="为什么不是凑的" data-section="引擎">
-<div class="kicker">09 · 模式</div><h2 class="title">共同模式：AI 引导式体验</h2>
-<div class="subtitle">不同品类。同一种底层体验设计。</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card"><div class="acc meta"></div><div class="h">自我探索</div><div class="d"><b>塔罗 · Xiao Liu Ren · Zi Wei Dou Shu</b> — AI 引导用户走完一段个人反思弧线，结尾是一份结构化报告。</div></div>
-<div class="card"><div class="acc cube"></div><div class="h">技能学习</div><div class="d"><b>Magic Cube</b> — AI 引导初学者走完 14 天路径，从"我不会"到"我能拼 3x3"。</div></div>
-<div class="card"><div class="acc acu"></div><div class="h">健康教育</div><div class="d"><b>Acu Map</b> — AI 引导用户认识 TCM 文化、穴位与经络，作为学习内容。</div></div>
-<div class="card"><div class="acc vibe"></div><div class="h">社交娱乐</div><div class="d"><b>Vibe Party</b> — AI 与系统引导一群人完成一场共享的互动场次。</div></div>
-</div>
-<div class="card hi" style="margin-top:12px"><div class="d"><b>结论：</b>RBW 不卖工具。RBW 卖的是被引导完成一段体验的感觉。</div></div>
-<div class="slide-meta"><span>引擎<span class="dot"></span>为什么自洽</span><span class="pgnum">09 / --</span></div></section>`,
-`<section class="slide" data-title="全球市场机会" data-section="市场">
-<div class="kicker">10 · 机会</div><h2 class="title">全球用户已经在为东方智慧、塔罗、健康与社交游戏付费</h2>
-<div class="subtitle">RBW 不创造新需求。RBW 进入的是已经存在付费意愿的品类。</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card"><div class="acc meta"></div><div class="h">自我探索</div><ul class="clean"><li>西方用户已经在为塔罗、占星与神谕解读付费</li><li>该领域的订阅 App 已有可观规模</li><li>东方系统（Xiao Liu Ren、Zi Wei）提供差异化</li></ul></div>
-<div class="card"><div class="acc acu"></div><div class="h">健康教育</div><ul class="clean"><li>针灸、穴位按摩、经络、TCM 健康在全球兴趣上升</li><li>英文教育内容质量参差——明显定位空档</li><li>教育框架（非医疗主张）契合全球市场</li></ul></div>
-<div class="card"><div class="acc vibe"></div><div class="h">社交娱乐</div><ul class="clean"><li>派对游戏在家庭派对、校园活动、酒吧、团建里是主流</li><li>扫码群体玩法是被验证过的传播机制</li><li>Host 天然就是传播节点</li></ul></div>
-<div class="card"><div class="acc cube"></div><div class="h">技能学习</div><ul class="clean"><li>魔方是全球小众但稳定需求</li><li>家长愿意为 STEM 与逻辑训练付费</li><li>年付方案在这个品类被广泛接受</li></ul></div>
-</div>
-<div class="card hi" style="margin-top:10px"><div class="d"><b>RBW 优势：</b>东方文化深度 + AI 引导式体验设计 + 高级视觉。这套组合在当前全球市场上少见。</div></div>
-<div class="slide-meta"><span>市场<span class="dot"></span>全球需求</span><span class="pgnum">10 / --</span></div></section>`
-];
-</script>
-
+<script src="slides_head_en.js"></script>
+<script src="slides_head_zh.js"></script>
 <script src="slides.js"></script>
 <script src="slides2.js"></script>
 <script src="slides_zh.js"></script>
@@ -370,7 +152,6 @@ function render(){
   while(tmp.firstChild){ parent.insertBefore(tmp.firstChild, host); }
   wireSlides();
 }
-
 let i=0, slides=[], total=0;
 const pgCur=document.getElementById('pg-cur');
 const pgTotal=document.getElementById('pg-total');
@@ -378,7 +159,6 @@ const secInd=document.getElementById('section-ind');
 const bar=document.getElementById('progress-bar');
 const tocWrap=document.getElementById('toc');
 const tocGrid=document.getElementById('toc-grid');
-
 function paint(){
   slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));
   pgCur.textContent=String(i+1).padStart(2,'0');
@@ -392,7 +172,6 @@ function paint(){
 }
 function go(n){i=Math.max(0,Math.min(total-1,n));paint();}
 function next(){go(i+1)}function prev(){go(i-1)}
-
 function wireSlides(){
   slides = Array.from(document.querySelectorAll('.slide'));
   total = slides.length;
@@ -407,13 +186,11 @@ function wireSlides(){
   });
   paint();
 }
-
 document.getElementById('btn-next').addEventListener('click',next);
 document.getElementById('btn-prev').addEventListener('click',prev);
 document.getElementById('btn-print').addEventListener('click',()=>window.print());
 document.getElementById('btn-toc').addEventListener('click',()=>tocWrap.classList.add('open'));
 document.getElementById('btn-toc-close').addEventListener('click',()=>tocWrap.classList.remove('open'));
-
 document.addEventListener('keydown',(e)=>{
   if(e.target&&(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'))return;
   if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();next();}
@@ -422,10 +199,14 @@ document.addEventListener('keydown',(e)=>{
   else if(e.key.toLowerCase()==='t'){tocWrap.classList.toggle('open');}
   else if(e.key==='Escape'){tocWrap.classList.remove('open');}
   else if(e.key.toLowerCase()==='p'){window.print();}
-  else if(e.key.toLowerCase()==='i'){const m=document.body.getAttribute('data-mode')==='internal'?'investor':'internal';setMode(m);}
+  else if(e.key.toLowerCase()==='i'){
+    const order=['investor','internal','post-nda'];
+    const cur=document.body.getAttribute('data-mode');
+    const ni=(order.indexOf(cur)+1)%order.length;
+    setMode(order[ni]);
+  }
   else if(e.key.toLowerCase()==='l'){const l=document.body.getAttribute('data-lang')==='zh'?'en':'zh';setLang(l);}
 });
-
 document.querySelector('.stage').addEventListener('click',(e)=>{
   if(!e.target.closest('.slide'))return;
   if(e.target.closest('a,button'))return;
@@ -433,11 +214,12 @@ document.querySelector('.stage').addEventListener('click',(e)=>{
   const r=ac.getBoundingClientRect();const x=e.clientX-r.left;
   if(x>r.width*0.66)next();else if(x<r.width*0.18)prev();
 });
-
 function setMode(m){
   document.body.setAttribute('data-mode',m);
-  document.getElementById('mode-investor').classList.toggle('active',m==='investor');
-  document.getElementById('mode-internal').classList.toggle('active',m==='internal');
+  ['investor','internal','post-nda'].forEach(function(k){
+    var el=document.getElementById('mode-'+k);
+    if(el)el.classList.toggle('active',m===k);
+  });
 }
 function setLang(l){
   document.body.setAttribute('data-lang',l);
@@ -448,13 +230,12 @@ function setLang(l){
 }
 document.getElementById('mode-investor').addEventListener('click',()=>setMode('investor'));
 document.getElementById('mode-internal').addEventListener('click',()=>setMode('internal'));
+document.getElementById('mode-post-nda').addEventListener('click',()=>setMode('post-nda'));
 document.getElementById('lang-en').addEventListener('click',()=>setLang('en'));
 document.getElementById('lang-zh').addEventListener('click',()=>setLang('zh'));
-
 let tx=null;
 document.querySelector('.stage').addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX;},{passive:true});
 document.querySelector('.stage').addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){dx<0?next():prev();}tx=null;},{passive:true});
-
 render();
 })();
 </script></body></html>
