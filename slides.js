@@ -1,4 +1,4 @@
-/* RBW Confidential Strategy Deck — slides 11-43 payload */
+/* RBW Confidential Strategy Deck — slides 11-43 payload (English) */
 window.RBW_SLIDES = window.RBW_SLIDES || [];
 window.RBW_SLIDES.push(
 /* 11 */ `<section class="slide" data-title="Overseas-First Strategy" data-section="GTM">
@@ -6,9 +6,9 @@ window.RBW_SLIDES.push(
 <div class="subtitle">Validate live with English-speaking users now. Launch domestically once filing is complete.</div><div class="hr"></div>
 <div class="grid c2">
 <div class="card"><div class="h">Why Overseas First</div><ul class="clean"><li>Domestic ICP filing is still in progress</li><li>English-speaking users are more open to tarot, TCM wellness education and party games</li><li>Hong Kong / offshore structure (under professional review) supports overseas collections and future capital arrangements</li><li>Revenue from overseas gives a stronger position for the domestic launch</li></ul></div>
-<div class="card hi"><div class="h">Operating Principle</div><div class="d">Do not wait for the perfect domestic environment. Run validation where the door is already open. Bring proof points back into the domestic launch.</div><div class="zh" style="margin-top:6px">先在通路顺畅的市场验证，再用验证结果加速国内上线。</div></div>
+<div class="card hi"><div class="h">Operating Principle</div><div class="d">Do not wait for the perfect domestic environment. Run validation where the door is already open. Bring proof points back into the domestic launch.</div></div>
 <div class="card"><div class="h">Sequencing</div><ol class="clean"><li>Overseas landing pages and HTML product previews</li><li>Vibe Party live test sessions</li><li>RBW Meta first paid reports in English</li><li>Acu Map educational SEO base</li><li>Magic Cube 14-day challenge subscription test</li></ol></div>
-<div class="card"><div class="h">Important Note</div><div class="d">Company structure, tax, fund flow and equity arrangements are subject to professional legal and tax advice. This deck does not provide legal or tax conclusions.</div><div class="zh" style="margin-top:6px">公司架构、税务、资金流和股权安排均应以专业律师及税务顾问意见为准。</div></div>
+<div class="card"><div class="h">Important Note</div><div class="d">Company structure, tax, fund flow and equity arrangements are subject to professional legal and tax advice. This deck does not provide legal or tax conclusions.</div></div>
 </div>
 <div class="slide-meta"><span>GTM<span class="dot"></span>Overseas First</span><span class="pgnum">11 / --</span></div></section>`,
 
@@ -26,10 +26,9 @@ window.RBW_SLIDES.push(
 
 /* 13 */ `<section class="slide" data-title="Resource Strategy" data-section="Resources">
 <div class="kicker">13 · Resources</div><h2 class="title">High-Quality Resources Should Amplify Validation, Not Replace It</h2>
-<div class="subtitle">Use small scenes to validate. Use major resources to scale — only after the funnel works.</div>
-<div class="zh">先用小场景验证，再用大资源放大。</div><div class="hr"></div>
+<div class="subtitle">Use small scenes to validate. Use major resources to scale — only after the funnel works.</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card"><div class="h">Resource Inventory <span class="pill gold" style="margin-left:6px">Coded</span></div><ul class="clean"><li><b>Resource A</b> — Strategic Entertainment Landmark Resource</li><li><b>Resource B</b> — Major Internet Ecosystem Resource</li><li><b>Resource C</b> — Family Enterprise Governance Support</li><li><b>Resource D</b> — Professional Legal / Tax Advisory</li><li><b>Resource E</b> — Offline Venue Network</li></ul><div class="note" style="margin-top:6px">资源以代号方式表达，实名仅在 Post-NDA 阶段披露。</div></div>
+<div class="card"><div class="h">Resource Inventory <span class="pill gold" style="margin-left:6px">Coded</span></div><ul class="clean"><li><b>Resource A</b> — Strategic Entertainment Landmark Resource</li><li><b>Resource B</b> — Major Internet Ecosystem Resource</li><li><b>Resource C</b> — Family Enterprise Governance Support</li><li><b>Resource D</b> — Professional Legal / Tax Advisory</li><li><b>Resource E</b> — Offline Venue Network</li></ul><div class="note" style="margin-top:6px">Resources are referenced by code. Real names are disclosed only post-NDA.</div></div>
 <div class="card hi"><div class="h">Operating Rule</div><div class="d"><b>Phase 1 — Validate:</b> 30-50 small offline scenes, organic overseas channels, SEO content base.<br/><br/><b>Phase 2 — Amplify:</b> Activate strategic resources only after product funnel hits target conversion. Each resource activation must come with a clear measurement plan.</div></div>
 </div>
 <div class="card" data-internal="true" style="margin-top:12px;border-color:rgba(124,92,255,.35)"><div class="h" style="color:#cdbcff">Internal View · Strategic Meaning</div><div class="d">Resource A provides landmark venue credibility for offline launches. Resource B provides ecosystem-level distribution leverage once unit economics are proven. Resource C provides governance, risk control and pace-setting. Resource D ensures every external arrangement passes professional review. Resource E provides repeatable B2B venue testing. <b>No real names are written in this deck.</b></div></div>
@@ -37,8 +36,7 @@ window.RBW_SLIDES.push(
 
 /* 14 */ `<section class="slide" data-title="Why Not Use Big Resources Immediately" data-section="Resources">
 <div class="kicker">14 · Risk</div><h2 class="title">Why We Should Not Burn Strategic Resources Too Early</h2>
-<div class="subtitle">Resource discipline is part of company risk control.</div>
-<div class="zh">资源克制本身就是风控能力。</div><div class="hr"></div>
+<div class="subtitle">Resource discipline is part of company risk control.</div><div class="hr"></div>
 <div class="grid c2">
 <div class="card"><div class="h">If We Burn Resources Too Early</div><ul class="clean"><li>Funnel is not proven — big traffic exposes broken steps publicly</li><li>Conversion path is immature — high-quality traffic cannot be retained</li><li>Resources do not accumulate as an asset, they evaporate</li><li>Partners lose confidence after one weak public test</li><li>Family governance signals weakened discipline</li></ul></div>
 <div class="card hi"><div class="h">If We Validate First, Then Amplify</div><ul class="clean"><li>Small scenes reveal real user behavior cheaply</li><li>Funnel improvements ship before scale</li><li>Each resource activation is a measurable lift, not a gamble</li><li>Partners see numbers, not promises</li><li>Family governance signals mature operating discipline</li></ul></div>
@@ -95,11 +93,11 @@ window.RBW_SLIDES.push(
 <div class="subtitle">AI-guided tarot, Xiao Liu Ren, Zi Wei Dou Shu and structured self-discovery reports.</div><div class="hr"></div>
 <div class="grid c2">
 <div class="card"><div class="h">Product Surface</div><ul class="clean"><li>AI Tarot reading (single card / spread)</li><li>Xiao Liu Ren — fast question flow</li><li>Zi Wei Dou Shu report</li><li>Relationship reading</li><li>Career reading</li><li>Annual fortune report</li><li>Follow-up question chat</li><li>PDF report export</li></ul></div>
-<div class="card hi"><div class="h">Commercial Judgement</div><div class="d">Do not sell chat alone. Chat is a cost. Sell <b>structured reports</b>, <b>emotional value</b> and <b>follow-up guidance</b>. The report is the deliverable users keep and forward to friends.</div><div class="zh" style="margin-top:6px">不只卖对话，卖结构化报告、情绪价值和后续引导。</div></div>
+<div class="card hi"><div class="h">Commercial Judgement</div><div class="d">Do not sell chat alone. Chat is a cost. Sell <b>structured reports</b>, <b>emotional value</b> and <b>follow-up guidance</b>. The report is the deliverable users keep and forward to friends.</div></div>
 </div>
 <div class="grid c4" style="margin-top:12px">
 <div class="card"><div class="h">Disclaimer</div><div class="d">For entertainment, reflection and self-discovery only. Not professional advice.</div></div>
-<div class="card"><div class="h">Languages</div><div class="d">EN and ZH from day one. Other languages added based on traffic.</div></div>
+<div class="card"><div class="h">Languages</div><div class="d">English and Chinese from day one. Other languages added based on traffic.</div></div>
 <div class="card"><div class="h">Retention Hook</div><div class="d">Personal reading history. Annual report unlock.</div></div>
 <div class="card"><div class="h">Cross-Routing</div><div class="d">Soft suggestions into Acu Map and Magic Cube where relevant.</div></div>
 </div>
@@ -109,16 +107,16 @@ window.RBW_SLIDES.push(
 <div class="kicker">19 · Pricing</div><h2 class="title">RBW Meta Monetization</h2>
 <div class="subtitle">Tiered pricing for domestic and overseas markets. Subscriptions for recurring users.</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card"><div class="h">国内 · Domestic</div>
-<div class="kv"><span>小六壬快速问事</span><b>¥6.9 / 次</b></div>
-<div class="kv"><span>塔罗基础解读</span><b>¥19.9</b></div>
-<div class="kv"><span>深度塔罗报告</span><b>¥39</b></div>
-<div class="kv"><span>紫微命盘报告</span><b>¥49 – ¥99</b></div>
-<div class="kv"><span>年度运势报告</span><b>¥99 – ¥199</b></div>
-<div class="kv"><span>月度会员</span><b>¥29 / 月</b></div>
-<div class="kv"><span>年度会员</span><b>¥199 / 年</b></div>
+<div class="card"><div class="h">Domestic Market</div>
+<div class="kv"><span>Xiao Liu Ren quick reading</span><b>¥6.9 / time</b></div>
+<div class="kv"><span>Tarot basic reading</span><b>¥19.9</b></div>
+<div class="kv"><span>Deep tarot report</span><b>¥39</b></div>
+<div class="kv"><span>Zi Wei chart report</span><b>¥49 – ¥99</b></div>
+<div class="kv"><span>Annual fortune report</span><b>¥99 – ¥199</b></div>
+<div class="kv"><span>Monthly membership</span><b>¥29 / mo</b></div>
+<div class="kv"><span>Annual membership</span><b>¥199 / yr</b></div>
 </div>
-<div class="card hi"><div class="h">Overseas · English</div>
+<div class="card hi"><div class="h">Overseas Market</div>
 <div class="kv"><span>One-card reading</span><b>$1.99</b></div>
 <div class="kv"><span>Relationship reading</span><b>$4.99</b></div>
 <div class="kv"><span>Career reading</span><b>$4.99</b></div>
@@ -139,7 +137,7 @@ window.RBW_SLIDES.push(
 <div class="card"><div class="h">Content Surface</div><ul class="clean"><li>Acupoint map (interactive)</li><li>Meridian learning paths</li><li>AI explanations in plain language</li><li>Wellness education modules</li><li>TCM cultural learning content</li><li>Future expert-reviewed lessons</li><li>Future herbal wellness knowledge (educational)</li></ul></div>
 <div class="card hi"><div class="h">Strategic Role</div><div class="d">Acu Map is the <b>trust asset</b> of RBW. Its compounding SEO content positions RBW as a credible cultural-education brand globally. It is not, and will not be marketed as, a diagnostic or treatment product.</div></div>
 </div>
-<div class="card" style="margin-top:12px;border-color:rgba(255,122,122,.35)"><div class="h" style="color:#ff9b9b">Compliance Statement (must always appear)</div><div class="d">Acu Map is for educational and wellness learning only. It does not provide medical advice, diagnosis or treatment. Consult qualified healthcare professionals for medical conditions.<br/><span class="zh">Acu Map 是中医文化与穴位知识学习产品，不提供诊断、治疗或医疗建议。如有健康问题，请咨询合格的医疗专业人员。</span></div></div>
+<div class="card" style="margin-top:12px;border-color:rgba(255,122,122,.35)"><div class="h" style="color:#ff9b9b">Compliance Statement (must always appear)</div><div class="d">Acu Map is for educational and wellness learning only. It does not provide medical advice, diagnosis or treatment. Consult qualified healthcare professionals for medical conditions.</div></div>
 <div class="slide-meta"><span>ACU MAP<span class="dot"></span>Overview</span><span class="pgnum">20 / --</span></div></section>`,
 
 /* 21 */ `<section class="slide" data-title="Acu Map Compliance" data-section="Acu Map">
@@ -182,14 +180,14 @@ window.RBW_SLIDES.push(
 <div class="kicker">24 · Pricing</div><h2 class="title">Magic Cube Monetization</h2>
 <div class="subtitle">Tiered subscriptions, family plans, optional physical kit, school / club licenses.</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card"><div class="h">国内 · Domestic</div>
-<div class="kv"><span>免费体验</span><b>¥0</b></div>
-<div class="kv"><span>Pro 个人版</span><b>¥99 / 年</b></div>
-<div class="kv"><span>家庭版</span><b>¥199 / 年</b></div>
-<div class="kv"><span>实物魔方 + 会员套装</span><b>¥299</b></div>
-<div class="kv"><span>学校 / 社团版</span><b>¥999 – ¥2999 / 年</b></div>
+<div class="card"><div class="h">Domestic Market</div>
+<div class="kv"><span>Free trial</span><b>¥0</b></div>
+<div class="kv"><span>Pro individual</span><b>¥99 / yr</b></div>
+<div class="kv"><span>Family plan</span><b>¥199 / yr</b></div>
+<div class="kv"><span>Physical cube + membership</span><b>¥299</b></div>
+<div class="kv"><span>School / club plan</span><b>¥999 – ¥2999 / yr</b></div>
 </div>
-<div class="card hi"><div class="h">Overseas · English</div>
+<div class="card hi"><div class="h">Overseas Market</div>
 <div class="kv"><span>Free starter</span><b>$0</b></div>
 <div class="kv"><span>Pro</span><b>$9.99 / yr</b></div>
 <div class="kv"><span>Family plan</span><b>$19.99 / yr</b></div>
