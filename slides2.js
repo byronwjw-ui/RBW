@@ -1,4 +1,4 @@
-/* RBW Confidential Strategy Deck — slides 26-43 payload (English) */
+/* RBW Confidential Strategy Deck — slides 26-43 (English) */
 window.RBW_SLIDES = window.RBW_SLIDES || [];
 window.RBW_SLIDES.push(
 /* 26 */ `<section class="slide" data-title="Growth Flywheel" data-section="Business">
@@ -39,7 +39,7 @@ window.RBW_SLIDES.push(
 <div class="card"><div class="acc meta"></div><div class="h">RBW Meta</div><ul class="clean"><li>Reports generated</li><li>Paid report conversion</li><li>AOV</li><li>Follow-up questions</li><li>7-day return</li></ul></div>
 <div class="card"><div class="acc acu"></div><div class="h">Acu Map</div><ul class="clean"><li>SEO pages live</li><li>Search traffic</li><li>Time on page</li><li>Email signups</li><li>Expert content completion</li></ul></div>
 <div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><ul class="clean"><li>Lesson completion</li><li>Practice days</li><li>Formula completion</li><li>Annual subscription conversion</li></ul></div>
-<div class="card"><div class="h">Cadence</div><div class="d">Weekly product review. Monthly business review. Quarterly board-level review with family governance.</div></div>
+<div class="card"><div class="h">Cadence</div><div class="d">Weekly product review. Monthly business review. Quarterly review with senior advisors.</div></div>
 </div>
 <div class="slide-meta"><span>METRICS<span class="dot"></span>Scorecard</span><span class="pgnum">28 / --</span></div></section>`,
 
@@ -59,16 +59,17 @@ window.RBW_SLIDES.push(
 
 /* 30 */ `<section class="slide" data-title="Company & Governance" data-section="Governance">
 <div class="kicker">30 · Governance</div><h2 class="title">Company and Governance Structure</h2>
-<div class="subtitle">Domestic + Hong Kong / offshore, under professional review. Family governance supports pace and discipline.</div><div class="hr"></div>
+<div class="subtitle">Domestic + Hong Kong / offshore, under professional review. Senior advisors support pace and discipline.</div><div class="hr"></div>
 <div class="grid c3">
 <div class="card"><div class="h">Domestic Entity</div><div class="d">Responsible for domestic products, ICP filing, China operations and local compliance.</div></div>
 <div class="card"><div class="h">Hong Kong Entity</div><div class="d">Responsible for overseas business, collections and partner agreements.</div></div>
 <div class="card"><div class="h">Offshore Structure</div><div class="d">Used for future holding, financing and option-pool planning. Under professional review.</div></div>
-<div class="card hi"><div class="h">Family Governance & Risk Control</div><div class="d">Provides pace-setting, resource discipline and compliance boundary review. Acts as a check on aggressive moves and on under-investment.</div></div>
+<div class="card hi"><div class="h">Senior Advisors & Risk Control</div><div class="d">Provide pace-setting, resource discipline and compliance boundary review. Independent check on both aggressive moves and under-investment.</div></div>
 <div class="card"><div class="h">Professional Advisors</div><div class="d">Legal and tax advisors retained. All structure decisions follow their written opinions.</div></div>
 <div class="card"><div class="h">Disclosure Policy</div><div class="d">Specific equity percentages, individual names and contract details are not in this deck. They are disclosed under NDA only.</div></div>
 </div>
-<div class="card" style="margin-top:12px"><div class="note">This page describes structural intent only. Actual structure is finalized through professional legal and tax advice. Nothing here constitutes a legal or tax conclusion.</div></div>
+<div class="card" data-post-nda="true" style="margin-top:12px;border-color:rgba(126,224,161,.4)"><div class="h" style="color:#a8e8c0">Post-NDA · Cap Table Outline</div><div class="d">Founder allocation, option pool sizing, advisor allocation principles and future round dilution model available under NDA. Final terms subject to legal counsel.</div></div>
+<div class="card" style="margin-top:8px"><div class="note">This page describes structural intent only. Actual structure is finalized through professional legal and tax advice. Nothing here constitutes a legal or tax conclusion.</div></div>
 <div class="slide-meta"><span>GOVERNANCE<span class="dot"></span>Structure</span><span class="pgnum">30 / --</span></div></section>`,
 
 /* 31 */ `<section class="slide" data-title="Why RBW Can Win" data-section="Why Win">
@@ -76,11 +77,11 @@ window.RBW_SLIDES.push(
 <div class="subtitle">A combination that is hard to assemble from scratch.</div><div class="hr"></div>
 <div class="grid c2">
 <div class="card"><div class="h">Product</div><ul class="clean"><li>All four products already have clear prototypes</li><li>Not a single-point bet — a shared engine</li><li>Coherent experience pattern across categories</li></ul></div>
-<div class="card"><div class="h">Team</div><ul class="clean"><li>Fast-shipping founding team</li><li>Builds and validates within days, not quarters</li><li>Operational discipline modeled on family enterprise practice</li></ul></div>
-<div class="card"><div class="h">Market</div><ul class="clean"><li>Clear overseas cultural interest already present</li><li>Domestic offline resources available when needed</li><li>Multiple monetization paths from day one</li></ul></div>
-<div class="card hi"><div class="h">Governance</div><ul class="clean"><li>Family governance + risk-control support</li><li>Resource discipline built into strategy</li><li>Long-term stability prioritized over short-term flash</li></ul></div>
+<div class="card"><div class="h">Team</div><ul class="clean"><li>Two-person founding team — full ownership of every decision</li><li>Boss + Sales + FDE in one — ship, sell, and integrate in the same week</li><li>Operates in days, not quarters</li></ul></div>
+<div class="card"><div class="h">Market</div><ul class="clean"><li>Clear overseas cultural interest already present</li><li>Domestic offline channels available when needed</li><li>Multiple monetization paths from day one</li></ul></div>
+<div class="card hi"><div class="h">Discipline</div><ul class="clean"><li>Senior advisor review + risk-control support</li><li>Resource discipline built into strategy</li><li>Long-term stability prioritized over short-term flash</li></ul></div>
 </div>
-<div class="card" style="margin-top:12px"><div class="d"><b>The combination:</b> Engine + matrix + cultural depth + resource discipline + governance backbone. Each piece exists individually elsewhere. The combination is rare.</div></div>
+<div class="card" style="margin-top:12px"><div class="d"><b>The combination:</b> Engine + matrix + cultural depth + resource discipline + advisor-backed governance. Each piece exists individually elsewhere. The combination is rare.</div></div>
 <div class="slide-meta"><span>WHY WIN<span class="dot"></span>Combination</span><span class="pgnum">31 / --</span></div></section>`,
 
 /* 32 */ `<section class="slide" data-title="Investor Narrative" data-section="Investor">
@@ -97,7 +98,7 @@ window.RBW_SLIDES.push(
 <div class="kicker">33 · Ask</div><h2 class="title">What We Need Next</h2>
 <div class="subtitle">Two audiences, two different asks. Both grounded in the same plan.</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card hi"><div class="h">Internal Decision-Makers</div><ul class="clean"><li>Confirm company positioning</li><li>Confirm product priority order</li><li>Confirm resource activation pace</li><li>Confirm overseas-first sequencing</li><li>Confirm compliance boundaries</li><li>Confirm phased budget envelope</li><li>Confirm 90-day validation goals</li></ul></div>
+<div class="card hi"><div class="h">Founders & Advisors</div><ul class="clean"><li>Confirm company positioning</li><li>Confirm product priority order</li><li>Confirm resource activation pace</li><li>Confirm overseas-first sequencing</li><li>Confirm compliance boundaries</li><li>Confirm phased budget envelope</li><li>Confirm 90-day validation goals</li></ul></div>
 <div class="card"><div class="h">Potential Investors</div><ul class="clean"><li>Strategic feedback on the engine thesis</li><li>Product trials and observations</li><li>Business or distribution partnerships</li><li>Resource introductions (within boundaries)</li><li>Open dialogue toward later funding rounds</li></ul></div>
 </div>
 <div class="card" style="margin-top:12px"><div class="d"><b>What we are not asking for at this stage:</b> Final equity decisions. Public commitments. Any commitment that bypasses the 90-day validation gate.</div></div>
@@ -179,7 +180,7 @@ window.RBW_SLIDES.push(
 <div class="kicker">38 · Appendix C</div><h2 class="title">Appendix C — Sensitive Information Policy</h2>
 <div class="subtitle">Who can see what. How information is released between tiers.</div><div class="hr"></div>
 <table class="t"><thead><tr><th style="width:28%">Audience</th><th>Can See</th><th>Cannot See</th></tr></thead><tbody>
-<tr><td><b>Internal family / mentor</b></td><td>Full strategy, resource categories (coded), full roadmap, family governance discussions</td><td>External partner real names unless strictly necessary; live contract drafts</td></tr>
+<tr><td><b>Founders & advisors</b></td><td>Full strategy, resource categories (coded), full roadmap, operating notes</td><td>External partner real names unless strictly necessary; live contract drafts</td></tr>
 <tr><td><b>Investor preview</b></td><td>Market, products, business model, roadmap, compliance posture, governance intent</td><td>Specific resource names, individual contacts, structure details, equity percentages, financial detail</td></tr>
 <tr><td><b>Post-NDA investor</b></td><td>More detailed diligence materials, structure context, partner context</td><td>Items still controlled by legal process, third-party confidential information</td></tr>
 <tr><td><b>External public</b></td><td>Public product pages, public brand language</td><td>Anything in this deck. This deck is not for public distribution.</td></tr>
@@ -193,7 +194,7 @@ window.RBW_SLIDES.push(
 <table class="t"><thead><tr><th style="width:18%">Code</th><th>Category</th><th>Strategic Role</th></tr></thead><tbody>
 <tr><td><b>Resource A</b></td><td>Strategic Entertainment Landmark Resource</td><td>Landmark venue credibility for offline launches and signature events.</td></tr>
 <tr><td><b>Resource B</b></td><td>Major Internet Ecosystem Resource</td><td>Ecosystem-level distribution leverage after unit economics are proven.</td></tr>
-<tr><td><b>Resource C</b></td><td>Family Enterprise Governance Support</td><td>Pace-setting, risk control, compliance boundary review.</td></tr>
+<tr><td><b>Resource C</b></td><td>Senior Advisor & Risk Control Support</td><td>Pace-setting, risk control, compliance boundary review by independent senior advisors.</td></tr>
 <tr><td><b>Resource D</b></td><td>Professional Legal / Tax Advisory</td><td>Structure, contracts, regulatory review across jurisdictions.</td></tr>
 <tr><td><b>Resource E</b></td><td>Offline Venue Network</td><td>Repeatable B2B venue testing surface for Vibe Party.</td></tr>
 </tbody></table>
@@ -218,12 +219,13 @@ window.RBW_SLIDES.push(
 
 /* 41 */ `<section class="slide" data-title="Appendix F — Audience Views" data-section="Appendix">
 <div class="kicker">41 · Appendix F</div><h2 class="title">Appendix F — Audience View Reference</h2>
-<div class="subtitle">Use the toggle at the top of the deck. Same content surface, different disclosure.</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card hi"><div class="h">Investor Preview (default)</div><ul class="clean"><li>Full strategic narrative</li><li>Product, market, business model and roadmap</li><li>Resources referred to by code only</li><li>No equity percentages, contracts, or partner names</li></ul><div class="note" style="margin-top:6px">This is the safe default for any external review.</div></div>
-<div class="card"><div class="h">Internal View</div><ul class="clean"><li>All of Investor Preview, plus</li><li>Strategic meaning behind each resource code</li><li>Internal-only operating notes</li><li>Still no real external partner names</li></ul><div class="note" style="margin-top:6px">For family, mentor, and risk-control review.</div></div>
+<div class="subtitle">Use the toggle at the top of the deck. Same content surface, three disclosure levels.</div><div class="hr"></div>
+<div class="grid c3">
+<div class="card hi"><div class="h">Investor Preview (default)</div><ul class="clean"><li>Full strategic narrative</li><li>Product, market, business model and roadmap</li><li>Resources referred to by code only</li><li>No equity percentages, contracts, or partner names</li></ul><div class="note" style="margin-top:6px">Safe default for any external review.</div></div>
+<div class="card"><div class="h">Internal</div><ul class="clean"><li>Investor Preview content, plus</li><li>Strategic meaning behind each resource code</li><li>Internal operating notes</li><li>Still no real external partner names</li></ul><div class="note" style="margin-top:6px">For founders and senior advisors.</div></div>
+<div class="card" style="border-color:rgba(126,224,161,.4)"><div class="h" style="color:#a8e8c0">Post-NDA</div><div class="d" style="margin-top:2px;font-size:12.5px;line-height:1.55">Internal content, plus diligence-grade detail: engagement stages, cap table outline, structure context, milestone calendar. Real names still controlled through legal process.</div><div class="note" style="margin-top:6px">For investors after NDA.</div></div>
 </div>
-<div class="card" style="margin-top:12px"><div class="d"><b>How to switch:</b> Top of the deck → Investor Preview / Internal View toggle. Keyboard shortcut: <b>I</b>. The current view is reflected in real time across all slides.</div></div>
+<div class="card" style="margin-top:12px"><div class="d"><b>How to switch:</b> Top of the deck → three-segment toggle. Keyboard shortcut: <b>I</b> cycles through Investor → Internal → Post-NDA → Investor.</div></div>
 <div class="slide-meta"><span>APPENDIX F<span class="dot"></span>Audience Views</span><span class="pgnum">41 / --</span></div></section>`,
 
 /* 42 */ `<section class="slide" data-title="Appendix G — Navigation" data-section="Appendix">
@@ -237,7 +239,8 @@ window.RBW_SLIDES.push(
 <div class="kv"><span>Jump to last</span><b>End</b></div>
 <div class="kv"><span>Table of Contents</span><b>T</b></div>
 <div class="kv"><span>Close overlay</span><b>Esc</b></div>
-<div class="kv"><span>Toggle audience mode</span><b>I</b></div>
+<div class="kv"><span>Cycle audience view</span><b>I</b></div>
+<div class="kv"><span>Toggle language</span><b>L</b></div>
 <div class="kv"><span>Print / Save as PDF</span><b>P</b></div>
 </div>
 <div class="card hi"><div class="h">Mouse / Touch</div><ul class="clean"><li>Click right edge of slide → next</li><li>Click left edge of slide → previous</li><li>Top toolbar Prev / Next buttons</li><li>Touch swipe left / right on mobile</li><li>TOC button opens jump-to-slide menu</li><li>PDF button triggers system print dialog</li></ul></div>
