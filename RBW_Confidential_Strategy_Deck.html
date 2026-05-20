@@ -243,7 +243,7 @@ body[data-mode="internal"] [data-investor-only="true"]{display:none!important}
 <div class="slide-meta"><span>MARKET<span class="dot"></span>Global Demand</span><span class="pgnum">10 / --</span></div>
 </section>
 
-<!-- INSERT_HERE -->
+<div id="slides-injection-point"></div>
 
 </div>
 <div class="toc-wrap" id="toc"><div class="toc">
@@ -257,8 +257,19 @@ body[data-mode="internal"] [data-investor-only="true"]{display:none!important}
 <div class="progress"><i id="progress-bar"></i></div>
 <span class="section-ind">RBW CONFIDENTIAL · v1.0</span>
 </footer></div>
+<script src="slides.js"></script>
+<script src="slides2.js"></script>
 <script>
 (function(){
+// Inject slides 11-43 from window.RBW_SLIDES
+var host = document.getElementById('slides-injection-point');
+var payload = (window.RBW_SLIDES||[]).join('\n');
+var tmp = document.createElement('div');
+tmp.innerHTML = payload;
+var parent = host.parentNode;
+while(tmp.firstChild){ parent.insertBefore(tmp.firstChild, host); }
+parent.removeChild(host);
+
 const slides=Array.from(document.querySelectorAll('.slide'));
 const total=slides.length;const pgCur=document.getElementById('pg-cur');const pgTotal=document.getElementById('pg-total');
 const secInd=document.getElementById('section-ind');const bar=document.getElementById('progress-bar');
