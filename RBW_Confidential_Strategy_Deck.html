@@ -21,55 +21,34 @@
 html,body{margin:0;padding:0;background:var(--bg-0);color:var(--ink-0);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
   font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-body{
-  background:
-    radial-gradient(1200px 700px at 15% -10%, rgba(124,92,255,.18), transparent 60%),
-    radial-gradient(1000px 700px at 110% 10%, rgba(76,194,255,.12), transparent 55%),
-    radial-gradient(900px 700px at 50% 120%, rgba(201,164,90,.10), transparent 60%),
-    var(--bg-0);
-  min-height:100vh;overflow:hidden;
-}
+body{background:radial-gradient(1200px 700px at 15% -10%, rgba(124,92,255,.18), transparent 60%),radial-gradient(1000px 700px at 110% 10%, rgba(76,194,255,.12), transparent 55%),radial-gradient(900px 700px at 50% 120%, rgba(201,164,90,.10), transparent 60%),var(--bg-0);min-height:100vh;overflow:hidden}
 a{color:inherit} button{font-family:inherit}
 .deck-shell{position:fixed;inset:0;display:flex;flex-direction:column}
-.deck-header{display:flex;align-items:center;gap:14px;padding:10px 18px;border-bottom:1px solid var(--line);
-  background:linear-gradient(180deg,rgba(10,12,20,.85),rgba(10,12,20,.55));backdrop-filter:blur(10px);z-index:5}
+.deck-header{display:flex;align-items:center;gap:14px;padding:10px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(10,12,20,.85),rgba(10,12,20,.55));backdrop-filter:blur(10px);z-index:5}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em}
-.brand .logo{width:28px;height:28px;border-radius:8px;
-  background:conic-gradient(from 210deg, #7c5cff, #4cc2ff, #c9a45a, #ff6aa5, #7c5cff);
-  box-shadow:0 0 0 1px rgba(255,255,255,.12), 0 8px 24px rgba(124,92,255,.35)}
+.brand .logo{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 210deg, #7c5cff, #4cc2ff, #c9a45a, #ff6aa5, #7c5cff);box-shadow:0 0 0 1px rgba(255,255,255,.12), 0 8px 24px rgba(124,92,255,.35)}
 .brand .name{font-size:13px;color:var(--ink-0)}
 .brand .tag{font-size:11px;color:var(--ink-2);letter-spacing:.22em}
 .header-spacer{flex:1}
-.chip{font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--line-2);
-  border-radius:999px;color:var(--ink-1);background:var(--glass)}
+.chip{font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--line-2);border-radius:999px;color:var(--ink-1);background:var(--glass)}
 .chip.warn{color:#ffd29b;border-color:rgba(255,210,155,.35);background:rgba(255,180,90,.06)}
 .toolbar{display:flex;gap:8px;align-items:center}
-.btn{appearance:none;border:1px solid var(--line-2);background:var(--glass);color:var(--ink-0);padding:8px 12px;
-  border-radius:10px;font-size:12px;letter-spacing:.08em;cursor:pointer;
-  transition:transform .15s ease, background .15s ease, border-color .15s ease}
+.btn{appearance:none;border:1px solid var(--line-2);background:var(--glass);color:var(--ink-0);padding:8px 12px;border-radius:10px;font-size:12px;letter-spacing:.08em;cursor:pointer;transition:transform .15s ease, background .15s ease, border-color .15s ease}
 .btn:hover{background:var(--glass-2);border-color:rgba(255,255,255,.22)}
 .btn:active{transform:translateY(1px)}
 .btn.primary{background:linear-gradient(180deg, rgba(124,92,255,.35), rgba(76,108,255,.25));border-color:rgba(160,140,255,.45)}
 .btn.gold{background:linear-gradient(180deg, rgba(232,201,138,.18), rgba(201,164,90,.08));border-color:rgba(232,201,138,.45);color:#f3e3bf}
 .mode-toggle{display:inline-flex;border:1px solid var(--line-2);border-radius:10px;overflow:hidden}
-.mode-toggle button{background:transparent;border:0;color:var(--ink-2);padding:7px 12px;font-size:11px;
-  letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.mode-toggle button{background:transparent;border:0;color:var(--ink-2);padding:7px 12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
 .mode-toggle button.active{background:linear-gradient(180deg, rgba(124,92,255,.35), rgba(76,108,255,.25));color:#fff}
 .stage{flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .slides{position:relative;width:min(1280px, 96vw);aspect-ratio:16/9;max-height:88vh}
-.slide{position:absolute;inset:0;border-radius:var(--radius);
-  background:linear-gradient(180deg, rgba(18,22,39,.92), rgba(10,12,22,.92));
-  border:1px solid var(--line);box-shadow:var(--shadow);padding:48px 56px 64px;overflow:hidden;
-  opacity:0;transform:translateY(14px) scale(.995);transition:opacity .35s ease, transform .35s ease;pointer-events:none}
+.slide{position:absolute;inset:0;border-radius:var(--radius);background:linear-gradient(180deg, rgba(18,22,39,.92), rgba(10,12,22,.92));border:1px solid var(--line);box-shadow:var(--shadow);padding:48px 56px 64px;overflow:hidden;opacity:0;transform:translateY(14px) scale(.995);transition:opacity .35s ease, transform .35s ease;pointer-events:none}
 .slide.active{opacity:1;transform:none;pointer-events:auto}
-.slide::before{content:"RBW CONFIDENTIAL";position:absolute;right:-40px;bottom:60px;transform:rotate(-90deg);
-  transform-origin:right bottom;font-size:11px;letter-spacing:.5em;color:rgba(255,255,255,.05);pointer-events:none;white-space:nowrap}
-.slide::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(800px 300px at 10% -10%, rgba(124,92,255,.10), transparent 60%),
-  radial-gradient(700px 300px at 100% 110%, rgba(76,194,255,.07), transparent 60%)}
+.slide::before{content:"RBW CONFIDENTIAL";position:absolute;right:-40px;bottom:60px;transform:rotate(-90deg);transform-origin:right bottom;font-size:11px;letter-spacing:.5em;color:rgba(255,255,255,.05);pointer-events:none;white-space:nowrap}
+.slide::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(800px 300px at 10% -10%, rgba(124,92,255,.10), transparent 60%),radial-gradient(700px 300px at 100% 110%, rgba(76,194,255,.07), transparent 60%)}
 .slide > *{position:relative;z-index:1}
-.slide-meta{position:absolute;left:56px;right:56px;bottom:18px;display:flex;justify-content:space-between;align-items:center;
-  color:var(--ink-3);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.slide-meta{position:absolute;left:56px;right:56px;bottom:18px;display:flex;justify-content:space-between;align-items:center;color:var(--ink-3);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
 .slide-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;margin:0 8px;vertical-align:middle}
 .kicker{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-2)}
 .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2)}
@@ -87,14 +66,12 @@ h3.title{font-size:24px;line-height:1.2;margin:4px 0 6px;font-weight:700}
 .grid.c3{grid-template-columns:1fr 1fr 1fr}
 .grid.c4{grid-template-columns:repeat(4,1fr)}
 .stack > * + *{margin-top:8px}
-.card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
-  border:1px solid var(--line);border-radius:14px;padding:14px 16px;backdrop-filter:blur(8px)}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));border:1px solid var(--line);border-radius:14px;padding:14px 16px;backdrop-filter:blur(8px)}
 .card.hi{border-color:rgba(232,201,138,.35);background:linear-gradient(180deg, rgba(232,201,138,.08), rgba(232,201,138,.02))}
 .card .h{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin-bottom:4px}
 .card .v{font-size:18px;font-weight:700;color:#fff}
 .card .d{font-size:12.5px;color:var(--ink-1);margin-top:4px;line-height:1.5}
-.pill{display:inline-block;padding:3px 9px;border-radius:999px;border:1px solid var(--line-2);font-size:10.5px;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-1);background:var(--glass)}
+.pill{display:inline-block;padding:3px 9px;border-radius:999px;border:1px solid var(--line-2);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-1);background:var(--glass)}
 .pill.violet{color:#cdbcff;border-color:rgba(160,140,255,.45);background:rgba(124,92,255,.10)}
 .pill.pink{color:#ffc0d7;border-color:rgba(255,106,165,.45);background:rgba(255,106,165,.08)}
 .pill.blue{color:#bfe7ff;border-color:rgba(76,194,255,.45);background:rgba(76,194,255,.08)}
@@ -118,32 +95,24 @@ table.t td{color:var(--ink-1)}
 .acc.rbw{background:linear-gradient(90deg, #c9a45a, #e8c98a, #fff)}
 .cover{display:flex;flex-direction:column;justify-content:center;height:100%}
 .cover .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;color:var(--ink-2);letter-spacing:.3em}
-.cover h1{font-size:88px;line-height:.95;margin:14px 0 6px;letter-spacing:-.02em;
-  background:linear-gradient(180deg,#fff,#cfd2e0 60%,#8a90a3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover h1{font-size:88px;line-height:.95;margin:14px 0 6px;letter-spacing:-.02em;background:linear-gradient(180deg,#fff,#cfd2e0 60%,#8a90a3);-webkit-background-clip:text;background-clip:text;color:transparent}
 .cover .sub{font-size:22px;color:var(--ink-1);max-width:780px}
 .cover .core{font-size:16px;color:var(--ink-2);max-width:760px;margin-top:18px}
-.cover .seal{position:absolute;right:56px;top:48px;display:flex;align-items:center;gap:10px;
-  padding:8px 12px;border:1px solid rgba(232,201,138,.4);border-radius:999px;color:#f3e3bf;font-size:11px;letter-spacing:.22em}
-.toc-wrap{position:absolute;inset:0;background:rgba(5,6,12,.78);backdrop-filter:blur(12px);
-  display:none;align-items:center;justify-content:center;z-index:20}
+.cover .seal{position:absolute;right:56px;top:48px;display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid rgba(232,201,138,.4);border-radius:999px;color:#f3e3bf;font-size:11px;letter-spacing:.22em}
+.toc-wrap{position:absolute;inset:0;background:rgba(5,6,12,.78);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;z-index:20}
 .toc-wrap.open{display:flex}
-.toc{width:min(1100px,92vw);max-height:82vh;overflow:auto;
-  background:linear-gradient(180deg, rgba(18,22,39,.96), rgba(10,12,22,.96));
-  border:1px solid var(--line-2);border-radius:18px;padding:22px 26px;box-shadow:var(--shadow)}
+.toc{width:min(1100px,92vw);max-height:82vh;overflow:auto;background:linear-gradient(180deg, rgba(18,22,39,.96), rgba(10,12,22,.96));border:1px solid var(--line-2);border-radius:18px;padding:22px 26px;box-shadow:var(--shadow)}
 .toc h4{margin:0 0 4px;font-size:18px}
 .toc .small{color:var(--ink-3);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin-top:14px}
-.toc a{display:flex;gap:12px;align-items:center;padding:7px 10px;border-radius:10px;
-  text-decoration:none;color:var(--ink-1);border:1px solid transparent;cursor:pointer;font-size:13.5px}
+.toc a{display:flex;gap:12px;align-items:center;padding:7px 10px;border-radius:10px;text-decoration:none;color:var(--ink-1);border:1px solid transparent;cursor:pointer;font-size:13.5px}
 .toc a:hover{background:rgba(255,255,255,.04);border-color:var(--line)}
 .toc a .n{font-variant-numeric:tabular-nums;color:var(--ink-3);width:34px}
 .toc a .t{flex:1}
 .toc a .s{color:var(--ink-3);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-.deck-footer{border-top:1px solid var(--line);background:linear-gradient(0deg, rgba(10,12,20,.85), rgba(10,12,20,.55));
-  backdrop-filter:blur(10px);padding:8px 18px;display:flex;align-items:center;gap:14px}
+.deck-footer{border-top:1px solid var(--line);background:linear-gradient(0deg, rgba(10,12,20,.85), rgba(10,12,20,.55));backdrop-filter:blur(10px);padding:8px 18px;display:flex;align-items:center;gap:14px}
 .progress{flex:1;height:3px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
-.progress > i{display:block;height:100%;width:0%;
-  background:linear-gradient(90deg,#7c5cff,#4cc2ff,#e8c98a);transition:width .35s ease}
+.progress > i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#7c5cff,#4cc2ff,#e8c98a);transition:width .35s ease}
 .page-ind{font-size:12px;color:var(--ink-2);letter-spacing:.14em;font-variant-numeric:tabular-nums}
 .section-ind{font-size:11px;color:var(--ink-3);letter-spacing:.22em;text-transform:uppercase}
 body[data-mode="investor"] [data-internal="true"]{display:none !important}
@@ -156,54 +125,14 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
 .kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:13px;color:var(--ink-1)}
 .kv:last-child{border-bottom:0}
 .kv b{color:#fff;font-weight:600}
-@media print{
-  @page{size:1280px 720px;margin:0}
-  html,body{background:#fff !important;color:#111 !important;overflow:visible !important}
-  body{background:#fff !important}
-  .deck-header,.deck-footer,.toc-wrap{display:none !important}
-  .stage{display:block;overflow:visible}
-  .slides{width:1280px;height:auto;max-height:none;aspect-ratio:auto;position:static}
-  .slide{position:relative;inset:auto;width:1280px;height:720px;page-break-after:always;break-after:page;
-    opacity:1 !important;transform:none !important;pointer-events:auto !important;
-    background:#fff !important;color:#111 !important;border:0;border-radius:0;box-shadow:none}
-  .slide::after{display:none}
-  .slide::before{color:rgba(0,0,0,.06)}
-  .card{background:#f6f6f9 !important;border-color:#e3e3ea !important;color:#111}
-  .card .v,.card .h,.card .d,.subtitle,.lede,.zh,.note,ul.clean li,ol.clean li,table.t td,table.t th{color:#222 !important}
-  .kicker{color:#8a6a1f !important}
-  .pill{background:#f0f0f4 !important;color:#222 !important;border-color:#dcdce4 !important}
-  table.t,table.t th,table.t td{border-color:#e3e3ea !important;background:#fff !important}
-  table.t th{background:#f4f4f7 !important}
-  h1.title,h2.title,h3.title{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important}
-  .cover h1{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important}
-  .slide-meta{color:#777 !important}
-  .flow .step{background:#f6f6f9 !important;border-color:#e3e3ea !important;color:#222}
-  .kv{color:#222 !important;border-color:#dcdce4 !important}
-  .kv b{color:#111 !important}
-}
-@media (max-width: 900px){
-  .slides{aspect-ratio:auto;height:calc(100vh - 110px);max-height:none}
-  .slide{padding:24px 22px 56px}
-  h1.title{font-size:32px}h2.title{font-size:26px}h3.title{font-size:20px}
-  .cover h1{font-size:48px}
-  .grid.c3,.grid.c4{grid-template-columns:1fr 1fr}
-  .row{flex-direction:column}
-  .brand .tag{display:none}
-  .toolbar .btn span.long{display:none}
-  .flow{grid-template-columns:1fr 1fr}
-}
+@media print{@page{size:1280px 720px;margin:0}html,body{background:#fff !important;color:#111 !important;overflow:visible !important}body{background:#fff !important}.deck-header,.deck-footer,.toc-wrap{display:none !important}.stage{display:block;overflow:visible}.slides{width:1280px;height:auto;max-height:none;aspect-ratio:auto;position:static}.slide{position:relative;inset:auto;width:1280px;height:720px;page-break-after:always;break-after:page;opacity:1 !important;transform:none !important;pointer-events:auto !important;background:#fff !important;color:#111 !important;border:0;border-radius:0;box-shadow:none}.slide::after{display:none}.slide::before{color:rgba(0,0,0,.06)}.card{background:#f6f6f9 !important;border-color:#e3e3ea !important;color:#111}.card .v,.card .h,.card .d,.subtitle,.lede,.zh,.note,ul.clean li,ol.clean li,table.t td,table.t th{color:#222 !important}.kicker{color:#8a6a1f !important}.pill{background:#f0f0f4 !important;color:#222 !important;border-color:#dcdce4 !important}table.t,table.t th,table.t td{border-color:#e3e3ea !important;background:#fff !important}table.t th{background:#f4f4f7 !important}h1.title,h2.title,h3.title{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important}.cover h1{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important}.slide-meta{color:#777 !important}.flow .step{background:#f6f6f9 !important;border-color:#e3e3ea !important;color:#222}.kv{color:#222 !important;border-color:#dcdce4 !important}.kv b{color:#111 !important}}
+@media (max-width: 900px){.slides{aspect-ratio:auto;height:calc(100vh - 110px);max-height:none}.slide{padding:24px 22px 56px}h1.title{font-size:32px}h2.title{font-size:26px}h3.title{font-size:20px}.cover h1{font-size:48px}.grid.c3,.grid.c4{grid-template-columns:1fr 1fr}.row{flex-direction:column}.brand .tag{display:none}.toolbar .btn span.long{display:none}.flow{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body data-mode="investor">
 <div class="deck-shell">
   <header class="deck-header">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
-      <div>
-        <div class="name">RBW</div>
-        <div class="tag">AI GUIDED EXPERIENCE COMPANY</div>
-      </div>
-    </div>
+    <div class="brand"><div class="logo" aria-hidden="true"></div><div><div class="name">RBW</div><div class="tag">AI GUIDED EXPERIENCE COMPANY</div></div></div>
     <span class="chip warn">CONFIDENTIAL</span>
     <span class="chip">v1.0</span>
     <div class="header-spacer"></div>
@@ -221,7 +150,6 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   <main class="stage">
     <div class="slides" id="slides">
 
-<!-- ============== SLIDE 01 — COVER ============== -->
 <section class="slide cover" data-title="Cover" data-section="Open">
   <div class="seal">● CONFIDENTIAL · v1.0</div>
   <div class="mono">RBW · AI GUIDED EXPERIENCE COMPANY</div>
@@ -234,29 +162,17 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
     <span class="pill">Internal · Investor Preview · Post-NDA</span>
     <span class="pill violet">Version 1.0</span>
   </div>
-  <div class="slide-meta">
-    <span>CONFIDENTIAL — DO NOT DISTRIBUTE<span class="dot"></span>RBW Strategy Deck</span>
-    <span><span class="pgnum">01 / --</span></span>
-  </div>
+  <div class="slide-meta"><span>CONFIDENTIAL — DO NOT DISTRIBUTE<span class="dot"></span>RBW Strategy Deck</span><span><span class="pgnum">01 / --</span></span></div>
 </section>
 
-<!-- ============== SLIDE 02 — CONFIDENTIALITY ============== -->
 <section class="slide" data-title="Confidentiality Notice" data-section="Open">
   <div class="kicker">02 · Confidentiality</div>
   <h2 class="title">Confidentiality Notice</h2>
   <div class="subtitle">For selected internal decision-makers and qualified potential investors only.</div>
   <div class="hr"></div>
   <div class="grid c2">
-    <div class="card hi">
-      <div class="h">English</div>
-      <div class="v" style="font-size:16px;line-height:1.5;color:#fff">CONFIDENTIAL — DO NOT DISTRIBUTE</div>
-      <div class="d">This document is confidential and intended only for selected internal decision-makers and qualified potential investors. It contains confidential business strategy information of RBW including product roadmap, channel resources and capital structure considerations. Do not copy, forward, screenshot, upload or otherwise distribute any part of this document without prior written permission.</div>
-    </div>
-    <div class="card">
-      <div class="h">中文</div>
-      <div class="v" style="font-size:16px;line-height:1.5;color:#fff">商业机密文件 — 未经书面许可不得传播</div>
-      <div class="d">本文档仅供指定内部决策者及合格潜在投资人查阅，不得复制、转发、截图、上传或对外传播。本文档包含 RBW 的商业战略、产品规划、渠道资源和资本结构设想；如需进一步披露细节，应通过 NDA 与法律流程完成。</div>
-    </div>
+    <div class="card hi"><div class="h">English</div><div class="v" style="font-size:16px;line-height:1.5;color:#fff">CONFIDENTIAL — DO NOT DISTRIBUTE</div><div class="d">This document is confidential and intended only for selected internal decision-makers and qualified potential investors. It contains confidential business strategy information of RBW including product roadmap, channel resources and capital structure considerations. Do not copy, forward, screenshot, upload or otherwise distribute any part of this document without prior written permission.</div></div>
+    <div class="card"><div class="h">中文</div><div class="v" style="font-size:16px;line-height:1.5;color:#fff">商业机密文件 — 未经书面许可不得传播</div><div class="d">本文档仅供指定内部决策者及合格潜在投资人查阅，不得复制、转发、截图、上传或对外传播。本文档包含 RBW 的商业战略、产品规划、渠道资源和资本结构设想；如需进一步披露细节，应通过 NDA 与法律流程完成。</div></div>
   </div>
   <div class="grid c3" style="margin-top:14px">
     <div class="card"><div class="h">Disclosure Tier 1</div><div class="v" style="font-size:14px">Internal View</div><div class="d">给父母、商业师父、家族风控负责人。完整战略逻辑可见，外部资源以代号展示。</div></div>
@@ -266,7 +182,6 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   <div class="slide-meta"><span>CONFIDENTIAL<span class="dot"></span>Notice</span><span class="pgnum">02 / --</span></div>
 </section>
 
-<!-- ============== SLIDE 03 — EXECUTIVE SUMMARY ============== -->
 <section class="slide" data-title="Executive Summary" data-section="Thesis">
   <div class="kicker">03 · Executive Summary</div>
   <h2 class="title">RBW in One Page</h2>
@@ -279,27 +194,13 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
       <div class="card"><div class="h">How RBW Wins</div><div class="d">Validate with small scenes first. Only amplify with high-quality resources after the funnel works. Resource discipline is part of risk control.</div></div>
     </div>
     <div class="stack">
-      <div class="card hi"><div class="h">The Ten Points</div>
-        <ol class="clean" style="font-size:13px">
-          <li>RBW is an AI Guided Experience Company.</li>
-          <li>Not a single AI mysticism product.</li>
-          <li>Enters via four high-interest scenes.</li>
-          <li>One unified AI Experience Engine underneath.</li>
-          <li>Overseas first for live validation.</li>
-          <li>Domestic launch after ICP completion.</li>
-          <li>Vibe Party = distribution funnel.</li>
-          <li>RBW Meta = cash flow.</li>
-          <li>Acu Map = wellness education + SEO trust.</li>
-          <li>Magic Cube = subscription learning. Strategic resources amplify, never replace, validation.</li>
-        </ol>
-      </div>
+      <div class="card hi"><div class="h">The Ten Points</div><ol class="clean" style="font-size:13px"><li>RBW is an AI Guided Experience Company.</li><li>Not a single AI mysticism product.</li><li>Enters via four high-interest scenes.</li><li>One unified AI Experience Engine underneath.</li><li>Overseas first for live validation.</li><li>Domestic launch after ICP completion.</li><li>Vibe Party = distribution funnel.</li><li>RBW Meta = cash flow.</li><li>Acu Map = wellness education + SEO trust.</li><li>Magic Cube = subscription learning. Strategic resources amplify, never replace, validation.</li></ol></div>
       <div class="card"><div class="h">One Sentence</div><div class="v" style="font-size:18px;line-height:1.35">Separate products. Unified engine.<br/>Validate first. Amplify with resources later.</div><div class="d zh">前台分开，后台统一。先验证，再用资源放大。</div></div>
     </div>
   </div>
   <div class="slide-meta"><span>THESIS<span class="dot"></span>Executive Summary</span><span class="pgnum">03 / --</span></div>
 </section>
 
-<!-- ============== SLIDE 04 — CEO-LEVEL THESIS ============== -->
 <section class="slide" data-title="CEO-Level Thesis" data-section="Thesis">
   <div class="kicker">04 · Positioning</div>
   <h2 class="title">RBW is not a collection of small apps.</h2>
@@ -307,79 +208,36 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   <div class="zh" style="margin-top:6px">RBW 不是四个小工具的集合，而是一套可以持续生产 AI 互动体验产品的系统。</div>
   <div class="hr"></div>
   <div class="grid c2">
-    <div class="card" style="border-color:rgba(255,122,122,.35)">
-      <div class="h" style="color:#ff9b9b">Do not say it like this</div>
-      <ul class="clean">
-        <li>玄学 App</li>
-        <li>魔方学习工具</li>
-        <li>穴位查询小程序</li>
-        <li>派对游戏合集</li>
-        <li>"AI 算命"</li>
-      </ul>
-      <div class="note" style="margin-top:8px">这套语言无法支持长期估值、融资和家族治理叙事。</div>
-    </div>
-    <div class="card hi">
-      <div class="h" style="color:#f3e3bf">Say it like this</div>
-      <ul class="clean">
-        <li>AI-guided <b>Self-discovery</b></li>
-        <li>AI-guided <b>Skill Learning</b></li>
-        <li>AI-guided <b>Wellness Education</b></li>
-        <li>AI-guided <b>Social Play</b></li>
-        <li>One shared <b>AI Experience Engine</b></li>
-      </ul>
-      <div class="note" style="margin-top:8px">投资人、家族决策者和合规顾问都能在同一句话里理解 RBW。</div>
-    </div>
+    <div class="card" style="border-color:rgba(255,122,122,.35)"><div class="h" style="color:#ff9b9b">Do not say it like this</div><ul class="clean"><li>玄学 App</li><li>魔方学习工具</li><li>穴位查询小程序</li><li>派对游戏合集</li><li>"AI 算命"</li></ul><div class="note" style="margin-top:8px">这套语言无法支持长期估值、融资和家族治理叙事。</div></div>
+    <div class="card hi"><div class="h" style="color:#f3e3bf">Say it like this</div><ul class="clean"><li>AI-guided <b>Self-discovery</b></li><li>AI-guided <b>Skill Learning</b></li><li>AI-guided <b>Wellness Education</b></li><li>AI-guided <b>Social Play</b></li><li>One shared <b>AI Experience Engine</b></li></ul><div class="note" style="margin-top:8px">投资人、家族决策者和合规顾问都能在同一句话里理解 RBW。</div></div>
   </div>
   <div class="slide-meta"><span>POSITIONING<span class="dot"></span>CEO Thesis</span><span class="pgnum">04 / --</span></div>
 </section>
 
-<!-- ============== SLIDE 05 — MARKET SHIFT ============== -->
 <section class="slide" data-title="Market Shift" data-section="Market">
   <div class="kicker">05 · Market</div>
   <h2 class="title">AI Consumer Products Are Moving from Tools to Experiences</h2>
   <div class="subtitle">The first wave was productivity. The next wave is feeling, guidance and participation.</div>
   <div class="hr"></div>
   <div class="grid c2">
-    <div class="card">
-      <div class="h">Wave 1 — AI as Tool</div>
-      <ul class="clean">
-        <li>Writing assistants</li>
-        <li>Office and meeting copilots</li>
-        <li>Customer service automation</li>
-        <li>Code generation</li>
-      </ul>
-      <div class="d">Sold on efficiency. Replaceable by the next model.</div>
-    </div>
-    <div class="card hi">
-      <div class="h">Wave 2 — AI as Experience</div>
-      <ul class="clean">
-        <li>Companionship and self-discovery</li>
-        <li>Social entertainment and group play</li>
-        <li>Wellness culture and education</li>
-        <li>Skill learning with guidance</li>
-      </ul>
-      <div class="d">Sold on emotion, guidance and participation. Sticky by design.</div>
-    </div>
+    <div class="card"><div class="h">Wave 1 — AI as Tool</div><ul class="clean"><li>Writing assistants</li><li>Office and meeting copilots</li><li>Customer service automation</li><li>Code generation</li></ul><div class="d">Sold on efficiency. Replaceable by the next model.</div></div>
+    <div class="card hi"><div class="h">Wave 2 — AI as Experience</div><ul class="clean"><li>Companionship and self-discovery</li><li>Social entertainment and group play</li><li>Wellness culture and education</li><li>Skill learning with guidance</li></ul><div class="d">Sold on emotion, guidance and participation. Sticky by design.</div></div>
   </div>
   <div class="card" style="margin-top:14px"><div class="d"><b>RBW thesis:</b> Users no longer only want efficiency. They want emotional value, a sense of being guided, and the feeling of taking part in something. RBW is built for the experience layer of AI consumer products.</div></div>
   <div class="slide-meta"><span>MARKET<span class="dot"></span>Tools → Experiences</span><span class="pgnum">05 / --</span></div>
 </section>
 
-<!-- ============== SLIDE 06 — PRODUCT MATRIX ============== -->
 <section class="slide" data-title="Product Matrix" data-section="Products">
   <div class="kicker">06 · Products</div>
   <h2 class="title">Four Products. One Engine.</h2>
   <div class="subtitle">Each product covers a distinct domain and plays a distinct commercial role.</div>
   <div class="hr"></div>
-  <table class="t">
-    <thead><tr><th style="width:18%">Product</th><th>Domain</th><th>User Need</th><th>Business Role</th></tr></thead>
-    <tbody>
-      <tr><td><span class="pill violet">RBW Meta</span></td><td>Self-discovery</td><td>Tarot, Xiao Liu Ren, Zi Wei Dou Shu, structured reports</td><td>Cash-flow engine</td></tr>
-      <tr><td><span class="pill pink">Vibe Party</span></td><td>Social play</td><td>Party games, icebreakers, group interaction</td><td>Distribution engine</td></tr>
-      <tr><td><span class="pill teal">Acu Map</span></td><td>Wellness education</td><td>Acupoints, meridians, TCM cultural learning</td><td>SEO and trust asset</td></tr>
-      <tr><td><span class="pill blue">Magic Cube</span></td><td>Skill learning</td><td>2x2 / 3x3 formulas, tracking, challenges</td><td>Subscription learning</td></tr>
-    </tbody>
-  </table>
+  <table class="t"><thead><tr><th style="width:18%">Product</th><th>Domain</th><th>User Need</th><th>Business Role</th></tr></thead><tbody>
+    <tr><td><span class="pill violet">RBW Meta</span></td><td>Self-discovery</td><td>Tarot, Xiao Liu Ren, Zi Wei Dou Shu, structured reports</td><td>Cash-flow engine</td></tr>
+    <tr><td><span class="pill pink">Vibe Party</span></td><td>Social play</td><td>Party games, icebreakers, group interaction</td><td>Distribution engine</td></tr>
+    <tr><td><span class="pill teal">Acu Map</span></td><td>Wellness education</td><td>Acupoints, meridians, TCM cultural learning</td><td>SEO and trust asset</td></tr>
+    <tr><td><span class="pill blue">Magic Cube</span></td><td>Skill learning</td><td>2x2 / 3x3 formulas, tracking, challenges</td><td>Subscription learning</td></tr>
+  </tbody></table>
   <div class="grid c4" style="margin-top:14px">
     <div class="card"><div class="acc meta"></div><div class="h">RBW Meta</div><div class="d">Self-discovery reports and AI dialogue. High AOV, immediate cash flow.</div></div>
     <div class="card"><div class="acc vibe"></div><div class="h">Vibe Party</div><div class="d">Free party games. One host brings a room of users.</div></div>
@@ -389,7 +247,6 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   <div class="slide-meta"><span>PRODUCTS<span class="dot"></span>Matrix</span><span class="pgnum">06 / --</span></div>
 </section>
 
-<!-- ============== SLIDE 07 — PRODUCT ROLES ============== -->
 <section class="slide" data-title="Product Roles" data-section="Products">
   <div class="kicker">07 · Discipline</div>
   <h2 class="title">Each Product Has a Different Commercial Mission</h2>
@@ -406,7 +263,6 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   <div class="slide-meta"><span>PRODUCTS<span class="dot"></span>Commercial Roles</span><span class="pgnum">07 / --</span></div>
 </section>
 
-<!-- ============== SLIDE 08 — EXPERIENCE ENGINE ============== -->
 <section class="slide" data-title="Experience Engine" data-section="Engine">
   <div class="kicker">08 · Platform</div>
   <h2 class="title">RBW Experience Engine</h2>
@@ -427,7 +283,6 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   <div class="slide-meta"><span>ENGINE<span class="dot"></span>Shared Platform</span><span class="pgnum">08 / --</span></div>
 </section>
 
-<!-- ============== SLIDE 09 — WHY THIS IS NOT RANDOM ============== -->
 <section class="slide" data-title="Why This Is Not Random" data-section="Engine">
   <div class="kicker">09 · Pattern</div>
   <h2 class="title">The Common Pattern: AI-Guided Experiences</h2>
@@ -443,56 +298,28 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   <div class="slide-meta"><span>ENGINE<span class="dot"></span>Why Coherent</span><span class="pgnum">09 / --</span></div>
 </section>
 
-<!-- ============== SLIDE 10 — GLOBAL MARKET OPPORTUNITY ============== -->
 <section class="slide" data-title="Global Market Opportunity" data-section="Market">
   <div class="kicker">10 · Opportunity</div>
   <h2 class="title">Global Users Already Love Eastern Wisdom, Tarot, Wellness and Social Games</h2>
   <div class="subtitle">RBW is not creating new demand. RBW is entering categories with existing global willingness to pay.</div>
   <div class="hr"></div>
   <div class="grid c2">
-    <div class="card"><div class="acc meta"></div><div class="h">Self-discovery</div>
-      <ul class="clean">
-        <li>Western users already pay for tarot, astrology and oracle reading</li>
-        <li>Subscription apps in this space already exist at meaningful scale</li>
-        <li>Eastern systems (Xiao Liu Ren, Zi Wei) add differentiation</li>
-      </ul>
-    </div>
-    <div class="card"><div class="acc acu"></div><div class="h">Wellness Education</div>
-      <ul class="clean">
-        <li>Interest in acupuncture, acupressure, meridians and TCM wellness is rising globally</li>
-        <li>English-language educational content quality is uneven — clear positioning gap</li>
-        <li>Education framing, not medical claims, fits the global market</li>
-      </ul>
-    </div>
-    <div class="card"><div class="acc vibe"></div><div class="h">Social Play</div>
-      <ul class="clean">
-        <li>Party games are mainstream in house parties, college events, bars and team building</li>
-        <li>QR-code group play is a proven viral mechanic</li>
-        <li>Hosts are natural distributors</li>
-      </ul>
-    </div>
-    <div class="card"><div class="acc cube"></div><div class="h">Skill Learning</div>
-      <ul class="clean">
-        <li>Cube solving is a global niche with stable demand</li>
-        <li>Parents pay for STEM and logic training</li>
-        <li>Annual subscriptions are well-accepted in this segment</li>
-      </ul>
-    </div>
+    <div class="card"><div class="acc meta"></div><div class="h">Self-discovery</div><ul class="clean"><li>Western users already pay for tarot, astrology and oracle reading</li><li>Subscription apps in this space already exist at meaningful scale</li><li>Eastern systems (Xiao Liu Ren, Zi Wei) add differentiation</li></ul></div>
+    <div class="card"><div class="acc acu"></div><div class="h">Wellness Education</div><ul class="clean"><li>Interest in acupuncture, acupressure, meridians and TCM wellness is rising globally</li><li>English-language educational content quality is uneven — clear positioning gap</li><li>Education framing, not medical claims, fits the global market</li></ul></div>
+    <div class="card"><div class="acc vibe"></div><div class="h">Social Play</div><ul class="clean"><li>Party games are mainstream in house parties, college events, bars and team building</li><li>QR-code group play is a proven viral mechanic</li><li>Hosts are natural distributors</li></ul></div>
+    <div class="card"><div class="acc cube"></div><div class="h">Skill Learning</div><ul class="clean"><li>Cube solving is a global niche with stable demand</li><li>Parents pay for STEM and logic training</li><li>Annual subscriptions are well-accepted in this segment</li></ul></div>
   </div>
   <div class="card hi" style="margin-top:10px"><div class="d"><b>RBW edge:</b> Eastern cultural depth + AI-guided experience design + premium, non-cheap visual identity. This combination is rare in the current global market.</div></div>
   <div class="slide-meta"><span>MARKET<span class="dot"></span>Global Demand</span><span class="pgnum">10 / --</span></div>
 </section>
 
-<!-- SLIDES_PLACEHOLDER -->
+<!-- SLIDES_11_43_HERE -->
 
     </div>
     <div class="toc-wrap" id="toc">
       <div class="toc">
         <div class="row" style="align-items:center;gap:16px">
-          <div style="flex:1">
-            <div class="small">Table of Contents</div>
-            <h4>RBW — Confidential Strategy Deck</h4>
-          </div>
+          <div style="flex:1"><div class="small">Table of Contents</div><h4>RBW — Confidential Strategy Deck</h4></div>
           <button class="btn" id="btn-toc-close">Close (Esc)</button>
         </div>
         <div class="hr"></div>
@@ -539,9 +366,7 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   document.getElementById('btn-toc-close').addEventListener('click', ()=>tocWrap.classList.remove('open'));
   slides.forEach((s,idx)=>{
     const a = document.createElement('a');
-    a.innerHTML = '<span class="n">'+String(idx+1).padStart(2,'0')+'</span>'+
-                  '<span class="t">'+(s.getAttribute('data-title')||'')+'</span>'+
-                  '<span class="s">'+(s.getAttribute('data-section')||'')+'</span>';
+    a.innerHTML = '<span class="n">'+String(idx+1).padStart(2,'0')+'</span>'+'<span class="t">'+(s.getAttribute('data-title')||'')+'</span>'+'<span class="s">'+(s.getAttribute('data-section')||'')+'</span>';
     a.addEventListener('click', ()=>{ go(idx); tocWrap.classList.remove('open'); });
     tocGrid.appendChild(a);
   });
@@ -554,10 +379,7 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
     else if(e.key.toLowerCase()==='t'){ tocWrap.classList.toggle('open'); }
     else if(e.key==='Escape'){ tocWrap.classList.remove('open'); }
     else if(e.key.toLowerCase()==='p'){ window.print(); }
-    else if(e.key.toLowerCase()==='i'){
-      const m = document.body.getAttribute('data-mode')==='internal'?'investor':'internal';
-      setMode(m);
-    }
+    else if(e.key.toLowerCase()==='i'){ const m = document.body.getAttribute('data-mode')==='internal'?'investor':'internal'; setMode(m); }
   });
   document.querySelector('.stage').addEventListener('click', (e)=>{
     if(e.target.closest('.slide') == null) return;
@@ -576,11 +398,7 @@ body[data-mode="internal"] .internal-badge{display:inline-block}
   document.getElementById('mode-internal').addEventListener('click', ()=>setMode('internal'));
   let tx=null;
   document.querySelector('.stage').addEventListener('touchstart', e=>{ tx = e.changedTouches[0].clientX; }, {passive:true});
-  document.querySelector('.stage').addEventListener('touchend', e=>{
-    if(tx==null) return;
-    const dx = e.changedTouches[0].clientX - tx;
-    if(Math.abs(dx)>40){ dx<0?next():prev(); } tx=null;
-  }, {passive:true});
+  document.querySelector('.stage').addEventListener('touchend', e=>{ if(tx==null) return; const dx = e.changedTouches[0].clientX - tx; if(Math.abs(dx)>40){ dx<0?next():prev(); } tx=null; }, {passive:true});
   render();
 })();
 </script>
