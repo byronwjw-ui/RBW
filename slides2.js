@@ -1,4 +1,4 @@
-/* RBW Confidential Strategy Deck — slides 26-43 payload */
+/* RBW Confidential Strategy Deck — slides 26-43 payload (English) */
 window.RBW_SLIDES = window.RBW_SLIDES || [];
 window.RBW_SLIDES.push(
 /* 26 */ `<section class="slide" data-title="Growth Flywheel" data-section="Business">
@@ -88,7 +88,7 @@ window.RBW_SLIDES.push(
 <div class="subtitle">One sentence. Same sentence. Every time.</div><div class="hr"></div>
 <div class="grid c2">
 <div class="card" style="border-color:rgba(255,122,122,.35)"><div class="h" style="color:#ff9b9b">Do not say</div><div class="d" style="font-size:15px">"We made tarot, cube, acupoints and party games."</div><div class="note" style="margin-top:6px">This sounds like four small apps and limits the conversation immediately.</div></div>
-<div class="card hi"><div class="h" style="color:#f3e3bf">Say this</div><div class="d" style="font-size:15px">"RBW is building an <b>AI Experience Engine</b> that turns cultural knowledge, social entertainment, wellness education and skill learning into guided interactive products."</div><div class="zh" style="margin-top:6px">RBW 正在打造一套 AI 互动体验引擎，把文化内容、社交娱乐、健康科普和技能学习变成可商业化、可传播、可复用的互动产品。</div></div>
+<div class="card hi"><div class="h" style="color:#f3e3bf">Say this</div><div class="d" style="font-size:15px">"RBW is building an <b>AI Experience Engine</b> that turns cultural knowledge, social entertainment, wellness education and skill learning into guided interactive products."</div></div>
 </div>
 <div class="card" style="margin-top:12px"><div class="h">Supporting Lines</div><ul class="clean"><li>Vibe Party creates group distribution.</li><li>RBW Meta monetizes self-discovery.</li><li>Acu Map builds wellness education trust.</li><li>Magic Cube creates subscription learning.</li><li>One shared engine ships all of them.</li></ul></div>
 <div class="slide-meta"><span>INVESTOR<span class="dot"></span>Narrative</span><span class="pgnum">32 / --</span></div></section>`,
@@ -117,15 +117,14 @@ window.RBW_SLIDES.push(
 /* 35 */ `<section class="slide" data-title="Closing" data-section="Close">
 <div class="kicker">35 · Closing</div><div class="acc rbw" style="max-width:220px"></div>
 <h2 class="title">RBW — From Products to an AI Experience Engine</h2>
-<div class="lede" style="margin-top:8px">RBW does not sell isolated tools. RBW sells AI-guided experiences.</div>
-<div class="zh">RBW 不卖孤立工具，RBW 卖的是被 AI 引导完成一段体验的感觉。</div><div class="hr"></div>
+<div class="lede" style="margin-top:8px">RBW does not sell isolated tools. RBW sells AI-guided experiences.</div><div class="hr"></div>
 <div class="grid c3">
 <div class="card"><div class="h">Validate</div><div class="d">Small scenes. Real users. Real money. Real numbers.</div></div>
 <div class="card hi"><div class="h">Build the Engine</div><div class="d">One AI Experience Engine. Four products today. More tomorrow.</div></div>
 <div class="card"><div class="h">Amplify</div><div class="d">Strategic resources activated only after the funnel is proven.</div></div>
 </div>
-<div class="card" style="margin-top:12px"><div class="v" style="font-size:17px;line-height:1.4">Validate first. Build the engine. Then amplify with strategic resources.</div><div class="zh">先验证，再建引擎，最后用战略资源放大。</div></div>
-<div class="card" style="margin-top:10px;border-color:rgba(255,210,155,.35)"><div class="d" style="color:#ffd29b"><b>CONFIDENTIAL — DO NOT DISTRIBUTE.</b> This document contains confidential business strategy information of RBW. Do not copy, forward, upload or distribute without written permission.<br/><span class="zh">商业机密文件 — 未经书面许可不得复制、转发、上传或传播。</span></div></div>
+<div class="card" style="margin-top:12px"><div class="v" style="font-size:17px;line-height:1.4">Validate first. Build the engine. Then amplify with strategic resources.</div></div>
+<div class="card" style="margin-top:10px;border-color:rgba(255,210,155,.35)"><div class="d" style="color:#ffd29b"><b>CONFIDENTIAL — DO NOT DISTRIBUTE.</b> This document contains confidential business strategy information of RBW. Do not copy, forward, upload or distribute without written permission.</div></div>
 <div class="slide-meta"><span>CLOSE<span class="dot"></span>RBW v1.0</span><span class="pgnum">35 / --</span></div></section>`,
 
 /* 36 */ `<section class="slide" data-title="Appendix A — Pricing Reference" data-section="Appendix">
@@ -168,8 +167,8 @@ window.RBW_SLIDES.push(
 <div class="kicker">37 · Appendix B</div><h2 class="title">Appendix B — Compliance Language</h2>
 <div class="subtitle">Mandatory disclaimers that must appear in-product and in any external communication.</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card hi"><div class="acc meta"></div><div class="h">RBW Meta</div><div class="d" style="font-size:14px">For entertainment, reflection and self-discovery only. Not financial, legal, medical or professional advice.</div><div class="zh" style="margin-top:6px">仅供娱乐、反思与自我探索之用，不构成金融、法律、医疗或专业意见。</div></div>
-<div class="card hi"><div class="acc acu"></div><div class="h">Acu Map</div><div class="d" style="font-size:14px">For educational and wellness learning only. Not medical advice, diagnosis or treatment. Consult qualified healthcare professionals for medical conditions.</div><div class="zh" style="margin-top:6px">仅供教育与健康文化学习之用，不提供医疗建议、诊断或治疗。如有健康问题，请咨询合格医疗专业人员。</div></div>
+<div class="card hi"><div class="acc meta"></div><div class="h">RBW Meta</div><div class="d" style="font-size:14px">For entertainment, reflection and self-discovery only. Not financial, legal, medical or professional advice.</div></div>
+<div class="card hi"><div class="acc acu"></div><div class="h">Acu Map</div><div class="d" style="font-size:14px">For educational and wellness learning only. Not medical advice, diagnosis or treatment. Consult qualified healthcare professionals for medical conditions.</div></div>
 <div class="card"><div class="acc vibe"></div><div class="h">Vibe Party</div><div class="d" style="font-size:14px">For social entertainment use among consenting participants. Hosts are responsible for the appropriateness of content within their event.</div></div>
 <div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><div class="d" style="font-size:14px">Educational and skill-learning product. Practice times and difficulty assessments are illustrative and not a measure of cognitive ability.</div></div>
 </div>
@@ -251,8 +250,8 @@ window.RBW_SLIDES.push(
 <h2 class="title">Confidential — End of Deck</h2>
 <div class="lede">This document contains confidential business strategy information of RBW. It is intended only for selected internal decision-makers and qualified potential investors.</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card hi"><div class="h">English</div><div class="d" style="font-size:14px"><b>CONFIDENTIAL — DO NOT DISTRIBUTE.</b> This document contains confidential business strategy information of RBW. Do not copy, forward, screenshot, upload or distribute any part of this document without prior written permission.</div></div>
-<div class="card"><div class="h">中文</div><div class="d" style="font-size:14px"><b>商业机密文件 — 未经书面许可不得复制、转发、上传或传播。</b>本文档包含 RBW 的商业战略、产品规划、渠道资源和资本结构设想。仅供指定内部决策者及合格潜在投资人查阅。</div></div>
+<div class="card hi"><div class="h">Confidentiality</div><div class="d" style="font-size:14px"><b>CONFIDENTIAL — DO NOT DISTRIBUTE.</b> This document contains confidential business strategy information of RBW. Do not copy, forward, screenshot, upload or distribute any part of this document without prior written permission.</div></div>
+<div class="card"><div class="h">Scope</div><div class="d" style="font-size:14px">This deck covers RBW's business strategy, product roadmap, channel resources and capital structure considerations. For selected internal decision-makers and qualified potential investors only.</div></div>
 </div>
 <div class="card" style="margin-top:12px"><div class="d"><b>Document control:</b> Version 1.0 · RBW Confidential Strategy Deck · maintained internally. Any updates supersede prior versions. Distribution log maintained internally.</div></div>
 <div class="slide-meta"><span>RBW CONFIDENTIAL<span class="dot"></span>End of Document · v1.0</span><span class="pgnum">43 / --</span></div></section>`
