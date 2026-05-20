@@ -5,7 +5,7 @@ window.RBW_SLIDES_ZH.push(
 <div class="kicker">11 · 进入市场</div><h2 class="title">海外先行，国内 ICP 同步推进</h2>
 <div class="subtitle">先在英文市场做真实用户验证，国内 ICP 完成后再上线。</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card"><div class="h">为什么先海外</div><ul class="clean"><li>国内 ICP 备案仍在推进中</li><li>英文市场用户对塔罗、中医文化科普、派对游戏接受度更高</li><li>香港及离岸架构（专业意见推进中）有利于海外收款与未来资本安排</li><li>海外营收先跑起来，国内上线更有底气</li></ul></div>
+<div class="card"><div class="h">为什么先海外</div><ul class="clean"><li>国内 ICP 备案仍在推进中</li><li>英文市场用户对塔罗、TCM 健康文化科普、派对游戏接受度更高</li><li>香港及离岸架构（专业意见推进中）有利于海外收款与未来资本安排</li><li>海外营收先跑起来，国内上线更有底气</li></ul></div>
 <div class="card hi"><div class="h">操作原则</div><div class="d">不等国内一切完美才动。先在已经打开的门里做验证，再把验证结果带回国内放大。</div></div>
 <div class="card"><div class="h">推进顺序</div><ol class="clean"><li>海外 Landing Page 与 HTML 产品预览</li><li>Vibe Party 真实场次测试</li><li>RBW Meta 英文首批付费报告</li><li>Acu Map 教育 SEO 内容基础</li><li>Magic Cube 14 天挑战订阅测试</li></ol></div>
 <div class="card"><div class="h">重要说明</div><div class="d">公司架构、税务、资金流和股权安排均以专业律师及税务顾问意见为准，本文档不构成法律或税务结论。</div></div>
@@ -28,18 +28,19 @@ window.RBW_SLIDES_ZH.push(
 <div class="kicker">13 · 资源</div><h2 class="title">高质量资源应放大验证，而不是替代验证</h2>
 <div class="subtitle">先用小场景验证，再用大资源放大——只有漏斗跑通之后。</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card"><div class="h">资源清单 <span class="pill gold" style="margin-left:6px">代号制</span></div><ul class="clean"><li><b>Resource A</b> — 战略级线下娱乐地标资源</li><li><b>Resource B</b> — 头部互联网生态资源</li><li><b>Resource C</b> — 家族企业治理与风控支持</li><li><b>Resource D</b> — 专业法律与税务顾问</li><li><b>Resource E</b> — 线下场景渠道网络</li></ul><div class="note" style="margin-top:6px">资源以代号表达，实名仅在 Post-NDA 阶段披露。</div></div>
+<div class="card"><div class="h">资源清单 <span class="pill gold" style="margin-left:6px">代号制</span></div><ul class="clean"><li><b>Resource A</b> — 战略级线下娱乐地标资源</li><li><b>Resource B</b> — 头部互联网生态资源</li><li><b>Resource C</b> — 资深顾问与风控支持</li><li><b>Resource D</b> — 专业法律与税务顾问</li><li><b>Resource E</b> — 线下场景渠道网络</li></ul><div class="note" style="margin-top:6px">资源以代号表达，实名仅在 Post-NDA 阶段披露。</div></div>
 <div class="card hi"><div class="h">操作规则</div><div class="d"><b>第一阶段 · 验证：</b>30-50 个小型线下场景、海外自然流量、SEO 内容基础。<br/><br/><b>第二阶段 · 放大：</b>产品漏斗达到目标转化后，再激活战略资源。每次资源激活都必须带明确的衡量计划。</div></div>
 </div>
-<div class="card" data-internal="true" style="margin-top:12px;border-color:rgba(124,92,255,.35)"><div class="h" style="color:#cdbcff">Internal View · 战略含义</div><div class="d">Resource A 为线下首发提供地标级场所背书。Resource B 在单元经济跑通后提供生态级分发杠杆。Resource C 提供治理、风控与节奏控制。Resource D 确保每一项对外安排都经专业审查。Resource E 提供可重复的 B2B 场景测试面。<b>本文档不写出任何真实名称。</b></div></div>
+<div class="card" data-internal="true" style="margin-top:12px;border-color:rgba(124,92,255,.35)"><div class="h" style="color:#cdbcff">Internal · 战略含义</div><div class="d">Resource A 为线下首发提供地标级场所背书。Resource B 在单元经济跑通后提供生态级分发杠杆。Resource C 通过资深顾问审查提供运营纪律、风控与节奏控制。Resource D 确保每一项对外安排都经专业审查。Resource E 提供可重复的 B2B 场景测试面。<b>本文档不写出任何真实名称。</b></div></div>
+<div class="card" data-post-nda="true" style="margin-top:8px;border-color:rgba(126,224,161,.4)"><div class="h" style="color:#a8e8c0">Post-NDA · 推进状态</div><div class="d">每一项资源都处于已定义的推进阶段，附下一里程碑计划。详细合作方画像、合作意向函与里程碑日历可在 NDA 之后基于"按需知情"原则提供。</div></div>
 <div class="slide-meta"><span>资源<span class="dot"></span>放大器原则</span><span class="pgnum">13 / --</span></div></section>`,
 
 /* 14 */ `<section class="slide" data-title="为什么不立即用大资源" data-section="资源">
 <div class="kicker">14 · 风险</div><h2 class="title">为什么不应过早消耗战略资源</h2>
 <div class="subtitle">资源克制本身就是风控能力。</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card"><div class="h">过早消耗资源的代价</div><ul class="clean"><li>漏斗未验证 — 大流量公开暴露断点</li><li>转化路径不成熟 — 高质量流量留不住</li><li>资源无法沉淀成资产，直接蒸发</li><li>合作方在一次公开弱测试之后信心受损</li><li>家族治理收到的是"纪律弱化"的信号</li></ul></div>
-<div class="card hi"><div class="h">先验证再放大的红利</div><ul class="clean"><li>小场景以低成本暴露真实用户行为</li><li>漏斗在规模化之前完成迭代</li><li>每次资源激活都是可测量的增量，不是赌博</li><li>合作方看到的是数字，不是承诺</li><li>家族治理收到的是"运营纪律成熟"的信号</li></ul></div>
+<div class="card"><div class="h">过早消耗资源的代价</div><ul class="clean"><li>漏斗未验证 — 大流量公开暴露断点</li><li>转化路径不成熟 — 高质量流量留不住</li><li>资源无法沉淀成资产，直接蒸发</li><li>合作方在一次公开弱测试之后信心受损</li><li>顾问审查收到的是"纪律弱化"的信号</li></ul></div>
+<div class="card hi"><div class="h">先验证再放大的红利</div><ul class="clean"><li>小场景以低成本暴露真实用户行为</li><li>漏斗在规模化之前完成迭代</li><li>每次资源激活都是可测量的增量，不是赌博</li><li>合作方看到的是数字，不是承诺</li><li>顾问审查收到的是"运营纪律成熟"的信号</li></ul></div>
 </div>
 <div class="card" style="margin-top:12px"><div class="d"><b>运营承诺：</b>任何战略资源在对应产品达到预设验证阈值之前，不会被激活。阈值在测试<i>之前</i>定，不是事后定。</div></div>
 <div class="slide-meta"><span>资源<span class="dot"></span>纪律</span><span class="pgnum">14 / --</span></div></section>`,
