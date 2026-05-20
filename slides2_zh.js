@@ -39,7 +39,7 @@ window.RBW_SLIDES_ZH.push(
 <div class="card"><div class="acc meta"></div><div class="h">RBW Meta</div><ul class="clean"><li>报告生成数</li><li>付费报告转化</li><li>AOV</li><li>追问次数</li><li>7 日回访</li></ul></div>
 <div class="card"><div class="acc acu"></div><div class="h">Acu Map</div><ul class="clean"><li>SEO 内容数</li><li>搜索流量</li><li>页面停留</li><li>邮件订阅</li><li>专家课程完课</li></ul></div>
 <div class="card"><div class="acc cube"></div><div class="h">Magic Cube</div><ul class="clean"><li>课程完成</li><li>练习天数</li><li>公式完成</li><li>年付订阅转化</li></ul></div>
-<div class="card"><div class="h">节奏</div><div class="d">每周产品复盘。每月业务复盘。每季与家族治理一起做董事级复盘。</div></div>
+<div class="card"><div class="h">节奏</div><div class="d">每周产品复盘。每月业务复盘。每季与资深顾问一起复盘。</div></div>
 </div>
 <div class="slide-meta"><span>指标<span class="dot"></span>计分卡</span><span class="pgnum">28 / --</span></div></section>`,
 
@@ -59,16 +59,17 @@ window.RBW_SLIDES_ZH.push(
 
 /* 30 */ `<section class="slide" data-title="公司与治理" data-section="治理">
 <div class="kicker">30 · 治理</div><h2 class="title">公司与治理结构</h2>
-<div class="subtitle">境内 + 香港 / 离岸，专业意见推进中。家族治理保障节奏与纪律。</div><div class="hr"></div>
+<div class="subtitle">境内 + 香港 / 离岸，专业意见推进中。资深顾问保障节奏与纪律。</div><div class="hr"></div>
 <div class="grid c3">
 <div class="card"><div class="h">境内主体</div><div class="d">负责境内产品、ICP 备案、中国运营与本地合规。</div></div>
 <div class="card"><div class="h">香港主体</div><div class="d">负责海外业务、收款与合作签约。</div></div>
 <div class="card"><div class="h">离岸结构</div><div class="d">用于未来控股、融资与期权池规划。专业意见推进中。</div></div>
-<div class="card hi"><div class="h">家族治理与风控</div><div class="d">提供节奏控制、资源纪律与合规边界审查。既制衡过于激进的动作，也制衡投入不足。</div></div>
+<div class="card hi"><div class="h">资深顾问与风控</div><div class="d">提供节奏控制、资源纪律与合规边界审查。独立制衡——既约束过于激进的动作，也约束投入不足。</div></div>
 <div class="card"><div class="h">专业顾问</div><div class="d">已聘法律与税务顾问。所有架构决定以书面意见为准。</div></div>
 <div class="card"><div class="h">披露政策</div><div class="d">具体股权比例、个人姓名、合同细节不在本文档中。仅在 NDA 下披露。</div></div>
 </div>
-<div class="card" style="margin-top:12px"><div class="note">本页仅描述结构意图。实际架构以专业法律与税务意见为准。本页不构成任何法律或税务结论。</div></div>
+<div class="card" data-post-nda="true" style="margin-top:12px;border-color:rgba(126,224,161,.4)"><div class="h" style="color:#a8e8c0">Post-NDA · 股权结构概要</div><div class="d">创始团队分配、期权池规模、顾问分配原则、未来轮次稀释模型可在 NDA 之后提供。最终条款以法律意见为准。</div></div>
+<div class="card" style="margin-top:8px"><div class="note">本页仅描述结构意图。实际架构以专业法律与税务意见为准。本页不构成任何法律或税务结论。</div></div>
 <div class="slide-meta"><span>治理<span class="dot"></span>结构</span><span class="pgnum">30 / --</span></div></section>`,
 
 /* 31 */ `<section class="slide" data-title="为什么 RBW 能赢" data-section="为什么能赢">
@@ -76,11 +77,11 @@ window.RBW_SLIDES_ZH.push(
 <div class="subtitle">这是一种很难从零拼出来的组合。</div><div class="hr"></div>
 <div class="grid c2">
 <div class="card"><div class="h">产品</div><ul class="clean"><li>四个产品都已有清晰原型</li><li>不是单点豪赌——是共享引擎</li><li>跨品类的一致体验模式</li></ul></div>
-<div class="card"><div class="h">团队</div><ul class="clean"><li>出货速度快的创始团队</li><li>以天为单位构建并验证，不是以季度</li><li>参照家族企业实践的运营纪律</li></ul></div>
-<div class="card"><div class="h">市场</div><ul class="clean"><li>明确的海外文化兴趣已存在</li><li>需要时可调用的国内线下资源</li><li>第一天起就有多条变现路径</li></ul></div>
-<div class="card hi"><div class="h">治理</div><ul class="clean"><li>家族治理 + 风控支持</li><li>资源纪律内嵌进战略</li><li>长期稳定优于短期亮眼</li></ul></div>
+<div class="card"><div class="h">团队</div><ul class="clean"><li>两人姐弟创始团队 — 每一个决策完全自主</li><li>Boss + Sales + FDE 一体化 — 当周内可以同时完成设计、销售与交付</li><li>以天为单位推进，不是以季度</li></ul></div>
+<div class="card"><div class="h">市场</div><ul class="clean"><li>明确的海外文化兴趣已存在</li><li>需要时可调用的国内线下渠道</li><li>第一天起就有多条变现路径</li></ul></div>
+<div class="card hi"><div class="h">纪律</div><ul class="clean"><li>资深顾问审查 + 风控支持</li><li>资源纪律内嵌进战略</li><li>长期稳定优于短期亮眼</li></ul></div>
 </div>
-<div class="card" style="margin-top:12px"><div class="d"><b>组合：</b>引擎 + 产品矩阵 + 文化深度 + 资源纪律 + 治理骨架。每一块都在别处单独存在。组合在一起，少见。</div></div>
+<div class="card" style="margin-top:12px"><div class="d"><b>组合：</b>引擎 + 产品矩阵 + 文化深度 + 资源纪律 + 顾问支撑的治理。每一块都在别处单独存在。组合在一起，少见。</div></div>
 <div class="slide-meta"><span>为什么能赢<span class="dot"></span>组合</span><span class="pgnum">31 / --</span></div></section>`,
 
 /* 32 */ `<section class="slide" data-title="对投资人叙事" data-section="投资人">
@@ -97,7 +98,7 @@ window.RBW_SLIDES_ZH.push(
 <div class="kicker">33 · 请求</div><h2 class="title">下一步我们需要什么</h2>
 <div class="subtitle">两类受众，两种请求。共用一份计划作底。</div><div class="hr"></div>
 <div class="grid c2">
-<div class="card hi"><div class="h">内部决策者</div><ul class="clean"><li>确认公司定位</li><li>确认产品优先顺序</li><li>确认资源激活节奏</li><li>确认海外先行的排序</li><li>确认合规边界</li><li>确认分阶段预算</li><li>确认 90 天验证目标</li></ul></div>
+<div class="card hi"><div class="h">创始团队与顾问</div><ul class="clean"><li>确认公司定位</li><li>确认产品优先顺序</li><li>确认资源激活节奏</li><li>确认海外先行的排序</li><li>确认合规边界</li><li>确认分阶段预算</li><li>确认 90 天验证目标</li></ul></div>
 <div class="card"><div class="h">潜在投资人</div><ul class="clean"><li>对引擎逻辑的战略反馈</li><li>产品试用与观察</li><li>业务或分发合作</li><li>在边界内的资源引荐</li><li>面向后续融资的开放对话</li></ul></div>
 </div>
 <div class="card" style="margin-top:12px"><div class="d"><b>本阶段不寻求的事：</b>最终股权决定；公开承诺；任何绕开 90 天验证关口的承诺。</div></div>
@@ -179,7 +180,7 @@ window.RBW_SLIDES_ZH.push(
 <div class="kicker">38 · 附录 C</div><h2 class="title">附录 C — 敏感信息政策</h2>
 <div class="subtitle">谁能看什么。信息如何在分层间释放。</div><div class="hr"></div>
 <table class="t"><thead><tr><th style="width:28%">受众</th><th>可以看</th><th>不能看</th></tr></thead><tbody>
-<tr><td><b>内部家族 / 商业师父</b></td><td>完整战略、资源类目（代号）、完整路线图、家族治理讨论</td><td>除非必要的外部合作方实名；进行中的合同草稿</td></tr>
+<tr><td><b>创始团队与顾问</b></td><td>完整战略、资源类目（代号）、完整路线图、运营注释</td><td>除非必要的外部合作方实名；进行中的合同草稿</td></tr>
 <tr><td><b>投资人预览</b></td><td>市场、产品、商业模型、路线图、合规姿态、治理意图</td><td>具体资源名称、个人联系人、架构细节、股权比例、财务细节</td></tr>
 <tr><td><b>Post-NDA 投资人</b></td><td>更详细的尽调材料、架构上下文、合作方上下文</td><td>仍受法律流程控制的事项；第三方机密信息</td></tr>
 <tr><td><b>外部公众</b></td><td>公开产品页、公开品牌语言</td><td>本文档中的任何内容。本文档不对公众发布。</td></tr>
@@ -193,7 +194,7 @@ window.RBW_SLIDES_ZH.push(
 <table class="t"><thead><tr><th style="width:18%">代号</th><th>类目</th><th>战略角色</th></tr></thead><tbody>
 <tr><td><b>Resource A</b></td><td>战略级线下娱乐地标资源</td><td>为线下首发与标志性活动提供地标级场所背书。</td></tr>
 <tr><td><b>Resource B</b></td><td>头部互联网生态资源</td><td>单元经济跑通后的生态级分发杠杆。</td></tr>
-<tr><td><b>Resource C</b></td><td>家族企业治理与风控支持</td><td>节奏控制、风控、合规边界审查。</td></tr>
+<tr><td><b>Resource C</b></td><td>资深顾问与风控支持</td><td>由独立资深顾问提供节奏控制、风控与合规边界审查。</td></tr>
 <tr><td><b>Resource D</b></td><td>专业法律 / 税务顾问</td><td>跨司法辖区的架构、合同、监管审查。</td></tr>
 <tr><td><b>Resource E</b></td><td>线下场景渠道网络</td><td>Vibe Party 的可重复 B2B 场景测试面。</td></tr>
 </tbody></table>
@@ -218,12 +219,13 @@ window.RBW_SLIDES_ZH.push(
 
 /* 41 */ `<section class="slide" data-title="附录 F — 受众视图" data-section="附录">
 <div class="kicker">41 · 附录 F</div><h2 class="title">附录 F — 受众视图说明</h2>
-<div class="subtitle">使用顶部切换。同一内容面，不同披露层级。</div><div class="hr"></div>
-<div class="grid c2">
-<div class="card hi"><div class="h">Investor Preview（默认）</div><ul class="clean"><li>完整战略叙事</li><li>产品、市场、商业模型、路线图</li><li>资源仅以代号呈现</li><li>不含股权比例、合同、合作方实名</li></ul><div class="note" style="margin-top:6px">这是任何外部审视的安全默认。</div></div>
-<div class="card"><div class="h">Internal View</div><ul class="clean"><li>Investor Preview 的全部内容，加上</li><li>每一个资源代号背后的战略含义</li><li>仅供内部参考的运营注释</li><li>依然不出现任何真实合作方实名</li></ul><div class="note" style="margin-top:6px">用于家族、商业师父与风控负责人审视。</div></div>
+<div class="subtitle">使用顶部切换。同一内容面，三个披露层级。</div><div class="hr"></div>
+<div class="grid c3">
+<div class="card hi"><div class="h">Investor Preview（默认）</div><ul class="clean"><li>完整战略叙事</li><li>产品、市场、商业模型、路线图</li><li>资源仅以代号呈现</li><li>不含股权比例、合同、合作方实名</li></ul><div class="note" style="margin-top:6px">任何外部审视的安全默认。</div></div>
+<div class="card"><div class="h">Internal</div><ul class="clean"><li>Investor Preview 的全部内容，加上</li><li>每一个资源代号背后的战略含义</li><li>内部运营注释</li><li>依然不出现任何真实合作方实名</li></ul><div class="note" style="margin-top:6px">用于创始团队与资深顾问。</div></div>
+<div class="card" style="border-color:rgba(126,224,161,.4)"><div class="h" style="color:#a8e8c0">Post-NDA</div><div class="d" style="margin-top:2px;font-size:12.5px;line-height:1.55">Internal 全部 + 尽调级细节：资源推进阶段、股权结构概要、架构上下文、里程碑日历。真实名称仍受法律流程控制。</div><div class="note" style="margin-top:6px">用于签 NDA 后的投资人。</div></div>
 </div>
-<div class="card" style="margin-top:12px"><div class="d"><b>切换方式：</b>顶部 → Investor Preview / Internal View 切换。键盘快捷键：<b>I</b>。当前视图在所有 slide 上实时同步。</div></div>
+<div class="card" style="margin-top:12px"><div class="d"><b>切换方式：</b>顶部三段式按钮。键盘快捷键：<b>I</b> 循环切换 Investor → Internal → Post-NDA → Investor。</div></div>
 <div class="slide-meta"><span>附录 F<span class="dot"></span>受众视图</span><span class="pgnum">41 / --</span></div></section>`,
 
 /* 42 */ `<section class="slide" data-title="附录 G — 操作说明" data-section="附录">
@@ -237,7 +239,8 @@ window.RBW_SLIDES_ZH.push(
 <div class="kv"><span>跳到末页</span><b>End</b></div>
 <div class="kv"><span>目录</span><b>T</b></div>
 <div class="kv"><span>关闭弹层</span><b>Esc</b></div>
-<div class="kv"><span>切换受众视图</span><b>I</b></div>
+<div class="kv"><span>循环受众视图</span><b>I</b></div>
+<div class="kv"><span>切换语言</span><b>L</b></div>
 <div class="kv"><span>打印 / 另存 PDF</span><b>P</b></div>
 </div>
 <div class="card hi"><div class="h">鼠标 / 触屏</div><ul class="clean"><li>点击 slide 右侧 → 下一页</li><li>点击 slide 左侧 → 上一页</li><li>顶部工具栏 Prev / Next</li><li>移动端左右滑动</li><li>目录按钮打开跳转菜单</li><li>PDF 按钮触发系统打印对话框</li></ul></div>
